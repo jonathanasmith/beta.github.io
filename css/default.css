@@ -452,8 +452,8 @@ display: none;
 
 /*Defining flex direction*/
 
-.FC{display: flex; flex-direction:column;}
-.FR{display: flex; flex-direction:row;}
+.FC{display: flex; flex-direction:column; height:100%;}
+.FR{display: flex; flex-direction:row; width:100%;}
 
 /*Aligning content within a single flex-cell*/
 
@@ -507,6 +507,10 @@ display: none;
 
 
 .scroll{overflow: scroll;}
+
+.nav{
+    height:200px;
+}
 
 
 
