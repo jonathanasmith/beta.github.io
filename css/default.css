@@ -1,0 +1,529 @@
+/* App specific --------------------------------------------------------------------------------*/
+
+#modal{display: none; } 
+#modal1{display: none; } 
+#modal2{display: none; } 
+#modal3{display: none; } 
+#modal4{display: none; } 
+#modal5{display: none; } 
+#hide{display: none; } 
+#hide1{display: none; }
+
+
+.blur{
+filter: blur(3px);
+opacity: 0.5;
+pointer-events: none;
+}
+
+.GS{
+    -webkit-filter: grayscale(0.9);
+}
+
+.GS{
+    -webkit-filter: grayscale(0.9);
+}
+
+.dark{filter: brightness(50%);}
+
+/* Page Box --------------------------------------------------------------------------------*/
+
+.PB 
+{ 
+margin:0;
+height:768px;
+width:1366px;
+}
+
+/* Global --------------------------------------------------------------------------------*/
+
+body{
+background: #fff;
+margin: 0;
+padding: 0;
+font-size: 16px;
+line-height:1.2;
+font-family: 'Montserrat', sans-serif;
+color:#413f42;
+font-weight: 400;
+overflow: hidden;
+}
+
+/* Test backgrounds */
+
+.T1{background-color: red; }
+.T2{background-color: green;}
+.T3{background-color: blue;}
+
+
+/* Type */
+
+.h1{
+letter-spacing: 1px;
+font-size:5em; 
+font-weight: 400;
+margin:0;
+}
+
+.h2{
+letter-spacing: 1px;
+font-size:3em; 
+font-weight: 400;
+margin:0;
+}
+
+.h3{
+letter-spacing: 1px;
+font-size:2.3em; 
+font-weight: 400;
+margin:0;
+}
+
+.h4{
+letter-spacing: 1px;
+font-size:1.8em; 
+font-weight: 400;
+margin:0;
+}
+
+.h5{
+letter-spacing: 1px;
+font-size:1.3em; 
+font-weight: 400;
+margin:0;
+}
+
+.p1{
+font-size:0.8em; 
+font-weight: 400;
+}
+
+.p2{
+font-size:0.95em; 
+font-weight: 400;
+}
+
+.bodyFont{
+font-family: 'Azo Sans', sans-serif;
+font-weight: 400;
+}
+
+/* No Style */
+
+.NS{
+text-decoration: none;
+color:inherit;
+}
+
+.FoC_1{
+color: #ffffff;
+}
+
+.FoC_2{
+color:#3D9E3F;
+}
+
+/* States */
+
+.active:active{box-shadow:inset 0 0 30px gray;}
+
+
+
+/* Backgrounds --------------------------------------------------------------------------------*/
+
+.B1{background:linear-gradient(-130deg, #fefefe, #ffffff);}
+.B2{background:linear-gradient(-130deg, #3D9E3F, #9AC31C); color:white;}
+.B3{background:#3D9E3F; color:white;}
+
+
+/* Borders --------------------------------------------------------------------------------*/
+
+.Bo1{
+    border-style: solid;
+    border-color: #3D9E3F;
+    border-width: 4px 4px 4px 4px;
+}
+
+.Bo1_L{
+    border-style: solid;
+    border-color: #3D9E3F;
+    border-width: 0px 0px 0px 4px;
+}
+
+.Bo1_R{
+    border-style: solid;
+    border-color: #3D9E3F;
+    border-width: 0px 4px 0px 0px;
+}
+
+.Bo1_T{
+    border-style: solid;
+    border-color: #3D9E3F;
+    border-width: 4px 0px 0px 0px;
+}
+
+.Bo1_B{
+    border-style: solid;
+    border-color: #3D9E3F;
+    border-width: 0px 0px 0px 4px;
+}
+
+
+.Bo2{
+    border-style: solid;
+    border-color: #3D9E3F;
+    border-width: 2px 2px 2px 2px;
+}
+
+.Bo2_L{
+    border-style: solid;
+    border-color: #3D9E3F;
+    border-width: 0px 0px 0px 2px;
+}
+
+.Bo2_R{
+    border-style: solid;
+    border-color: #3D9E3F;
+    border-width: 0px 2px 0px 0px;
+}
+
+.Bo2_T{
+    border-style: solid;
+    border-color: #3D9E3F;
+    border-width: 2px 0px 0px 0px;
+}
+
+.Bo2_B{
+    border-style: solid;
+    border-color: #3D9E3F;
+    border-width: 0px 0px 0px 2px;
+}
+
+
+
+.BoR_5{
+	border-radius: 5px;
+}
+
+.BoR_10{
+    border-radius: 10px;
+}
+
+.BoR_5_T{
+    border-radius: 5px 5px 0px 0px;
+}
+
+
+
+/* Heights & Widths --------------------------------------------------------------------------------*/
+
+.H5{height:5px;}
+.H10{height:10px;}
+.H20{height:20px;}
+.H30{height:30px;}
+.H40{height:40px;}
+.H50{height:50px;}
+.H60{height:60px;}
+.H70{height:70px;}
+.H75{height:75px;}
+.H80{height:80px;}
+.H90{height:90px;}
+.H100{height:100px;}
+.H110{height:110px;}
+.H120{height:120px;}
+.H130{height:130px;}
+.H150{height:150px;}
+.H200{height:200px;}
+
+
+
+.W5{width:5px;}
+.W10{width:10px;}
+.W20{width:20px;}
+.W30{width:30px;}
+.W40{width:40px;}
+.W50{width:50px;}
+.W60{width:60px;}
+.W75{width:75px;}
+.W100{width:100px;}
+.W125{width:125px;}
+
+.W150{width:150px;}
+.W160{width:160px;}
+.W170{width:170px;}
+.W175{width:175px;}
+.W180{width:180px;}
+.W190{width:190px;}
+
+.W200{width:200px;}
+.W230{width:230px;}
+
+.W100PC{width:100%;}
+.H100PC{height:100%;}
+
+/* Margins --------------------------------------------------------------------------------*/
+
+.M_L_5{margin-left:5px;}
+.M_T_5{margin-top:5px;}
+.M_R_5{margin-right:5px;}
+.M_B_5{margin-bottom:5px;}
+
+
+.M_L_10{margin-left:10px;}
+.M_T_10{margin-top:10px;}
+.M_R_10{margin-right:10px;}
+.M_B_10{margin-bottom:10px;}
+
+
+.M_L_20{margin-left:20px;}
+.M_T_20{margin-top:20px;}
+.M_R_20{margin-right:20px;}
+.M_B_20{margin-bottom:20px;}
+
+
+.M50{
+    margin-left:50px;
+    margin-right:50px;
+}
+
+.M100{
+    margin-left:100px;
+    margin-right:100px;
+}
+
+/* Padding --------------------------------------------------------------------------------*/
+
+.P5{padding:5px;}
+.P10{padding:10px;}
+
+/* Modal --------------------------------------------------------------------------------*/
+
+.modal {
+position:fixed;
+transform: translate(283px,134px);    
+height:500px;
+width:800px;
+z-index: 99;
+}
+
+
+.modalSmall {
+position:fixed;
+transform: translate(458px,234px);    
+height:300px;
+width:450px;
+z-index: 99;
+}
+
+/* Headers --------------------------------------------------------------------------------*/
+
+
+.headerOne {
+position:fixed;
+transform: translate(30px,568px);    
+height:50px;
+width:130px;
+z-index: 99;
+}
+
+.headerTwo{
+position:fixed;
+transform: translate(1038px,130px);    
+height:50px;
+width:200px;
+z-index: 99;
+}
+
+.headerThree{
+position:fixed;
+transform: translate(970px,163px);    
+height:50px;
+width:200px;
+z-index: 99;
+}
+
+.headerFour {
+position:fixed;
+transform: translate(380px,548px);    
+height:50px;
+width:130px;
+z-index: 99;
+}
+
+/* Button --------------------------------------------------------------------------------*/
+
+.Bu1{
+height:50px;
+width:250px;
+text-decoration: none;
+}
+
+.Bu2{
+height:60px;
+width:415px;
+text-decoration: none;
+}
+
+#PF2{
+display: none;
+}
+
+#PF3{
+display: none;
+}
+
+#PF4{
+display: none;
+}
+
+
+.CN{
+    font-size: 25px;
+}
+
+/* Numberpad --------------------------------------------------------------------------------*/
+
+.numberpadContainer{
+    width:415px;
+}
+
+.numberpad{
+    display:grid;
+    font-size:1.1em;
+    letter-spacing: 1.2px;
+    font-weight: 400;
+    margin:auto;
+    text-align: center;
+    vertical-align: middle;
+    grid-template-columns: 130px 130px 130px ;
+    grid-template-rows: 60px 60px 60px 60px ;
+    grid-column-gap:10px;
+    grid-row-gap:10px;
+}
+
+.key{
+    padding-top:20px;
+    cursor:pointer;
+    transition: all 0.5s ease 0s;
+}
+
+.key:active{
+    background:#3D9E3F; 
+    transition:opacity 1s linear;
+}
+
+.inputbox{
+    width:410px;
+    height:50px;
+    line-height: 0px;
+}
+.inputtext{
+    text-align: center;
+    text-decoration: none;
+}
+
+.forward{
+    position:fixed;
+    transform: translate(1236px,638px);    
+    height:130px;
+    width:130px;
+    background: none;
+}
+
+.forward2{
+    position:fixed;
+    transform: translate(1266px,668px);    
+    height:100px;
+    width:100px;
+    background: none;
+}
+
+
+.menuItem{
+    background-position: center; 
+    background-size: 100%;
+}
+
+
+
+
+/* Hardcoded ---------------------------------------------------------------------------------------------- */
+
+
+/*Defining flex direction*/
+
+.FC{display: flex; flex-direction:column;}
+.FR{display: flex; flex-direction:row;}
+
+/*Aligning content within a single flex-cell*/
+
+.flexCell_i{display:flex; flex-direction:column; justify-content: flex-start; align-items: flex-start;}
+.flexCell_ii{display:flex; flex-direction:column; justify-content: flex-start; align-items: center;}
+.flexCell_iii{display:flex; flex-direction:column; justify-content: flex-start; align-items: flex-end;}
+.flexCell_iv{display:flex; flex-direction:column; justify-content: center; align-items: flex-start;}
+.flexCell_v{display:flex; flex-direction:column; justify-content: center; align-items: center;}
+.flexCell_vi{display:flex; flex-direction:column; justify-content: center; align-items: flex-end;}
+.flexCell_vii{display:flex; flex-direction:column; justify-content: flex-end; align-items: flex-start;}
+.flexCell_viii{display:flex; flex-direction:column; justify-content: flex-end; align-items: center;}
+.flexCell_ix{display:flex; flex-direction:column; justify-content: flex-end; align-items: flex-end;}
+
+/*Setting flex value*/
+
+.F025{flex:0.25;}
+.F05{flex:0.5;}
+.F075{flex:0.75;}
+.F1{flex:1;}
+.F2{flex:2;}
+.F3{flex:3;}
+.F4{flex:4;}
+.F5{flex:5;}
+.F6{flex:6;}
+.F7{flex:7;}
+.F8{flex:8;}
+.F9{flex:9;}
+.F10{flex:10;}
+
+.F{display:flex;}
+
+.AC_S{align-content:flex-start;}
+.AC_C{align-content:center;}
+.AC_E{align-content:flex-end;}
+
+.JC_S{justify-content:flex-start;}
+.JC_C{justify-content:center;}
+.JC_E{justify-content:flex-end;}
+
+.AS_S{align-self:flex-start;}
+.AS_C{align-self:center;}
+.AS_E{align-self:flex-end;}
+
+.AI_S{align-items:flex-start;}
+.AI_C{align-items:center;}
+.AI_E{align-items:flex-end;}
+
+.TA_L{text-align:left;}
+.TA_C{text-align:center;}
+.TA_R{text-align:right;}
+
+
+.scroll{overflow: scroll;}
+
+
+
+/* CSS Rules ---------------------------------------------- 
+
+--> JS case notation
+
+
+What_Version_Where_HowMuch
+
+border_1_Top_10
+
+OR
+
+What_State
+
+flexRow_i
+
+
+*/
