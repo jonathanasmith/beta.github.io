@@ -57,7 +57,7 @@ margin:0.25em;
 
 /* Backgrounds --------------------------------------------------------------------------------*/
 
-.B_i{background:;}
+.B_i{background: linear-gradient(to left, #136EFB, #5858ff); color:white;}
 .B_ii{background:;}
 .B_iii{background:;}
 .B_iv{background:;}
@@ -97,6 +97,20 @@ margin:0.25em;
 
 /* Background Images ---------------------------------------------------*/
 
+
+@media only screen and (max-width: 600px) {
+
+.BI_i{
+   background-image: url("../images/BG1.png");
+    background-size: 130% auto;
+    background-repeat: no-repeat;
+    background-position: top;
+    }
+
+}
+
+@media only screen and (min-width: 600px) {
+
 .BI_i{
    background-image: url("../images/BG1.png");
     background-size: 100% auto;
@@ -104,6 +118,7 @@ margin:0.25em;
     background-position: top;
     }
 
+}
 
 /* Hardcoded ----------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------*/
