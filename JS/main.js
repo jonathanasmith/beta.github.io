@@ -22,6 +22,8 @@ function getQueryVariable(variable)
 }
 
 
+
+
 // Remaining script
 
 /*

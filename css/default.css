@@ -30,36 +30,58 @@ footer {
   min-height:75px;
   margin: auto auto 0 auto;
 }
+
+button{
+    min-height:40px;
+    width:130px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+    color:white;
+    border:none;
+    font-family: inherit;
+    font-size:0.9em;
+    font-weight:500;
+}
+
+
 /* Type ---------------------------------------------------------------------------------------*/
 
 .h1{
 letter-spacing: 1px;
 font-size:5em; 
 margin:1em;
+font-weight:600;
 }
 
 .h2{
 letter-spacing: 1px;
 font-size:3em; 
 margin:0.5em;
+font-weight:600;
+
 }
 
 .h3{
 letter-spacing: 1px;
 font-size:2em; 
 margin:0.25em;
+font-weight:600;
+
 }
 
 .h4{
 letter-spacing: 1px;
 font-size:1.5em; 
 margin:0.25em;
+font-weight:600;
 }
 
 .h5{
 letter-spacing: 1px;
 font-size:1.2em; 
 margin:0.25em;
+font-weight:600;
 }
 
 .p1{font-size:0.85em;}
@@ -71,7 +93,7 @@ margin:0.25em;
 /* Backgrounds --------------------------------------------------------------------------------*/
 
 .B_i{background: linear-gradient(to left, #136EFB, #5858ff); color:white;}
-.B_ii{background:;}
+.B_ii{background: linear-gradient(to left, #136EFB, #388E8E); color:white;}
 .B_iii{background:;}
 .B_iv{background:;}
 .B_v{background:;}
@@ -108,30 +130,73 @@ margin:0.25em;
     border-width: 0px 0px 2px 0px;
 }
 
+.BoR_5{
+    border-radius: 5px;
+}
+
+.BoR_10{
+    border-radius: 10px;
+}
+
+.BoR_50PC{
+    border-radius: 50%;
+}
+
 /* Background Images ---------------------------------------------------*/
+
+
+
+.BI_i{background-image: url("../images/line1.png"); background-size: auto 100% ; background-position:center; }
+.BI_ii{background-image: url("../images/line2.png"); background-size: auto 100% ; background-position:center; }
+.BI_iii{background-image: url("../images/line3.png"); background-size: auto 100% ; background-position:center; }
+.BI_iv{background-image: url("../images/line4.png"); background-size: auto 100% ; background-position:center; }
+.BI_v{background-image: url("../images/line5.png"); background-size: auto 100% ; background-position:center; }
+.BI_vi{background-image: url("../images/line6.png"); background-size: auto 100% ; background-position:center; }
+.BI_vii{background-image: url("../images/line7.png"); background-size: auto 100% ; background-position:center; }
+
+
+/* Product Images ---------------------------------------------------*/
+
+
+.productImage{
+    height:150px;
+    border-radius: 20px;
+}
+
+
+@media only screen and (max-width: 1000px) {
+
+.productImage{
+    height:130px;
+    border-radius: 20px;
+}
+
+}
+
+@media only screen and (max-width: 700px) {
+
+.productImage{
+    height:120px;
+    border-radius: 20px;
+}
+
+}
+
+/* Flex Collapse ---------------------------------------------------*/
 
 
 @media only screen and (max-width: 600px) {
 
-.BI_i{
-   background-image: url("../images/BG1.png");
-    background-size: 130% auto;
-    background-repeat: no-repeat;
-    background-position: top;
+    .collapse{
+
+        flex-direction:column !important;
+
     }
 
 }
 
-@media only screen and (min-width: 600px) {
 
-.BI_i{
-   background-image: url("../images/BG1.png");
-    background-size: 100% auto;
-    background-repeat: no-repeat;
-    background-position: top;
-    }
-
-}
+.wavyBackground
 
 /* Hardcoded ----------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------*/
