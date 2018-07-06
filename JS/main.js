@@ -24,16 +24,17 @@ function getQueryVariable(variable)
 
 // Remaining script
 
+/*
 
 Parse.Cloud.run('testFunction', {
 
     success: function(result) {
-      alert("success")
+      
     },
 
     error: function(error) {
-      alert("error")
-    }
-    
-  });
 
+    }
+
+  });
+*/

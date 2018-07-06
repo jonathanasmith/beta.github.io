@@ -14,9 +14,22 @@ font-size: 0.9em;
 line-height:1.2;
 font-family: 'Montserrat', sans-serif;
 color:#413f42;
-overflow: hidden;
+display:flex;
+flex-direction: column;
+min-height: 100vh;
+overflow: scroll;
 }
 
+header{
+    max-height:150px;
+    min-height:150px;
+}
+
+footer {
+  max-height:75px;
+  min-height:75px;
+  margin: auto auto 0 auto;
+}
 /* Type ---------------------------------------------------------------------------------------*/
 
 .h1{
@@ -197,7 +210,7 @@ margin:0.25em;
 .scroll{overflow: scroll;}
 .disable{pointer-events: none;}
 .active:active{box-shadow:inset 0 0 30px gray;}
-.noStyle{text-decoration: none;}
+.noStyle{text-decoration: none;color:inherit;}
 .blur{filter: blur(3px);opacity: 0.5;}
 .greyScale{filter: grayscale(0.9); -webkit-filter: grayscale(0.9);}
 
