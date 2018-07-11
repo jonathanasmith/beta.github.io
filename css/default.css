@@ -1,3 +1,5 @@
+@import "fonts.css"
+
 /* Test Backgrounds ----------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------*/
 
@@ -13,6 +15,7 @@ padding: 0;
 font-size: 0.9em;
 line-height:1.2;
 font-family: 'Montserrat', sans-serif;
+font-weight: 400;
 color:#413f42;
 display:flex;
 flex-direction: column;
@@ -31,6 +34,11 @@ footer {
   margin: auto auto 0 auto;
 }
 
+.footerContainer{
+    max-width:850px;
+    margin:auto;
+}
+
 button{
     min-height:40px;
     width:130px;
@@ -41,7 +49,6 @@ button{
     border:none;
     font-family: inherit;
     font-size:0.9em;
-    font-weight:500;
 }
 
 
@@ -49,39 +56,16 @@ button{
 
 .h1{
 letter-spacing: 1px;
-font-size:5em; 
+font-size:3em; 
 margin:1em;
-font-weight:600;
+font-weight: 600;
 }
 
 .h2{
 letter-spacing: 1px;
-font-size:3em; 
-margin:0.5em;
-font-weight:600;
-
-}
-
-.h3{
-letter-spacing: 1px;
-font-size:2em; 
-margin:0.25em;
-font-weight:600;
-
-}
-
-.h4{
-letter-spacing: 1px;
 font-size:1.5em; 
-margin:0.25em;
-font-weight:600;
-}
-
-.h5{
-letter-spacing: 1px;
-font-size:1.2em; 
-margin:0.25em;
-font-weight:600;
+margin:0.5em;
+font-weight: 600;
 }
 
 .p1{font-size:0.85em;}
@@ -93,7 +77,7 @@ font-weight:600;
 /* Backgrounds --------------------------------------------------------------------------------*/
 
 .B_i{background: linear-gradient(to left, #136EFB, #5858ff); color:white;}
-.B_ii{background: linear-gradient(to left, #136EFB, #388E8E); color:white;}
+.B_ii{background: linear-gradient(to left, #136EFB, #0000FF); color:white;}
 .B_iii{background:;}
 .B_iv{background:;}
 .B_v{background:;}
@@ -261,19 +245,19 @@ font-weight:600;
 
 /* Type ----------------------------------------------------------------*/
 
-.FoW_100{font-weight: 100;}
-.FoW_200{font-weight: 200;}
-.FoW_300{font-weight: 300;}
-.FoW_400{font-weight: 400;}
-.FoW_500{font-weight: 500;}
-.FoW_600{font-weight: 600;}
-.FoW_700{font-weight: 700;}
-.FoW_800{font-weight: 800;}
+.FW_100{font-weight: 100;}
+.FW_200{font-weight: 200;}
+.FW_300{font-weight: 300;}
+.FW_400{font-weight: 400;}
+.FW_500{font-weight: 500;}
+.FW_600{font-weight: 600;}
+.FW_700{font-weight: 700;}
+.FW_800{font-weight: 800;}
 
 /* Operators -----------------------------------------------------------*/
 
 .scroll{overflow: scroll;}
-.disable{pointer-events: none;}
+.disable{pointer-events: none; -webkit-filter: grayscale(80%); filter: grayscale(100%); opacity: 0.7;}
 .active:active{box-shadow:inset 0 0 30px gray;}
 .noStyle{text-decoration: none;color:inherit;}
 .blur{filter: blur(3px);opacity: 0.5;}
