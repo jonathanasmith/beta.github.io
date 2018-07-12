@@ -264,6 +264,20 @@ font-weight: 600;
 .greyScale{filter: grayscale(0.9); -webkit-filter: grayscale(0.9);}
 
 
+
+
+/* Opacity -----------------------------------------------------------*/
+
+.O_1{opacity: 0.1};
+.O_2{opacity: 0.2};
+.O_3{opacity: 0.3};
+.O_4{opacity: 0.4};
+.O_5{opacity: 0.5};
+.O_6{opacity: 0.6};
+.O_7{opacity: 0.7};
+.O_8{opacity: 0.8};
+.O_9{opacity: 0.9};
+
 /* CSS Rules ---------------------------------------------- 
 
 --> JS case notation
