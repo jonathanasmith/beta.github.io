@@ -21,17 +21,21 @@
       <div class="H_50"></div>
 
       <!--Connect Block-->
-      <div class="M_L_50 M_R_50 FC" id="connect" onclick="flip()">
-        <div class="F_1 h3 TA_C">👋 We make gear you unlock by running. Connect with Strava below to get started (or to log back in)</div>
+      <div class="M_L_50 M_R_50 FC" id="connect">
+        <div class="F_1 h3 TA_C">🏆 We make gear you unlock by running. Connect with Strava below to get started (or to log back in)</div>
         <div class="H_20"></div>
-        <div class="F_1 TA_C"><img src="images/btn_strava_connectwith_orange@2x.png" class="H_50"/></div>
+        <div class="F_1 TA_C">
+          <a href="https://www.strava.com/oauth/authorize?client_id=7316&response_type=code&redirect_uri=https://api.kick.run/beta&approval_prompt=force&scope=view_private,write">
+            <img src="images/btn_strava_connectwith_orange@2x.png" class="link H_50"/>
+          </a>
+        </div>
         <div class="H_20"></div>
       </div>
       <!--Connect Block-->
 
       <!--Connect Block-->
       <div class="flexCell_v" id="connected">
-        <div class="h3 TA_C">Hi, Jonathan, your account is connected</div>
+        <div class="h3 TA_C">👋 Hi, Jonathan, your account is connected</div>
         <div class="H_20"></div>
         <div class="F_1 flexCell_vi h4" >
             <div id="notifications" onclick="notificationsOff()"><i class="far fa-bell FoC_iii"></i>&nbsp; &nbsp;Unlock notifications are on</div>
@@ -44,7 +48,6 @@
       <div id="demo" class="FR fade">
         <div id="demoContent" class="F_1 behind productContainer">
           <div class="h3 FR AI_C JC_C M_L_20 M_R_20 M_B_10">
-            <div class="F_10 ">Have you run the distance?</div>
           </div>
           <div class="BI_iv H_10 M_L_20 M_R_20"></div>
           <div class="H_30"></div>
@@ -67,7 +70,7 @@
               <div class="F_1 flexCell_v">
                 <img src="images/top3.png" class="productImage"/>
               <div class="H_20"></div>
-              <button class="active B_i"><i class="fas fa-check"></i>&nbsp;&nbsp;Half Marathon</button>
+              <button class="active disable B_i"><i class="fas fa-lock"></i>&nbsp;&nbsp;Half Marathon</button>
               <div class="H_50"></div>
               </div>
               <div class="F_1 flexCell_v">
@@ -85,7 +88,6 @@
 
       <!--Unlockable Products-->
       <div id="unlockable">
-        <div class="">
           <!--Product Block 1-->
           <div class="H_50"></div>
           <div class="h3 FR AI_C JC_C M_L_20 M_R_20 M_B_10">
@@ -209,8 +211,11 @@
             </div>
           </div>
           <!--Product Block 3-->
-        </div>
       </div>
+      <!--Unlock Products-->
+
+
+
     </div>
   </div>
   <footer class="F_1 B_i FR H_75">

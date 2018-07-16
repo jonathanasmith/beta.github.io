@@ -213,7 +213,7 @@ font-weight: 500;
 #connect{display: flex}
 #connected{display: none}
 #unlockable{display:none;}
-#demo{pointer-events:none; max-height: 200px}
+#demo{pointer-events:none; max-height: 250px}
 
 #notificationsOff{display:none;}
 
