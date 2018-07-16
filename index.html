@@ -250,10 +250,9 @@ function getQueryVariable(variable)
  return(false);
 }
 
+var accessToken = getQueryVariable('accesstoken');
 
-var accessToken = getQueryVariable('accesstoken')
-alert(accessToken);
-
+document.cookie = "accessToken="+accessToken+";max-age=2678400; path=/";
 
 function flip() {
 document.getElementById("connect").style.display = "none";
