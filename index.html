@@ -30,21 +30,17 @@
       <!--Connect Block-->
 
       <!--Connect Block-->
-      <div class="FR collapse" id="connected">
-        <div class="F_1 h3 M_L_20 TA_L">
-          <i class="fas fa-check FoC_iii"></i>&nbsp;Account connected
+      <div class="flexCell_iv M_L_20" id="connected">
+        <div class="h3"><i class="fas fa-check FoC_iii"></i>&nbsp;Hi, *Name*, your account is connected</div>
+        <div class="H_20"></div>
+        <div class="F_1 flexCell_vi h4" >
+            <div id="notifications" onclick="notificationsOff()"><i class="far fa-bell FoC_iii"></i>&nbsp; &nbsp;Unlock notifications are on</div>
+            <div id="notificationsOff" onclick="notificationsOn()"><i class="far fa-bell-slash FoC_iv"></i>&nbsp; &nbsp;Unlock notifications are off</div>
         </div>
-        <div class="F_1 flexCell_vi" >
-            <div>Unlock notifications on &nbsp; &nbsp; <i class="far fa-bell h3 FoC_iii"></i></div>
-            <div id="notifications"><i class="far fa-bell-slash"></i>&nbsp;&nbsp;Notifications are off: Click to receive an update when you unlock something new</div>
-        </div>
-
-
       </div>
       <!--Connect Block-->
       <div class="H_20" ></div>
       <!--Demo Block-->
-
       <div id="demo" class="FR fade">
         <div id="demoContent" class="F_1 behind productContainer">
           <div class="h3 FR AI_C JC_C M_L_20 M_R_20 M_B_10">
@@ -85,7 +81,6 @@
         </div>
       </div>
       <!--Demo Block-->
-      <div class="H_50" ></div>
 
 
       <!--Unlockable Products-->
@@ -245,6 +240,16 @@ document.getElementById("connected").style.display = "flex";
 document.getElementById("demo").style.display = "none";
 document.getElementById("unlockable").style.display = "block";
 
+}
+
+function notificationsOff(){
+document.getElementById("notifications").style.display = "none";
+document.getElementById("notificationsOff").style.display = "block";
+}
+
+function notificationsOn(){
+document.getElementById("notificationsOff").style.display = "none";
+document.getElementById("notifications").style.display = "block";
 }
 
 //document.getElementById("blur").classList.add('blur');

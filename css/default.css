@@ -74,12 +74,20 @@ margin:0em;
 font-weight: 600;
 }
 
+.h4{
+letter-spacing: 1px;
+font-size:1.2em; 
+margin:0em;
+font-weight: 500;
+}
+
 .p1{font-size:0.85em;}
 .p2{font-size:0.75em;}
 
 .FoC_i{color: #ffffff;}
 .FoC_ii{color:#6E6E6E;}
 .FoC_iii{color:#308014;}
+.FoC_iv{color:#7f0000;}
 
 /* Backgrounds --------------------------------------------------------------------------------*/
 
@@ -207,7 +215,7 @@ font-weight: 600;
 #unlockable{display:none;}
 #demo{pointer-events:none; max-height: 200px}
 
-#notifications{display:none;}
+#notificationsOff{display:none;}
 
 /* Hardcoded ----------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------*/
