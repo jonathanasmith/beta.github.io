@@ -14,159 +14,209 @@
   <header class="F_1 FR B_i">
     <div class="F_1 flexCell_v"></div>
     <div class="F_1 flexCell_v"><img src="images/logo_white.png" class="H_50"/></div>
-    <div class="F_1 flexCell_vi "></div>
+    <div class="F_1 flexCell_vi "><div class="H_30 B_iii M_R_20 P_L_10 P_R_10 flexCell_v BoR_5 link active" onclick="flip()">Toggle</div></div>
   </header>
   <div class="F_1">
     <div style="max-width:900px;margin:auto">
       <div class="H_30"></div>
 
       <!--Connect Block-->
-      <div class="M_L_50 M_R_50" id="connect" style="display:none">
-        <div class="F_1 h3 TA_C">👋 We make gear you unlock by running. Connect with Strava below to get started</div>
+      <div class="M_L_50 M_R_50 FC" id="connect" >
+        <div class="F_1 h3 TA_C">👋 We make gear you unlock by running. Connect with Strava below to get started or log back in</div>
         <div class="H_20"></div>
         <div class="F_1 TA_C"><img src="images/btn_strava_connectwith_orange@2x.png" class="H_50"/></div>
         <div class="H_20"></div>
-        <div class="TA_C W_400 FoC_ii" style="margin:auto">(<span class="FW_600">Connected before?</span> Just use the same button and use Strava to login to your account)</div>
       </div>
       <!--Connect Block-->
 
       <!--Connect Block-->
-      <div class="M_L_50 M_R_50" id="connect">
-        <div class="F_1 h3 TA_C"><i class="fas fa-check"></i> Account connected </div>
-        <div class="flexCell_v"><div class="W_150 B_i flexCell_v H_30 BoR_5 p1 active link">Account Settings</div></div>
-        <div id="settingsExpand">
-          <div class="TA_C" style="display:none"><i class="far fa-bell"></i> Notifications are on: we'll send updates when you unlock something new</div>
-          <div class="TA_C"><i class="far fa-bell-slash"></i>&nbsp;&nbsp;Notifications are off: Click to receive an update when you unlock something new</div>
+      <div class="M_L_50 M_R_50 FR" id="connected">
+        <div class="F_1 flexCell_v">
+          <img src="https://dgalywyr863hv.cloudfront.net/pictures/athletes/277645/912687/2/medium.jpg" class="H50"/>
         </div>
+        <div class="F_2">
+          <div class="h3 TA_C"><i class="fas fa-check"></i> Account connected </div>
+          <div class="flexCell_v"><div class="W_150 B_i flexCell_v H_30 BoR_5 p1 active link">Account Settings</div></div>
+          <div id="settingsExpand">
+            <div class="TA_C" style="display:none"><i class="far fa-bell"></i> Notifications are on: we'll send updates when you unlock something new</div>
+            <div class="TA_C"><i class="far fa-bell-slash"></i>&nbsp;&nbsp;Notifications are off: Click to receive an update when you unlock something new</div>
+          </div>
+        </div>
+
       </div>
       <!--Connect Block-->
+      <div class="H_50" ></div>
+      <!--Demo Block-->
+
+      <div id="demo" class="FR fade">
+        <div id="demoContent" class="F_1 behind productContainer">
+          <div class="h3 FR AI_C JC_C M_L_20 M_R_20 M_B_10">
+            <div class="F_10 ">Have you run the distance?</div>
+          </div>
+          <div class="BI_iv H_10 M_L_20 M_R_20"></div>
+          <div class="H_30"></div>
+          <div class="FR ">
+            <div class="F_1 collapse FR">
+              <div class="F_1 flexCell_v">
+                <img src="images/top1.png" class="productImage"/>
+              <div class="H_20"></div>
+              <button class="active B_i"><i class="fas fa-check"></i>&nbsp;&nbsp;5k</button>
+              <div class="H_50"></div>
+              </div>
+              <div class="F_1 flexCell_v">
+                <img src="images/top2.png" class="productImage"/>
+              <div class="H_20"></div>
+              <button class="active B_i"><i class="fas fa-check"></i>&nbsp;&nbsp;10k</button>
+              <div class="H_50"></div>
+              </div>
+            </div>
+            <div class="F_1 collapse FR ">
+              <div class="F_1 flexCell_v">
+                <img src="images/top3.png" class="productImage"/>
+              <div class="H_20"></div>
+              <button class="active B_i"><i class="fas fa-check"></i>&nbsp;&nbsp;Half Marathon</button>
+              <div class="H_50"></div>
+              </div>
+              <div class="F_1 flexCell_v">
+                <img src="images/top4.png" class="productImage"/>
+              <div class="H_20"></div>
+              <button class="active disable B_i"><i class="fas fa-lock"></i>&nbsp; Marathon</button>
+              <div class="H_50"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Demo Block-->
+
 
       <!--Unlockable Products-->
-      <div class="productContainer">
-        <!--Product Block 1-->
-        <div class="H_50"></div>
-        <div class="h3 FR AI_C JC_C M_L_20 M_R_20 M_B_10">
-          <div class="F_10 ">Have you run the distance?</div>
+      <div id="unlockable">
+        <div class="">
+          <!--Product Block 1-->
+          <div class="H_50"></div>
+          <div class="h3 FR AI_C JC_C M_L_20 M_R_20 M_B_10">
+            <div class="F_10 ">Have you run the distance?</div>
+          </div>
+          <div class="BI_iv H_10 M_L_20 M_R_20"></div>
+          <div class="H_30"></div>
+          <div class="FR ">
+            <div class="F_1 collapse FR">
+              <div class="F_1 flexCell_v">
+                <img src="images/top1.png" class="productImage"/>
+              <div class="H_20"></div>
+              <button class="active B_i"><i class="fas fa-check"></i>&nbsp;&nbsp;5k</button>
+              <div class="H_50"></div>
+              </div>
+              <div class="F_1 flexCell_v">
+                <img src="images/top2.png" class="productImage"/>
+              <div class="H_20"></div>
+              <button class="active B_i"><i class="fas fa-check"></i>&nbsp;&nbsp;10k</button>
+              <div class="H_50"></div>
+              </div>
+            </div>
+            <div class="F_1 collapse FR ">
+              <div class="F_1 flexCell_v">
+                <img src="images/top3.png" class="productImage"/>
+              <div class="H_20"></div>
+              <button class="active B_i"><i class="fas fa-check"></i>&nbsp;&nbsp;Half Marathon</button>
+              <div class="H_50"></div>
+              </div>
+              <div class="F_1 flexCell_v">
+                <img src="images/top4.png" class="productImage"/>
+              <div class="H_20"></div>
+              <button class="active disable B_i"><i class="fas fa-lock"></i>&nbsp; Marathon</button>
+              <div class="H_50"></div>
+              </div>
+            </div>
+          </div>
+          <!--Product Block 1-->
+
+          <!--Product Block 2-->
+
+          <div class="h3 FR AI_C JC_C M_L_20 M_R_20 M_B_10">
+            <div class="F_10 ">What's your next adventure?</div>
+          </div>      
+          <div class="BI_v H_10 M_L_20 M_R_20"></div>
+          <div class="H_30"></div>
+          <div class="FR">
+            <div class="F_1 collapse FR ">
+              <div class="F_1 flexCell_v">
+                <img src="https://cdn.shopify.com/s/files/1/1368/7687/products/KickBlanks14_480x480.jpg?v=1530851903" class="productImage"/>
+              <div class="H_20"></div>
+              <button class="active B_i"> Ultra</button>
+              <div class="H_50"></div>
+
+              </div>
+              <div class="F_1 flexCell_v">
+                <img src="https://cdn.shopify.com/s/files/1/1368/7687/products/KickBlanks14_480x480.jpg?v=1530851903" class="productImage"/>
+              <div class="H_20"></div>
+              <button class="active B_i"> Explorer</button>
+              <div class="H_50"></div>
+
+              </div>
+            </div>
+            <div class="F_1 collapse FR ">
+              <div class="F_1 flexCell_v">
+                <img src="https://cdn.shopify.com/s/files/1/1368/7687/products/KickBlanks14_480x480.jpg?v=1530851903" class="productImage"/>
+              <div class="H_20"></div>
+              <button class="active B_i"> Climber</button>
+              <div class="H_50"></div>
+              </div>
+              <div class="F_1 flexCell_v">
+                <img src="https://cdn.shopify.com/s/files/1/1368/7687/products/KickBlanks14_480x480.jpg?v=1530851903" class="productImage"/>
+              <div class="H_20"></div>
+              <button class="active B_i"> Traveller</button>
+              <div class="H_50"></div>
+
+              </div>
+            </div>
+          </div>
+          <!--Product Block 2-->
+
+          <!--Product Block 3-->
+
+          <div class="h3 FR AI_C JC_C M_L_20 M_R_20 M_B_10">
+            <div class="F_10">How far will you go this month?</div>
+          </div>      
+          <div class="BI_i H_10 M_L_20 M_R_20"></div>
+          <div class="H_30"></div>
+
+          <div class="FR">
+            <div class="F_1 collapse FR ">
+              <div class="F_1 flexCell_v">
+                <img src="https://cdn.shopify.com/s/files/1/1368/7687/products/KickBlanks14_480x480.jpg?v=1530851903" class="productImage"/>
+              <div class="H_20"></div>
+              <button class="active B_i"> 50k</button>
+              <div class="H_50"></div>
+
+              </div>
+              <div class="F_1 flexCell_v">
+                <img src="https://cdn.shopify.com/s/files/1/1368/7687/products/KickBlanks14_480x480.jpg?v=1530851903" class="productImage"/>
+              <div class="H_20"></div>
+              <button class="active B_i"> 100k</button>
+              <div class="H_50"></div>
+
+              </div>
+            </div>
+            <div class="F_1 collapse FR ">
+              <div class="F_1 flexCell_v">
+                <img src="https://cdn.shopify.com/s/files/1/1368/7687/products/KickBlanks14_480x480.jpg?v=1530851903" class="productImage"/>
+              <div class="H_20"></div>
+              <button class="active B_i"> 150k</button>
+              <div class="H_50"></div>
+              </div>
+              <div class="F_1 flexCell_v">
+                <img src="https://cdn.shopify.com/s/files/1/1368/7687/products/KickBlanks14_480x480.jpg?v=1530851903" class="productImage"/>
+              <div class="H_20"></div>
+              <button class="active B_i"> 200k</button>
+              <div class="H_50"></div>
+
+              </div>
+            </div>
+          </div>
+          <!--Product Block 3-->
         </div>
-        <div class="BI_iv H_10 M_L_20 M_R_20"></div>
-        <div class="H_30"></div>
-        <div class="FR">
-          <div class="F_1 collapse FR ">
-            <div class="F_1 flexCell_v">
-              <img src="images/top1.png" class="productImage"/>
-            <div class="H_20"></div>
-            <button class="active B_i"><i class="fas fa-check"></i>&nbsp;&nbsp;5k</button>
-            <div class="H_50"></div>
-            </div>
-            <div class="F_1 flexCell_v">
-              <img src="images/top2.png" class="productImage"/>
-            <div class="H_20"></div>
-            <button class="active B_i"><i class="fas fa-check"></i>&nbsp;&nbsp;10k</button>
-            <div class="H_50"></div>
-            </div>
-          </div>
-          <div class="F_1 collapse FR ">
-            <div class="F_1 flexCell_v">
-              <img src="images/top3.png" class="productImage"/>
-            <div class="H_20"></div>
-            <button class="active B_i"><i class="fas fa-check"></i>&nbsp;&nbsp;Half Marathon</button>
-            <div class="H_50"></div>
-            </div>
-            <div class="F_1 flexCell_v">
-              <img src="images/top4.png" class="productImage"/>
-            <div class="H_20"></div>
-            <button class="active disable B_i"><i class="fas fa-lock"></i>&nbsp; Marathon</button>
-            <div class="H_50"></div>
-
-            </div>
-          </div>
-        </div>
-        <!--Product Block 1-->
-
-        <!--Product Block 2-->
-
-        <div class="h3 FR AI_C JC_C M_L_20 M_R_20 M_B_10">
-          <div class="F_10 ">What's your next adventure?</div>
-        </div>      
-        <div class="BI_v H_10 M_L_20 M_R_20"></div>
-        <div class="H_30"></div>
-        <div class="FR">
-          <div class="F_1 collapse FR ">
-            <div class="F_1 flexCell_v">
-              <img src="https://cdn.shopify.com/s/files/1/1368/7687/products/KickBlanks14_480x480.jpg?v=1530851903" class="productImage"/>
-            <div class="H_20"></div>
-            <button class="active B_i"> Ultra</button>
-            <div class="H_50"></div>
-
-            </div>
-            <div class="F_1 flexCell_v">
-              <img src="https://cdn.shopify.com/s/files/1/1368/7687/products/KickBlanks14_480x480.jpg?v=1530851903" class="productImage"/>
-            <div class="H_20"></div>
-            <button class="active B_i"> Explorer</button>
-            <div class="H_50"></div>
-
-            </div>
-          </div>
-          <div class="F_1 collapse FR ">
-            <div class="F_1 flexCell_v">
-              <img src="https://cdn.shopify.com/s/files/1/1368/7687/products/KickBlanks14_480x480.jpg?v=1530851903" class="productImage"/>
-            <div class="H_20"></div>
-            <button class="active B_i"> Climber</button>
-            <div class="H_50"></div>
-            </div>
-            <div class="F_1 flexCell_v">
-              <img src="https://cdn.shopify.com/s/files/1/1368/7687/products/KickBlanks14_480x480.jpg?v=1530851903" class="productImage"/>
-            <div class="H_20"></div>
-            <button class="active B_i"> Traveller</button>
-            <div class="H_50"></div>
-
-            </div>
-          </div>
-        </div>
-        <!--Product Block 2-->
-
-        <!--Product Block 3-->
-
-        <div class="h3 FR AI_C JC_C M_L_20 M_R_20 M_B_10">
-          <div class="F_10">How far will you go this month?</div>
-        </div>      
-        <div class="BI_i H_10 M_L_20 M_R_20"></div>
-        <div class="H_30"></div>
-
-        <div class="FR">
-          <div class="F_1 collapse FR ">
-            <div class="F_1 flexCell_v">
-              <img src="https://cdn.shopify.com/s/files/1/1368/7687/products/KickBlanks14_480x480.jpg?v=1530851903" class="productImage"/>
-            <div class="H_20"></div>
-            <button class="active B_i"> 50k</button>
-            <div class="H_50"></div>
-
-            </div>
-            <div class="F_1 flexCell_v">
-              <img src="https://cdn.shopify.com/s/files/1/1368/7687/products/KickBlanks14_480x480.jpg?v=1530851903" class="productImage"/>
-            <div class="H_20"></div>
-            <button class="active B_i"> 100k</button>
-            <div class="H_50"></div>
-
-            </div>
-          </div>
-          <div class="F_1 collapse FR ">
-            <div class="F_1 flexCell_v">
-              <img src="https://cdn.shopify.com/s/files/1/1368/7687/products/KickBlanks14_480x480.jpg?v=1530851903" class="productImage"/>
-            <div class="H_20"></div>
-            <button class="active B_i"> 150k</button>
-            <div class="H_50"></div>
-            </div>
-            <div class="F_1 flexCell_v">
-              <img src="https://cdn.shopify.com/s/files/1/1368/7687/products/KickBlanks14_480x480.jpg?v=1530851903" class="productImage"/>
-            <div class="H_20"></div>
-            <button class="active B_i"> 200k</button>
-            <div class="H_50"></div>
-
-            </div>
-          </div>
-        </div>
-        <!--Product Block 3-->
       </div>
     </div>
   </div>
@@ -187,3 +237,12 @@
 
 <script src="https://npmcdn.com/parse@1.11.1/dist/parse.js"></script>
 <script src="JS/main.js"></script>
+
+
+<script>
+
+function flip() {
+
+
+}
+</script>

@@ -84,7 +84,7 @@ font-weight: 600;
 
 .B_i{background: linear-gradient(to left, #136EFB, #5858ff); color:white;}
 .B_ii{background: linear-gradient(to left, #136EFB, #0000FF); color:white;}
-.B_iii{background:;}
+.B_iii{background:white; color:#413f42;}
 .B_iv{background:;}
 .B_v{background:;}
 
@@ -188,17 +188,30 @@ font-weight: 600;
 
 }
 
-
 #settingsExpand{
     display:none;
 }
+
+.productContainer{
+    overflow: hidden;
+    filter: grayscale(90%);
+}
+
+.fade{background-image : linear-gradient(to top, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)); }
+.behind{z-index:-1;}
+
+
+#connect{display: flex}
+#connected{display: none}
+#unlockable{display:none;}
+#demo{pointer-events:none; max-height: 200px}
 
 /* Hardcoded ----------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------*/
 
 /* Flex ---------------------------------------------------*/
 
-.FC{display: flex; flex-direction:column; }
+.FC{display: flex; flex-direction:column; height:100%;}
 .FR{display: flex; flex-direction:row; width:100%;}
 
 /*Aligning content within a single flex-cell*/
@@ -292,7 +305,6 @@ font-weight: 600;
 .Ma_A{
 margin:auto;    
 }
-
 
 /* CSS Rules ---------------------------------------------- 
 
