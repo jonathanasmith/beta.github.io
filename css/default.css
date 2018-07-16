@@ -56,7 +56,7 @@ button{
 .h1{
 letter-spacing: 1px;
 font-size:3em; 
-margin:1em;
+margin:0em;
 font-weight: 600;
 }
 
@@ -70,7 +70,7 @@ font-weight: 600;
 .h3{
 letter-spacing: 1px;
 font-size:1.5em; 
-margin:0.5em;
+margin:0em;
 font-weight: 600;
 }
 
@@ -79,6 +79,7 @@ font-weight: 600;
 
 .FoC_i{color: #ffffff;}
 .FoC_ii{color:#6E6E6E;}
+.FoC_iii{color:#308014;}
 
 /* Backgrounds --------------------------------------------------------------------------------*/
 
@@ -205,6 +206,8 @@ font-weight: 600;
 #connected{display: none}
 #unlockable{display:none;}
 #demo{pointer-events:none; max-height: 200px}
+
+#notifications{display:none;}
 
 /* Hardcoded ----------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------*/

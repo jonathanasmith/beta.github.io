@@ -18,11 +18,11 @@
   </header>
   <div class="F_1">
     <div style="max-width:900px;margin:auto">
-      <div class="H_30"></div>
+      <div class="H_50"></div>
 
       <!--Connect Block-->
-      <div class="M_L_50 M_R_50 FC" id="connect" >
-        <div class="F_1 h3 TA_C">👋 We make gear you unlock by running. Connect with Strava below to get started or log back in</div>
+      <div class="M_L_50 M_R_50 FC" id="connect" onclick="flip()">
+        <div class="F_1 h3 TA_C">👋 We make gear you unlock by running. Connect with Strava below to get started (or to log back in)</div>
         <div class="H_20"></div>
         <div class="F_1 TA_C"><img src="images/btn_strava_connectwith_orange@2x.png" class="H_50"/></div>
         <div class="H_20"></div>
@@ -30,22 +30,19 @@
       <!--Connect Block-->
 
       <!--Connect Block-->
-      <div class="M_L_50 M_R_50 FR" id="connected">
-        <div class="F_1 flexCell_v">
-          <img src="https://dgalywyr863hv.cloudfront.net/pictures/athletes/277645/912687/2/medium.jpg" class="H50"/>
+      <div class="FR collapse" id="connected">
+        <div class="F_1 h3 M_L_20 TA_L">
+          <i class="fas fa-check FoC_iii"></i>&nbsp;Account connected
         </div>
-        <div class="F_2">
-          <div class="h3 TA_C"><i class="fas fa-check"></i> Account connected </div>
-          <div class="flexCell_v"><div class="W_150 B_i flexCell_v H_30 BoR_5 p1 active link">Account Settings</div></div>
-          <div id="settingsExpand">
-            <div class="TA_C" style="display:none"><i class="far fa-bell"></i> Notifications are on: we'll send updates when you unlock something new</div>
-            <div class="TA_C"><i class="far fa-bell-slash"></i>&nbsp;&nbsp;Notifications are off: Click to receive an update when you unlock something new</div>
-          </div>
+        <div class="F_1 flexCell_vi" >
+            <div>Unlock notifications on &nbsp; &nbsp; <i class="far fa-bell h3 FoC_iii"></i></div>
+            <div id="notifications"><i class="far fa-bell-slash"></i>&nbsp;&nbsp;Notifications are off: Click to receive an update when you unlock something new</div>
         </div>
+
 
       </div>
       <!--Connect Block-->
-      <div class="H_50" ></div>
+      <div class="H_20" ></div>
       <!--Demo Block-->
 
       <div id="demo" class="FR fade">
@@ -88,6 +85,7 @@
         </div>
       </div>
       <!--Demo Block-->
+      <div class="H_50" ></div>
 
 
       <!--Unlockable Products-->
@@ -242,7 +240,13 @@
 <script>
 
 function flip() {
-
+document.getElementById("connect").style.display = "none";
+document.getElementById("connected").style.display = "flex";
+document.getElementById("demo").style.display = "none";
+document.getElementById("unlockable").style.display = "block";
 
 }
+
+//document.getElementById("blur").classList.add('blur');
+
 </script>
