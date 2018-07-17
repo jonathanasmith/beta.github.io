@@ -52,10 +52,8 @@ footer {
 }
 
 .Bu_ii{
-    min-height:31px;
+    min-height:25px;
     border-radius: 5px;
-    margin-left: 5px;
-    margin-right: 5px;
     color:white;
     border:none;
     font-family: inherit;
@@ -95,14 +93,15 @@ font-weight: 500;
 
 .p1{font-size:0.85em;}
 .p2{font-size:0.75em;}
+.p3{font-size:1.1em;}
 
 .FoC_i{color: #ffffff;}
 .FoC_ii{color:#6E6E6E;}
 .FoC_iii{color:#308014;}
 .FoC_iv{color:#7f0000;}
 
-.LH_22{
-    line-height: 2.2;
+.LH_2{
+    line-height: 2;
 }
 
 /* Backgrounds --------------------------------------------------------------------------------*/
