@@ -239,36 +239,25 @@
 
 <script>
 
-function getCookie(c_name) {
-    if (document.cookie.length > 0) {
-        c_start = document.cookie.indexOf(c_name + "=");
-        if (c_start != -1) {
-            c_start = c_start + c_name.length + 1;
-            c_end = document.cookie.indexOf(";", c_start);
-            if (c_end == -1) c_end = document.cookie.length;
-            return unescape(document.cookie.substring(c_start, c_end));
-        }
-    }
-    return "";
-}
+
 
 var accessTokenCookie = getCookie("accessToken")
 var accessTokenURL = getQueryVariable("accesstoken");
 
-alert("accessTokenCookie: "+accessTokenCookie)
-alert("accessTokenURL: "+accessTokenURL)
 
+if(accessTokenCookie.length>0){
 
-//document.cookie = "accessToken="+accessToken+";max-age=2678400; path=/";
-
-
-
-function flip() {
 document.getElementById("connect").style.display = "none";
-document.getElementById("connected").style.display = "flex";
 document.getElementById("demo").style.display = "none";
+document.getElementById("connected").style.display = "flex";
 document.getElementById("unlockable").style.display = "block";
+}
 
+else if(accessTokenURL.length>0){
+document.getElementById("connect").style.display = "none";
+document.getElementById("demo").style.display = "none";
+document.getElementById("connected").style.display = "flex";
+document.getElementById("unlockable").style.display = "block";
 }
 
 function notificationsOff(){
@@ -280,7 +269,5 @@ function notificationsOn(){
 document.getElementById("notificationsOff").style.display = "none";
 document.getElementById("notifications").style.display = "block";
 }
-
-//document.getElementById("blur").classList.add('blur');
 
 </script>
