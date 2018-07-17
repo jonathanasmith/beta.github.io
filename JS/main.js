@@ -1,7 +1,6 @@
 
 // Initialise Parse
 
-
 Parse.initialize(
   "bxr71QksTuJsPlLRodiehCBmfPtrKIzSsuu2YtId",
   "AMzZx8qW1pw9STOOjf625wkDau1vzddW0svKd7Dq"
@@ -22,21 +21,3 @@ function getQueryVariable(variable)
 }
 
 
-
-
-// Remaining script
-
-/*
-
-Parse.Cloud.run('testFunction', {
-
-    success: function(result) {
-      
-    },
-
-    error: function(error) {
-
-    }
-
-  });
-*/
