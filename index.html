@@ -252,7 +252,7 @@ if(accessTokenCookie.length>0){
 }
 
 else if(accessTokenURL.length>0){
-  document.cookie = "accessToken="+accessTokenCookie+";max-age=2678400; path=/";
+  document.cookie = "accessToken="+accessTokenURL+";max-age=2678400; path=/";
   document.getElementById("connect").style.display = "none";
   document.getElementById("demo").style.display = "none";
   document.getElementById("connected").style.display = "flex";
