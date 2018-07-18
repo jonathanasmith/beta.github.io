@@ -100,9 +100,9 @@ font-weight: 500;
 .FoC_iii{color:#308014;}
 .FoC_iv{color:#7f0000;}
 
-.LH_2{
-    line-height: 2;
-}
+
+.LH_15{line-height: 1.5;}
+.LH_2{line-height: 2;}
 
 /* Backgrounds --------------------------------------------------------------------------------*/
 
