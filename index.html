@@ -43,11 +43,7 @@
 
       <!--Connect Block-->
       <div class="flexCell_v" id="connected">
-        <div class="h4 TA_C M_L_50 M_R_50 LH_15">👋 Hi, Jonathan, welcome to Kick.run! Check out your tops and challenges below</div>
-        <!--<div class="F_1 flexCell_vi h4">
-          <div id="notifications" onclick="notificationsOff()"><i class="far fa-bell FoC_iii"></i>&nbsp; &nbsp;Unlock notifications are on</div>
-          <div id="notificationsOff" onclick="notificationsOn()"><i class="far fa-bell-slash FoC_iv"></i>&nbsp; &nbsp;Unlock notifications are off</div>
-        </div>-->
+        <div class="h3 TA_C M_L_50 M_R_50 LH_15">👋 Hi, <span id="firstName"></span>, welcome to Kick.run! Check out your tops and challenges below</div>
       </div>
       <!--Connect Block-->
       <!--Demo Block-->
@@ -129,7 +125,7 @@
         <div class="h3 FR AI_C JC_C M_L_20 M_R_20 M_B_10">
           <div class="F_10 ">What's your next adventure?</div>
         </div>      
-        <div class="BI_vi H_10 M_L_20 M_R_20"></div>
+        <div class="BI_iii H_10 M_L_20 M_R_20"></div>
         <div class="H_30"></div>
         <div class="FR">
           <div class="F_1 collapse FR ">
@@ -212,9 +208,26 @@
         <!--Unlock Products-->
 
         <div class="H_50"></div>
-        <div class="BI_iv H_10 M_L_20 M_R_20"></div>
+        <div class="BI_iii H_10 M_L_20 M_R_20"></div>
         <div class="H_20"></div>
-        <div class="p3 M_L_50 M_R_50 LH_2"><span class="FW_600">Account Settings:</span> Your account is connected <button class="Bu_ii BS B_iv" onclick="disconnect()"><i class="fas fa-unlink"></i>&nbsp;&nbsp;Disconnect</button> Unlock notifications are on <button class="Bu_ii BS B_i"><i class="fas fa-bell-slash"></i>&nbsp;&nbsp;Turn off</button> You are not receiving updates and offers from Kick.run <button class="Bu_ii BS B_i"><i class="fas fa-bullhorn"></i>&nbsp;&nbsp;Change preferences</button> Any other queries? Just <button class="Bu_ii BS B_i"><i class="fas fa-envelope"></i>&nbsp;&nbsp;Get in touch</button></div>
+        <div class="p3 M_L_20 M_R_20 LH_2">
+
+          <span class="FW_600">Account Settings:</span> 
+
+          Your account is connected <button class="active Bu_ii BS B_iv" onclick="disconnect()"><i class="fas fa-unlink"></i>&nbsp;&nbsp;Disconnect</button> 
+
+          <span id="notifications1" style="display:none">Unlock notifications are on <button class="active Bu_ii BS B_i" onclick="notificationsOff()"><i class="fas fa-bell-slash"></i>&nbsp;&nbsp;Turn off</button></span>
+
+          <span id="notifications2" style="display:none">Unlock notifications are off <button class="active Bu_ii BS B_i" onclick="notificationsOn()"><i class="fas fa-bell"></i>&nbsp;&nbsp;Turn on</button></span>
+
+          <span id="preferences1" style="display:none">You are receiving updates and offers from Kick.run <button class="active Bu_ii BS B_i" onclick="preferencesOff()"><i class="fas fa-bullhorn"></i>&nbsp;&nbsp;Stop updates</button></span>
+
+          <span id="preferences2" style="display:none">You are not receiving updates and offers from Kick.run <button class="active Bu_ii BS B_i" onclick="preferencesOn()"><i class="fas fa-bullhorn"></i>&nbsp;&nbsp;Receive updates</button></span>
+
+          Any other queries? Just <button class="active Bu_ii BS B_i" onclick="location.href='mailto:hello@kick.run';"><i class="fas fa-envelope"></i>&nbsp;&nbsp;Get in touch</button>
+
+        </div>
+
         <div class="H_50"></div>
       </div>
     </div>
@@ -241,32 +254,68 @@
 
 <script>
 
-var accessTokenCookie = getCookie("accessToken")
+
+//document.cookie = "accessToken="+accessTokenURL+";max-age=2678400; path=/";
+//var accessTokenCookie = getCookie("accessToken")
+
+Parse.initialize(
+  "bxr71QksTuJsPlLRodiehCBmfPtrKIzSsuu2YtId",
+  "AMzZx8qW1pw9STOOjf625wkDau1vzddW0svKd7Dq"
+);
+Parse.serverURL = 'https://parseapi.back4app.com';
+
 var accessTokenURL = getQueryVariable("accesstoken");
 
-if(accessTokenCookie.length>0){
-  document.getElementById("connect").style.display = "none";
-  document.getElementById("demo").style.display = "none";
-  document.getElementById("connected").style.display = "flex";
-  document.getElementById("unlockable").style.display = "block";
-}
+Parse.Cloud.run('userLogin', {
+  AccessToken: accessTokenURL 
+}, {
+  success: function(result) {
+    document.getElementById("firstName").innerHTML = result.tokenResponse.athlete.firstname;
+    document.getElementById("connect").style.display = "none";
+    document.getElementById("demo").style.display = "none";
+    document.getElementById("connected").style.display = "flex";
+    document.getElementById("unlockable").style.display = "block";
+    var notifications = result.notifications
+    var updates = result.updates
 
-else if(accessTokenURL.length>0){
-  document.cookie = "accessToken="+accessTokenURL+";max-age=2678400; path=/";
-  document.getElementById("connect").style.display = "none";
-  document.getElementById("demo").style.display = "none";
-  document.getElementById("connected").style.display = "flex";
-  document.getElementById("unlockable").style.display = "block";
+    if (notifications){document.getElementById("notifications1").style.display = "inline";}
+    else{document.getElementById("notifications2").style.display = "inline";}
+
+    if (updates){document.getElementById("preferences1").style.display = "inline";}
+    else{document.getElementById("preferences2").style.display = "inline";}
+
+  },
+  error: function(error){
+    return false
+  }
+});
+
+function notificationsOn(){
+
+updateUser(accessTokenURL,"notifications",true);
+document.getElementById("notifications2").style.display = "none";
+document.getElementById("notifications1").style.display = "inline";
 }
 
 function notificationsOff(){
-  document.getElementById("notifications").style.display = "none";
-  document.getElementById("notificationsOff").style.display = "block";
+
+updateUser(accessTokenURL,"notifications",false);
+  document.getElementById("notifications1").style.display = "none";
+  document.getElementById("notifications2").style.display = "inline";
 }
 
-function notificationsOn(){
-  document.getElementById("notificationsOff").style.display = "none";
-  document.getElementById("notifications").style.display = "block";
+
+function preferencesOn(){
+
+updateUser(accessTokenURL,"updates",true);
+  document.getElementById("preferences2").style.display = "none";
+  document.getElementById("preferences1").style.display = "inline";
+}
+
+function preferencesOff(){
+updateUser(accessTokenURL,"updates",false);
+  document.getElementById("preferences1").style.display = "none";
+  document.getElementById("preferences2").style.display = "inline";
 }
 
 function disconnect(){
@@ -274,9 +323,12 @@ function disconnect(){
   if (confirm("Are you sure? Disconnecting will completely remove your Kick.run achievements to date.")) {
     alert("Remove account process")
   } else {
-    alert("Do nothing process")
+    return false;
   }
-
 }
+
+
+
+
 
 </script>

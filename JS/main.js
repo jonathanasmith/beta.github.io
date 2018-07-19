@@ -1,4 +1,3 @@
-
 // Initialise Parse
 
 Parse.initialize(
@@ -6,8 +5,6 @@ Parse.initialize(
   "AMzZx8qW1pw9STOOjf625wkDau1vzddW0svKd7Dq"
 );
 Parse.serverURL = 'https://parseapi.back4app.com';
-
-// Functions
 
 function getQueryVariable(variable)
 {
@@ -31,4 +28,20 @@ function getCookie(c_name) {
         }
     }
     return "";
+}
+
+function updateUser(x,y,z) {
+
+  Parse.Cloud.run('userUpdate', {
+      AccessToken: x,
+      ObjectName: y,
+      ObjectValue: z
+  }, {
+    success: function(result) {
+    },
+    error: function(error){
+    }
+  });
+
+
 }
