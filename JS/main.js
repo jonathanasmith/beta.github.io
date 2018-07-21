@@ -32,7 +32,7 @@ function getCookie(c_name) {
 
 function updateUser(x,y,z) {
 
-  Parse.Cloud.run('userUpdate', {
+  Parse.Cloud.run('updateUser', {
       AccessToken: x,
       ObjectName: y,
       ObjectValue: z
