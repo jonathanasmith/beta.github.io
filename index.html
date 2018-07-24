@@ -17,17 +17,20 @@
   <link href="css/default.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+
 </head>
 <body>
-  <header class="F_1 FR B_i">
-    <div class="F_1 flexCell_v"></div>
-    <div class="F_1 flexCell_v"><img src="images/logo_white.png" class="H_50"/></div>
-    <div class="F_1 flexCell_vi "></div>
+  <header class=" B_i">
+    <div class="FR" style="height:150px;max-width:900px;margin:auto">
+      <div class="F_1 flexCell_v"></div>
+      <div class="F_1 flexCell_v"><img src="images/logo_white.png" class="H_50"/></div>
+      <div class="F_1 h3 flexCell_v" onclick="launchCart()"><i class="fas fa-shopping-cart"></i></div>
+    </div>
   </header>
 
   <div class="F_1 F_C" id="orderFlow" >
     <div style="max-width:600px;margin:auto">
-      
+
 
       <div id="buyOne" class="hide">
         <div class="FR M_A JC_C H_75 AI_C" style="max-width:600px;,">
@@ -39,22 +42,47 @@
           <div class="F_025"></div>
         </div>
         <div class="h3 TA_C M_L_10 M_R_10" >
-          T-shirt or Technical?
+          Mens or womens
         </div>
-        <div class="H_50"></div>
+        <div class="H_20"></div>
         <div class="TA_C h4 M_L_10 M_R_10">
-          T-shirt and tehcnical top blurb. Probably a few sendences, maybe three maybe four. This is the last sentence.
+          Some blurb about mens or womens fits and sizes being different
         </div>
         <div class="H_50"></div>
-        <div class="FR ">
-          <div class="F_1 flexCell_vi M_R_20">
-            <img src="images/top3.png" class="productImage"/>
+        <div class="FR">
+          <div class="F_1 flexCell_vi M_R_20 ">
+            <div class="productBackground flexCell_v FoC_i h2 FW_500 active" style="background-image:url('images/top2.png')">
+              <div>Mens</div>
+            </div>
             <div class="H_20"></div>
           </div>
           <div class="F_1 flexCell_iv M_L_20">
-            <img src="images/top4.png" class="productImage"/>
+            <div class="productBackground flexCell_v FoC_i h2 FW_500 active" style="background-image:url('images/top1.png')">
+              <div>Womens</div>
+            </div>
             <div class="H_20"></div>
           </div>
+        </div>
+      </div>
+
+      <div id="cart" class="hide">
+        <div class="H_40"></div>
+        <div class="h1 TA_C M_L_10 M_R_10" >
+          <i class="fas fa-shopping-cart"></i> Cart 
+        </div>
+        <div class="H_20"></div>
+        <div class="BI_iv H_10 M_L_20 M_R_20"></div>
+        <div class="H_30"></div>
+        <span id="cartContents"></span> 
+        <div class="H_20"></div>
+        <div class="flexCell_v hide" id="fullCart">
+          <button class="Bu_i active B_i">Checkout</button>
+          <div class="H_20"></div>
+          <div class="active" onclick="exitCart()">Continue shopping</div>
+        </div>
+        <div class="flexCell_v hide" id="emptyCart">
+
+          <div class="active Bu_ii BS B_i flexCell_v P_L_10 P_R_10"  onclick="exitCart()">Continue shopping</div>
         </div>
       </div>
 
@@ -68,26 +96,30 @@
           <div class="F_025"></div>
         </div>
         <div class="h3 TA_C M_L_10 M_R_10" >
-          Mens or womens
+          T-shirt or Technical?
         </div>
-        <div class="H_50"></div>
+        <div class="H_20"></div>
         <div class="TA_C h4 M_L_10 M_R_10">
-          Some blurb about mens or womens fits and sizes being different
+          T-shirt and tehcnical top blurb. Probably a few sendences, maybe three maybe four. This is the last sentence.
         </div>
         <div class="H_50"></div>
-        <div class="FR ">
-          <div class="F_1 flexCell_vi M_R_20">
-            <img src="images/top3.png" class="productImage"/>
+        <div class="FR">
+          <div class="F_1 flexCell_vi M_R_20 ">
+            <div class="productBackground flexCell_v FoC_i h2 FW_500 active" style="background-image:url('images/top2.png')">
+              <div>T-shirt</div>
+            </div>
             <div class="H_20"></div>
           </div>
           <div class="F_1 flexCell_iv M_L_20">
-            <img src="images/top4.png" class="productImage"/>
+            <div class="productBackground flexCell_v FoC_i h2 FW_500 active" style="background-image:url('images/top1.png')">
+              <div>Technical</div>
+            </div>
             <div class="H_20"></div>
           </div>
         </div>
       </div>
 
-      <div id="buyThree" >
+      <div id="buyThree" class="hide">
         <div class="FR M_A JC_C H_75 AI_C" style="max-width:600px;,">
           <div class="F_025"></div>
           <div class="F_1 B_i progress" id="progressOne"></div>
@@ -97,11 +129,11 @@
           <div class="F_025"></div>
         </div>
         <div class="h3 TA_C" >
-          What's your size?
+          Choose your size
         </div>
         <div class="H_30"></div>
-        <div class="FR ">
-
+        <div class="FR flexCell_v">
+          <div id='product-component-af794437882'></div>        
         </div>
       </div>
 
@@ -109,7 +141,7 @@
     </div>
   </div>
   
-  <div class="F_1" id="mainContent" style="display:none">
+  <div class="F_1" id="mainContent">
     <div style="max-width:900px;margin:auto">
       <div class="H_50"></div>
       <!--Connect Block-->
@@ -118,7 +150,7 @@
         <div class="H_20"></div>
         <div class="F_1 TA_C">
           <a href="https://www.strava.com/oauth/authorize?client_id=7316&response_type=code&redirect_uri=https://api.kick.run/beta&approval_prompt=force&scope=view_private,write">
-            <img src="images/btn_strava_connectwith_orange@2x.png" class="link H_50"/>
+            <img src="images/btn_strava_connectwith_orange@2x.png" class="active H_50"/>
           </a>
           <div class="H_20"></div>
         </div>
@@ -336,10 +368,9 @@
 
 <script src="https://npmcdn.com/parse@1.11.1/dist/parse.js"></script>
 <script src="JS/main.js"></script>
-
+<script src="http://sdks.shopifycdn.com/js-buy-sdk/v1/latest/index.umd.min.js"></script>
 
 <script>
-
 
 //document.cookie = "accessToken="+accessTokenURL+";max-age=2678400; path=/";
 //var accessTokenCookie = getCookie("accessToken")
@@ -427,6 +458,55 @@ function disconnect(){
   }
 }
 
+function exitCart(){
+
+  document.getElementById("cart").style.display = "none";
+  document.getElementById("mainContent").style.display = "block";
+
+}
+
+
+function launchCart(){
+
+localStorage.setItem("cart", "");//images/top1.png:Mens 10k T-shirt (S):2:£20,images/top2.png:Mens 5k T-shirt (M):5:£25
+
+var cartString = localStorage.getItem("cart")
+
+if(cartString.length>0){
+
+document.getElementById("mainContent").style.display = "none";
+document.getElementById("cart").style.display = "block";
+document.getElementById("fullCart").style.display = "flex";
+
+
+
+var cartString = localStorage.getItem("cart")
+var cartArray =  cartString.split(',')
+
+var ccart = ""
+
+for (var i in cartArray) {
+  var itemArray = cartArray[i].split(':')
+  ccart = ccart+'<div class="FR h4" ><div class="F_1 flexCell_v"><img src="'+itemArray[0]+'" class="H_50 BoR_5"/></div><div class="F_2  flexCell_v TA_L M_L_10">'+itemArray[1]+'</div><div class="F_1 flexCell_v">'+itemArray[3]+'</div><div class="F_1  flexCell_v"><div><i class="fas fa-minus-circle"></i>&nbsp;'+itemArray[2]+'&nbsp;<i class="fas fa-plus-circle"></i></div></div></div><div class="H_20"></div>'
+}
+
+document.getElementById("cartContents").innerHTML = ccart
+
+}
+
+else{
+
+document.getElementById("cartContents").innerHTML = "<div class='flexCell_v h2'>Your cart is empty</div>"
+
+document.getElementById("mainContent").style.display = "none";
+document.getElementById("cart").style.display = "block";
+document.getElementById("emptyCart").style.display = "flex";
+
+
+}
+
+
+}
 
 
 

@@ -23,6 +23,7 @@ min-height: 100vh;
 overflow: scroll;
 }
 
+
 header{
     max-height:150px;
     min-height:150px;
@@ -48,7 +49,7 @@ footer {
     color:white;
     border:none;
     font-family: inherit;
-    font-size:0.9em;
+    font-size:0.9em ;
     cursor: pointer;
 }
 
@@ -67,7 +68,7 @@ footer {
 
 .h1{
 letter-spacing: 1px;
-font-size:3em; 
+font-size:2.5em; 
 margin:0em;
 font-weight: 600;
 }
@@ -182,12 +183,36 @@ font-weight: 500;
     border-radius: 20px;
 }
 
+.productBackground{
+    height:150px;
+    width: 150px;
+    border-radius: 20px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
 
 @media only screen and (max-width: 1000px) {
 
 .productImage{
     height:130px;
     border-radius: 20px;
+}
+
+.productBackground{
+    height:130px;
+    width: 130px;
+    border-radius: 20px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    
+}
+
+
+body{
+font-size: 0.75em;
 }
 
 }
@@ -199,7 +224,25 @@ font-weight: 500;
     border-radius: 20px;
 }
 
+.productBackground{
+    height:120px;
+    width: 120px;
+    border-radius: 20px;
+    background-image: url("images/top1.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    
 }
+
+body{
+font-size: 0.65em;
+}
+
+}
+
+
+
 
 /* Flex Collapse ---------------------------------------------------*/
 
@@ -316,8 +359,8 @@ font-weight: 500;
 
 .scroll{overflow: scroll;}
 .disable{pointer-events: none; -webkit-filter: grayscale(80%); filter: grayscale(   ); opacity: 0.7;}
-.active:active{box-shadow:inset 0 0 40px gray; }
-.link{cursor: pointer}
+.active:active{box-shadow:inset 0 0 40px gray;}
+.active{cursor: pointer}
 .noStyle{text-decoration: none;color:inherit;}
 .blur{filter: blur(3px);opacity: 0.5;}
 .greyScale{filter: grayscale(0.9); -webkit-filter: grayscale(0.9);}
@@ -352,7 +395,7 @@ margin:auto;
     margin-right:5px;
     border-radius:2px;
     border: 1px solid #136EFB;
-    height:5px;
+    height:3px;
 
 }
 
