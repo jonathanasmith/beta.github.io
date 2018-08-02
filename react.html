@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+  <link rel="manifest" href="favicon/site.webmanifest">
+  <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+
+  <title>Home</title>
+  <link href="css/default.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+
+</head>
+<body>
+  <header class="B_i">
+    <div class="FR" style="height:150px;max-width:900px;margin:auto">
+      <div class="F_1 flexCell_v"></div>
+      <div class="F_1 flexCell_v"><img src="images/logo_white.png" class="H_50"/></div>
+      <div class="F_1 h3 flexCell_v" onclick="launchCart()"><i class="fas fa-shopping-cart"></i></div>
+    </div>
+  </header>
+
+  <!-- END OF ORDER FLOW ******************************************************************************** -->
+
+  
+  <div class="flexCell_v H_100PC">
+    <div id="root">
+    </div>
+  </div>
+
+
+  <footer class="F_1 B_i FR H_75">
+    <div class="footerContainer FR H_75 ">
+      <div class="F_1 flexCell_iv M_L_20">&copy; Runwithkick Limited 2018</div>
+      <div class="F_1 flexCell_v">
+      </div>
+      <div class="F_1 FR AI_C JC_E h2 P_R_20">
+        <a href="https://facebook.com/runwithkick" class="noStyle" target="_blank"><i class="fab fa-facebook-square"></i></a>&nbsp;&nbsp;
+        <a href="https://twitter.com/runwithkick" class="noStyle" target="_blank"><i class="fab fa-twitter-square"></i></a>&nbsp;&nbsp;
+        <a href="https://instagram.com/runwithkick" class="noStyle" target="_blank"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+</body>
+</html>
+
+<script type="text/babel">
+
+function formatName(user) {
+  return user.firstName + ' ' + user.lastName;
+}
+
+const user = {
+  firstName: 'Harper',
+  lastName: 'Perez'
+};
+
+const element = (
+  <h1>
+    Hello, Jon
+  </h1>
+);
+
+ReactDOM.render(
+  element,
+  document.getElementById('root')
+);
+
+</script
+
+
