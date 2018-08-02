@@ -1,10 +1,14 @@
 // Initialise Parse
 
-Parse.initialize(
+function startParse(){
+
+  Parse.initialize(
   "bxr71QksTuJsPlLRodiehCBmfPtrKIzSsuu2YtId",
   "AMzZx8qW1pw9STOOjf625wkDau1vzddW0svKd7Dq"
-);
-Parse.serverURL = 'https://parseapi.back4app.com';
+  );
+
+  Parse.serverURL = 'https://parseapi.back4app.com';
+}
 
 function getQueryVariable(variable)
 {
