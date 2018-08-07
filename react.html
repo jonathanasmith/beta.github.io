@@ -29,14 +29,10 @@
   </header>
 
   <!-- END OF ORDER FLOW ******************************************************************************** -->
-  
-  <div class="flexCell_v H_100PC">
-    <div id="root">
-    </div>
-  </div>
 
+  <div id="root"></div>
 
-  <footer class="F_1 B_i FR H_75">
+  <footer class="F_1 B_i FR H_75">  
     <div class="footerContainer FR H_75 ">
       <div class="F_1 flexCell_iv M_L_20">&copy; Runwithkick Limited 2018</div>
       <div class="F_1 flexCell_v">
@@ -56,33 +52,11 @@
 <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
 <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
 <script src="JS/main.js"></script>
-<script src="JS/react.js"></script>
+<script src="JS/react.js" ></script>
 
-<script type="text/babel">
-
-var accessTokenURL = getQueryVariable("accesstoken")
-var accessTokenCookie = getCookie("accesstoken")
+<script>
 
 
-if(accessTokenCookie.length>0){
-
-alert("cookie");
-
-}
-
-else if(accessTokenURL.length>0){
-
-
-alert("URL")
-document.cookie = "accesstoken="+accessTokenURL+";max-age=2678400; path=/"
-
-}
-
-else  {
-
-alert("nothing")
-
-}
 
 
 

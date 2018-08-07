@@ -1,5 +1,6 @@
 // Initialise Parse
 
+
 function startParse(){
 
   Parse.initialize(
@@ -41,14 +42,59 @@ function updateUser(x,y,z) {
       ObjectName: y,
       ObjectValue: z
   }, {
-    success: function(result) {
+    success: function(result) { 
+    
     },
     error: function(error){
+      
     }
   });
 
-
 }
+
+
+
+
+// Settings Functions *********************************************************************
+
+function notificationsOn(){
+
+updateUser(accessTokenURL,"notifications",true);
+document.getElementById("notifications2").style.display = "none";
+document.getElementById("notifications1").style.display = "inline";
+}
+
+function notificationsOff(){
+
+updateUser(accessTokenURL,"notifications",false);
+  document.getElementById("notifications1").style.display = "none";
+  document.getElementById("notifications2").style.display = "inline";
+}
+
+
+function preferencesOn(){
+
+updateUser(accessTokenURL,"updates",true);
+  document.getElementById("preferences2").style.display = "none";
+  document.getElementById("preferences1").style.display = "inline";
+}
+
+function preferencesOff(){
+updateUser(accessTokenURL,"updates",false);
+  document.getElementById("preferences1").style.display = "none";
+  document.getElementById("preferences2").style.display = "inline";
+}
+
+function disconnect(){
+
+  if (confirm("Are you sure? Disconnecting will completely remove your Kick.run achievements to date.")) {
+    alert("Remove account process")
+  } else {
+    return false;
+  }
+}
+
+
 
 
 

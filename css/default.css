@@ -180,7 +180,7 @@ font-weight: 500;
 
 
 .productImage{
-    height:150px;
+    height:130px;
     border-radius: 20px;
 }
 
@@ -271,8 +271,6 @@ font-size: 0.8em;
 .behind{z-index:-1;}
 
 
-#connect{display: flex}
-#connected{display: none}
 #unlockable{display:none;}
 #demo{pointer-events:none; max-height: 250px}
 
@@ -382,12 +380,6 @@ font-size: 0.8em;
 
 .Ma_A{
 margin:auto;    
-}
-
-
-
-#loading{
-    display:none;
 }
 
 
