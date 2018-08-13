@@ -334,6 +334,7 @@ var accessTokenCookie = getCookie("accesstoken")
 
 if(accessTokenCookie.length>0){
 
+alert(123);
 
 
 }
@@ -346,7 +347,7 @@ if(accessTokenURL.length>0){
 
 startParse();
 Parse.Cloud.run('retrieveUser', {
-  AccessToken: accessTokenURL 
+  AccessToken: accessTokenURL
   }, {
   success: function(result) {
     document.getElementById('loading').style.display = "none";
