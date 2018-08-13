@@ -335,6 +335,7 @@ var accessTokenCookie = getCookie("accesstoken")
 if(accessTokenCookie.length>0){
 
 
+
 }
 
 
@@ -343,8 +344,6 @@ if(accessTokenCookie.length>0){
 
 else if(accessTokenURL.length>0){
 
-//document.cookie = "accesstoken="+accessTokenURL+";max-age=2678400; path=/"
-
 startParse();
 Parse.Cloud.run('retrieveUser', {
   AccessToken: accessTokenURL 
@@ -352,6 +351,7 @@ Parse.Cloud.run('retrieveUser', {
   success: function(result) {
     document.getElementById('loading').style.display = "none";
     document.getElementById('connected').style.display = "block";
+    document.cookie = "accesstoken="+accessTokenURL+";max-age=2678400; path=/"
     document.getElementById("firstName").innerHTML = result.tokenResponse.athlete.firstname
     
     var tops = result.tops
@@ -410,18 +410,6 @@ else  {
 }
 
 
-/*
-
-var accessTokenURL = getQueryVariable("accesstoken");
-
-
-if(accessTokenURL.length>0){
-   
-  document.getElementById("loading").style.display = "flex";
-  document.getElementById("connect").style.display = "none";
-  document.getElementById("demo").style.display = "none";
-
-}
 
 
 
@@ -473,7 +461,6 @@ document.getElementById("emptyCart").style.display = "flex";
 }
 
 }
-
 
 
 // Cart Functions *********************************************************************
