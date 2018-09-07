@@ -85,7 +85,7 @@ updateUser(accessTokenURL,"updates",false);
 function disconnect(){
 
   if (confirm("Are you sure? Disconnecting will completely remove your Kick.run achievements to date.")) {
-    function updateUser(accessToken,"activeUser",false) 
+    updateUser(accessToken,"activeUser",false) 
   } else {
     return false;
   }
