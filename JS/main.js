@@ -94,6 +94,8 @@ function disconnect(){
 
 function reconnect(){
 updateUser(accessToken,"activeUser",true)
+document.getElementById("deleteNotice").style.display = "none";
+
 }
 
 
