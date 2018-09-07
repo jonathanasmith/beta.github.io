@@ -329,7 +329,6 @@
 
 var accessTokenURL = getQueryVariable("accesstoken")
 var accessTokenCookie = getCookie("accesstoken")
-alert(accessTokenCookie)
 
 
 // Start spinner
@@ -338,7 +337,7 @@ if(accessTokenCookie.length>0){
 
 startParse();
 Parse.Cloud.run('retrieveUser', {
-  AccessToken: accessTokenURL
+  AccessToken: accessTokenCookie
   }, {
   success: function(result) {
 
@@ -348,7 +347,6 @@ Parse.Cloud.run('retrieveUser', {
 
     document.getElementById('loading').style.display = "none";
     document.getElementById('connected').style.display = "block";
-    document.cookie = "accesstoken="+accessTokenURL+";max-age=2678400; path=/"
     document.getElementById("firstName").innerHTML = result.tokenResponse.athlete.firstname
     
     var tops = result.tops
