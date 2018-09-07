@@ -330,18 +330,10 @@
 var accessTokenURL = getQueryVariable("accesstoken")
 var accessTokenCookie = getCookie("accesstoken")
 
-if(accessTokenCookie.length>0){
-  var accessToken = accessTokenCookie
-}
-
-else if(accessTokenURL.length>0){
-
-  var accessToken = accessTokenURL
-}
 
 // Start spinner
 
-if(accessToken.length>0){
+if(accessTokenCookie.length>0){
 
 startParse();
 Parse.Cloud.run('retrieveUser', {
@@ -403,7 +395,7 @@ Parse.Cloud.run('retrieveUser', {
 
 // ************************ IN PROGRESS
 
-/*
+
 else if(accessTokenURL.length>0){
 
 startParse();
@@ -458,7 +450,7 @@ Parse.Cloud.run('retrieveUser', {
   }
 });
 
-}*/
+}
 
 else  {
   document.getElementById('loading').style.display = "none";
