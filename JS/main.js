@@ -85,7 +85,7 @@ function disconnect(){
 
   if (confirm("Are you sure? Disconnecting will completely remove your Kick.run achievements to date.")) {
     updateUser(accessToken,"activeUser",false) 
-    document.getElementById("deleteNotice").innerHTML = '<div onclick="reconnect()" class="active FR H_50 flexCell_v M_L_20 M_R_20 TA_C B_iv BoR_10_B">Your account has been queued for deletion. <span class="FW_500">Please click here to undo this action.</span></div>'
+    location.reload();
   } else {
     return false;
   }
