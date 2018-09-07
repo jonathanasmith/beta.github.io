@@ -2,7 +2,6 @@
 
 
 function startParse(){
-
   Parse.initialize(
   "bxr71QksTuJsPlLRodiehCBmfPtrKIzSsuu2YtId",
   "AMzZx8qW1pw9STOOjf625wkDau1vzddW0svKd7Dq"
