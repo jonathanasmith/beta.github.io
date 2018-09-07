@@ -92,7 +92,9 @@ function disconnect(){
 }
 
 
-
+function reconnect(){
+updateUser(accessToken,"activeUser",true)
+}
 
 
 
