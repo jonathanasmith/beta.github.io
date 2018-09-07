@@ -51,6 +51,7 @@ footer {
     font-family: inherit;
     font-size:0.9em ;
     cursor: pointer;
+
 }
 
 .Bu_ii{
@@ -60,7 +61,15 @@ footer {
     border:none;
     font-family: inherit;
     font-size:0.9em;
-        cursor: pointer;
+    cursor: pointer;
+}
+
+.Bu_i:focus, .Bu_ii:focus{
+
+    outline-style:none;
+    box-shadow:none;
+    border-color:transparent;
+
 }
 
 

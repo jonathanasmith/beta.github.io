@@ -329,8 +329,10 @@ var accessTokenURL = getQueryVariable("accesstoken")
 var accessTokenCookie = getCookie("accesstoken")
 
 // Start spinner
-/*
+
 if(accessTokenCookie.length>0){
+
+  alert(123)
 
 startParse();
 Parse.Cloud.run('retrieveUser', {
@@ -384,12 +386,15 @@ Parse.Cloud.run('retrieveUser', {
   }
 });
 
-} */
+} 
 
 // ************************ IN PROGRESS
 
 
 if(accessTokenURL.length>0){
+
+
+  alert(456)
 
 startParse();
 Parse.Cloud.run('retrieveUser', {
@@ -403,7 +408,7 @@ Parse.Cloud.run('retrieveUser', {
     document.getElementById("firstName").innerHTML = result.tokenResponse.athlete.firstname
     
     var tops = result.tops
-    
+
     for (i = 0; i < tops.length; i++){
       
       if(tops[i]){
