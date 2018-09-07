@@ -403,8 +403,7 @@ Parse.Cloud.run('retrieveUser', {
     document.getElementById("firstName").innerHTML = result.tokenResponse.athlete.firstname
     
     var tops = result.tops
-
-    alert(tops);
+    
     for (i = 0; i < tops.length; i++){
       
       if(tops[i]){
