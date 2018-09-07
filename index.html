@@ -30,7 +30,7 @@
 <!-- Start of Main content ******************************************************************************** -->
 
   <div class="flexCell_v">
-    <div style="max-width:600px;margin:auto">
+    <div style="max-width:800px;margin:auto">
 
       <!-- Connect ******************************************************************************** -->
 
@@ -76,6 +76,7 @@
       </div>
       <!--Connect Block-->
 
+
       <!--Loading Block-->
       <div id="loading">
         <div class="H_150"></div>
@@ -86,7 +87,6 @@
       <!--Connected Block-->
       <div class="H_50"></div>
       <div id="connected" class="hide">
-      
       <div class="flexCell_v" id="connected">
         <div class="h3 TA_C M_L_50 M_R_50 LH_15">👋 Hi, <span id="firstName"></span>, welcome to Kick.run! Check out your tops and challenges below</div>
       </div>
@@ -332,6 +332,56 @@ var accessTokenCookie = getCookie("accesstoken")
 // Start spinner
 
 if(accessTokenCookie.length>0){
+
+startParse();
+Parse.Cloud.run('retrieveUser', {
+  AccessToken: accessTokenURL
+  }, {
+  success: function(result) {
+    document.getElementById('loading').style.display = "none";
+    document.getElementById('connected').style.display = "block";
+    document.cookie = "accesstoken="+accessTokenURL+";max-age=2678400; path=/"
+    document.getElementById("firstName").innerHTML = result.tokenResponse.athlete.firstname
+    
+    var tops = result.tops
+    for (i = 0; i < tops.length; i++){
+      
+      if(tops[i]){
+          var topNumber = i+1
+          var topNumberString =topNumber.toString();
+          var element = document.getElementById("top"+topNumberString);
+          element.classList.remove("disable");
+          var element1 = document.getElementById("topUnlock"+topNumberString);
+          element1.classList.remove("fa-lock");
+          element1.classList.add("fa-check");
+      }
+    };
+
+    var notifications = result.notifications
+    if (notifications){
+      document.getElementById('notifications1').style.display = "inline";
+    }
+    else{
+      document.getElementById('notifications2').style.display = "inline";
+    }
+
+    var preferences = result.updates
+    if (preferences){
+      document.getElementById('preferences1').style.display = "inline";
+    }
+    else{
+      document.getElementById('preferences2').style.display = "inline";
+    }
+
+  },
+  error: function(error){ 
+
+  document.getElementById('loading').style.display = "none";
+  document.getElementById('connect').style.display = "flex";
+
+
+  }
+});
 
 }
 
