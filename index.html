@@ -329,9 +329,15 @@
 
 var accessTokenURL = getQueryVariable("accesstoken")
 var accessTokenCookie = getCookie("accesstoken")
-var accessToken = accessTokenCookie
-var accessToken = accessTokenURL
 
+if(accessTokenCookie.length>0){
+  var accessToken = accessTokenCookie
+}
+
+else if(accessTokenURL.length>0){
+
+  var accessToken = accessTokenURL
+}
 
 // Start spinner
 
