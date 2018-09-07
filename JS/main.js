@@ -85,7 +85,7 @@ function disconnect(){
 
   if (confirm("Are you sure? Disconnecting will completely remove your Kick.run achievements to date.")) {
     updateUser(accessToken,"activeUser",false) 
-    location.reload();
+    document.getElementById("deleteNotice").style.display = "flex";
   } else {
     return false;
   }
