@@ -330,7 +330,6 @@
 var accessTokenURL = getQueryVariable("accesstoken")
 var accessTokenCookie = getCookie("accesstoken")
 
-
 // Start spinner
 
 if(accessTokenCookie.length>0){
@@ -342,7 +341,7 @@ Parse.Cloud.run('retrieveUser', {
   success: function(result) {
 
     if (result.activeUser == false) {
-      document.getElementById("deleteNotice").innerHTML = '<div class="FR H_50 flexCell_v M_L_20 M_R_20 TA_C B_iv BoR_10_B">Your account has been queued for deletion. Please click here to undo this action.</div>'
+      document.getElementById("deleteNotice").innerHTML = '<div class="FR H_50 flexCell_v M_L_20 M_R_20 TA_C B_iv BoR_10_B">Your account has been queued for deletion. <span class="FW_500" onclick="alert(123)">Please click here to undo this action.</span></div>'
     }
 
     document.getElementById('loading').style.display = "none";
