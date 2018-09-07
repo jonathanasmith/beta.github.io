@@ -157,14 +157,19 @@ font-weight: 500;
     border-width: 0px 0px 2px 0px;
 }
 
-.BoR_5{
-    border-radius: 5px;
-}
+.BoR_5{border-radius: 5px; }
+.BoR_5_T{border-radius: 5px 5px 0 0;}
+.BoR_5_B{border-radius: 0 0 5px 5px;}
+.BoR_5_L{border-radius: 5px 0 0 5px;}
+.BoR_5_R{border-radius: 0 5px 5px 0;}
 
-.BoR_10{
-    border-radius: 10px;
-}
+.BoR_10{border-radius: 10px; }
+.BoR_10_T{border-radius: 10px 10px 0 0;}
+.BoR_10_B{border-radius: 0 0 10px 10px;}
+.BoR_10_L{border-radius: 10px 0 0 10px;}
+.BoR_10_R{border-radius: 0 10px 10px 0;}
 
+    
 .BoR_50PC{
     border-radius: 50%;
 }

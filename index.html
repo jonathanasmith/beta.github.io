@@ -32,7 +32,7 @@
   <div class="flexCell_v">
     <div style="max-width:800px;margin:auto">
 
-      <span id="deleteNotice"></span>
+        <span id="deleteNotice"></span>
 
       <!-- Connect ******************************************************************************** -->
 
@@ -329,7 +329,6 @@
 
 var accessTokenURL = getQueryVariable("accesstoken")
 var accessTokenCookie = getCookie("accesstoken")
-
 var accessToken = accessTokenCookie
 var accessToken = accessTokenURL
 
@@ -344,8 +343,8 @@ Parse.Cloud.run('retrieveUser', {
   }, {
   success: function(result) {
 
-    if (result.activeUser) {
-      document.getElementById("deleteNotice").innerHTML = "your account has been queued for deletion"
+    if (result.activeUser == false) {
+      document.getElementById("deleteNotice").innerHTML = '<div class="FR H_50 flexCell_v TA_C B_iv BoR_10_B">Your account has been queued for deletion. Please click here to undo this action.</div>'
     }
 
     document.getElementById('loading').style.display = "none";
@@ -465,10 +464,8 @@ else  {
 
 
 function exitCart(){
-
   document.getElementById("cart").style.display = "none";
   document.getElementById("mainContent").style.display = "block";
-
 }
 
 function launchCart(){
