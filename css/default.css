@@ -110,10 +110,10 @@ font-weight: 500;
 
 /* Backgrounds --------------------------------------------------------------------------------*/
 
-.B_i{background: linear-gradient(to left, #136EFB, #5858ff); color:white;}
-.B_ii{background: linear-gradient(to left, #136EFB, #0000FF); color:white;}
+.B_i{background: linear-gradient(-150deg, #136EFB, #5858ff); color:white;}
+.B_ii{background: linear-gradient(-150deg, #136EFB, #0000FF); color:white;}
 .B_iii{background:white; color:#413f42;}
-.B_iv{background: linear-gradient(to left, #8C0000, #B20000); color:white;}
+.B_iv{background: linear-gradient(-150deg, #8C0000, #B20000); color:white;}
 .B_v{background:;}
 
 /* Borders --------------------------------------------------------------------------------*/
