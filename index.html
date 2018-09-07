@@ -32,6 +32,8 @@
   <div class="flexCell_v">
     <div style="max-width:800px;margin:auto">
 
+      <span id="deleteNotice"></span>
+
       <!-- Connect ******************************************************************************** -->
 
       <div id="connect" class="flexCell_v hide">
@@ -334,13 +336,17 @@ var accessToken = accessTokenURL
 
 // Start spinner
 
-if(accessTokenCookie.length>0){
+if(accessToken.length>0){
 
 startParse();
 Parse.Cloud.run('retrieveUser', {
   AccessToken: accessTokenURL
   }, {
   success: function(result) {
+
+    if (result.activeUser) {
+      document.getElementById("firstName").innerHTML = "your account has been queued for deletion"
+    }
 
     document.getElementById('loading').style.display = "none";
     document.getElementById('connected').style.display = "block";
@@ -392,7 +398,7 @@ Parse.Cloud.run('retrieveUser', {
 
 // ************************ IN PROGRESS
 
-
+/*
 else if(accessTokenURL.length>0){
 
 startParse();
@@ -447,7 +453,7 @@ Parse.Cloud.run('retrieveUser', {
   }
 });
 
-}
+}*/
 
 else  {
   document.getElementById('loading').style.display = "none";

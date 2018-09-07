@@ -68,7 +68,6 @@ updateUser(accessTokenURL,"notifications",false);
   document.getElementById("notifications2").style.display = "inline";
 }
 
-
 function preferencesOn(){
 
 updateUser(accessTokenURL,"updates",true);
@@ -86,6 +85,7 @@ function disconnect(){
 
   if (confirm("Are you sure? Disconnecting will completely remove your Kick.run achievements to date.")) {
     updateUser(accessToken,"activeUser",false) 
+    location.reload();
   } else {
     return false;
   }
