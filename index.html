@@ -345,7 +345,7 @@ Parse.Cloud.run('retrieveUser', {
   success: function(result) {
 
     if (result.activeUser) {
-      document.getElementById("firstName").innerHTML = "your account has been queued for deletion"
+      document.getElementById("deleteNotice").innerHTML = "your account has been queued for deletion"
     }
 
     document.getElementById('loading').style.display = "none";
