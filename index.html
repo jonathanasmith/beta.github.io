@@ -328,11 +328,13 @@
 var accessTokenURL = getQueryVariable("accesstoken")
 var accessTokenCookie = getCookie("accesstoken")
 
+var accessToken = accessTokenCookie
+var accessToken = accessTokenURL
+
+
 // Start spinner
 
 if(accessTokenCookie.length>0){
-
-  alert(123)
 
 startParse();
 Parse.Cloud.run('retrieveUser', {
@@ -393,8 +395,6 @@ Parse.Cloud.run('retrieveUser', {
 
 else if(accessTokenURL.length>0){
 
-  alert(456)
-
 startParse();
 Parse.Cloud.run('retrieveUser', {
   AccessToken: accessTokenURL
@@ -450,15 +450,9 @@ Parse.Cloud.run('retrieveUser', {
 }
 
 else  {
-
   document.getElementById('loading').style.display = "none";
   document.getElementById('connect').style.display = "flex";
-
 }
-
-
-
-
 
 
 // Cart Functions *********************************************************************
@@ -522,9 +516,7 @@ function productFlow(x){
 }
 
 function storeLocal(x,y){
-
   localStorage.setItem(x, y);
-
 }
 
 function hideShowBlock(x,y){
