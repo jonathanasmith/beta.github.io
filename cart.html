@@ -329,6 +329,8 @@
 var accessTokenURL = getQueryVariable("accesstoken")
 var accessTokenCookie = getCookie("accesstoken")
 
+// Start spinner
+
 if(accessTokenCookie.length>0){
 
 var accessToken = accessTokenCookie
@@ -449,5 +451,82 @@ else  {
   document.getElementById('connect').style.display = "flex";
 }
 
+
+// Cart Functions *********************************************************************
+
+
+function exitCart(){
+  document.getElementById("cart").style.display = "none";
+  document.getElementById("mainContent").style.display = "block";
+}
+
+function launchCart(){
+
+localStorage.setItem("cart", "");//images/top1.png:Mens 10k T-shirt (S):2:£20,images/top2.png:Mens 5k T-shirt (M):5:£25
+
+var cartString = localStorage.getItem("cart")
+
+if(cartString.length>0){
+
+document.getElementById("mainContent").style.display = "none";
+document.getElementById("cart").style.display = "block";
+document.getElementById("fullCart").style.display = "flex";
+
+
+var cartString = localStorage.getItem("cart")
+var cartArray =  cartString.split(',')
+
+var ccart = ""
+
+for (var i in cartArray) {
+  var itemArray = cartArray[i].split(':')
+  ccart = ccart+'<div class="FR h4" ><div class="F_1 flexCell_v"><img src="'+itemArray[0]+'" class="H_50 BoR_5"/></div><div class="F_2  flexCell_v TA_L M_L_10">'+itemArray[1]+'</div><div class="F_1 flexCell_v">'+itemArray[3]+'</div><div class="F_1  flexCell_v"><div><i class="fas fa-minus-circle"></i>&nbsp;'+itemArray[2]+'&nbsp;<i class="fas fa-plus-circle"></i></div></div></div><div class="H_20"></div>'
+}
+
+document.getElementById("cartContents").innerHTML = ccart
+
+}
+
+else{
+
+document.getElementById("cartContents").innerHTML = "<div class='flexCell_v h2'>Your cart is empty</div>"
+document.getElementById("mainContent").style.display = "none";
+document.getElementById("cart").style.display = "block";
+document.getElementById("emptyCart").style.display = "flex";
+
+}
+
+}
+
+
+// Cart Functions *********************************************************************
+
+function productFlow(x){
+
+  document.getElementById("mainContent").style.display = "none";
+  document.getElementById("orderFlow").style.display = "block";
+  document.getElementById("buyOne").style.display = "block";
+  localStorage.setItem("tempCartProduct", x);
+}
+
+function storeLocal(x,y){
+  localStorage.setItem(x, y);
+}
+
+function hideShowBlock(x,y){
+  document.getElementById(x).style.display = "none";
+  document.getElementById(y).style.display = "block";
+
+}
+
+function hideShowFlex(x,y){
+  document.getElementById(x).style.display = "none";
+  document.getElementById(y).style.display = "flex";
+}
+
+function hideShowInline(x,y){
+  document.getElementById(x).style.display = "none";
+  document.getElementById(y).style.display = "inline";
+}
 
 </script>

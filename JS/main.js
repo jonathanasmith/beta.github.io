@@ -56,27 +56,27 @@ function updateUser(x,y,z) {
 
 function notificationsOn(){
 
-updateUser(accessTokenURL,"notifications",true);
+updateUser(accessToken,"notifications",true);
 document.getElementById("notifications2").style.display = "none";
 document.getElementById("notifications1").style.display = "inline";
 }
 
 function notificationsOff(){
 
-updateUser(accessTokenURL,"notifications",false);
+updateUser(accessToken,"notifications",false);
   document.getElementById("notifications1").style.display = "none";
   document.getElementById("notifications2").style.display = "inline";
 }
 
 function preferencesOn(){
 
-updateUser(accessTokenURL,"updates",true);
+updateUser(accessToken,"updates",true);
   document.getElementById("preferences2").style.display = "none";
   document.getElementById("preferences1").style.display = "inline";
 }
 
 function preferencesOff(){
-updateUser(accessTokenURL,"updates",false);
+updateUser(accessToken,"updates",false);
   document.getElementById("preferences1").style.display = "none";
   document.getElementById("preferences2").style.display = "inline";
 }
@@ -90,7 +90,6 @@ function disconnect(){
     return false;
   }
 }
-
 
 function reconnect(){
 updateUser(accessToken,"activeUser",true)
