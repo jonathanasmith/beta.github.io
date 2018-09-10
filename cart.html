@@ -21,290 +21,50 @@
   <header class="B_i">
     <div class="FR" style="height:150px;max-width:900px;margin:auto">
       <div class="F_1 flexCell_v"></div>
-      <div class="F_1 flexCell_v"><img src="images/logo_white.png" class="H_50"/></div>
-      <div id="cartIcon" class="F_1 h3 flexCell_v " onclick="launchCart()"><i class="fas fa-shopping-cart hide"></i></div>
+      <div class="F_2 flexCell_v"><img src="images/logo_white.png" class="H_50"/></div>
+      <div id="cartIcon" class="F_1 h1 flexCell_v "><i class="far fa-times-circle"></i></div>
     </div>
   </header>
 
-<!-- Start of Main content ******************************************************************************** -->
-
-  <div class="flexCell_v">
-    <div style="max-width:800px;margin:auto">
-
-        <span id="deleteNotice"></span>
 
       <!-- Connect ******************************************************************************** -->
 
-      <div id="connect" class="flexCell_v hide">
-        <div class="M_L_50 M_R_50 FC">
-          <div class="H_50"></div>
-          <div class="F_1 h3 TA_C">We make gear you unlock by running. Connect with Strava below to get started (or to log back in)</div>
-          <div class="H_20"></div>
-          <div class="F_1 TA_C">
-            <a href="https://www.strava.com/oauth/authorize?client_id=7316&response_type=code&redirect_uri=https://api.kick.run/beta&approval_prompt=force&scope=view_private,write">
-              <img src="images/btn_strava_connectwith_orange@2x.png" class="active H_50"/>
-            </a>
-            <div class="H_20"></div>
-          </div>
-        </div>
-        <div class="H_20"></div>
-        <div id="demo" class="FR fade">
-          <div id="demoContent" class="F_1 behind productContainer">
-            <div class="BI_iv H_10 M_L_20 M_R_20"></div>
-            <div class="H_30"></div>
-            <div class="FR ">
-              <div class="F_1 collapse FR">
-                <div class="F_1 flexCell_v">
-                  <img src="images/top1.png" class="productImage"/>
-                </div>
-                <div class="H_20"></div>
-                <div class="F_1 flexCell_v">
-                  <img src="images/top2.png" class="productImage"/>
-                </div>
-              </div>
-              <div class="F_1 collapse FR ">
-                <div class="F_1 flexCell_v">
-                  <img src="images/top3.png" class="productImage"/>
-                </div>
-                <div class="H_20"></div>
-                <div class="F_1 flexCell_v">
-                  <img src="images/top4.png" class="productImage"/>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!--Connect Block-->
-
-
-      <!--Loading Block-->
-      <div id="loading">
-        <div class="H_150"></div>
-        <img src="https://cdn.shopify.com/s/files/1/1368/7687/files/Spinner.gif?1196196044267427305" class="H_75">
-      </div>
-      <!--Loading Block-->
-
-      <!--Connected Block-->
-      <div class="H_50"></div>
-      <div id="connected" class="hide">
-      <div class="flexCell_v" id="connected">
-        <div class="h3 TA_C M_L_50 M_R_50 LH_15">👋 Hi, <span id="firstName"></span>, welcome to Kick.run! Check out your tops and challenges below</div>
-      </div>
-
-      <!--Unlockable Products-->
-      
-        <!--Product Block 1-->
         <div class="H_50"></div>
-        <div class="h3 FR AI_C JC_C M_L_20 M_R_20 M_B_10">
-          <div class="F_10 ">Have you run the distance?</div>
-        </div>
-        <div class="BI_iii H_10 M_L_20 M_R_20"></div>
-        <div class="H_30"></div>
-        <div class="FR">
-          <div class="F_1 collapse FR">
-            <div class="F_1 flexCell_v">
-              <img src="images/top1.png" class="productImage"/>
-              <div class="H_20"></div>
-              <button class="Bu_i active disable B_i" value="5k" onclick="productFlow(this.id)" id="top1">
-                <i class="fas fa-lock" id="topUnlock1"></i>&nbsp;&nbsp;5k
-              </button>
-              <div class="H_50"></div>
-            </div>
-            <div class="F_1 flexCell_v">
-              <img src="images/top2.png" class="productImage"/>
-              <div class="H_20"></div>
-              <button class="Bu_i active disable B_i" onclick="productFlow(this.id)" id="top2">
-                <i class="fas fa-lock" id="topUnlock2"></i>&nbsp;&nbsp;10k
-              </button>
-              <div class="H_50"></div>
-            </div>
-          </div>
-          <div class="F_1 collapse FR ">
-            <div class="F_1 flexCell_v">
-              <img src="images/top3.png" class="productImage"/>
-              <div class="H_20"></div>
-              <button class="Bu_i active disable B_i" onclick="productFlow(this.id)" id="top3">
-                <i class="fas fa-lock" id="topUnlock3"></i>&nbsp;&nbsp;Half Marathon
-              </button>
-              <div class="H_50"></div>
-            </div>
-            <div class="F_1 flexCell_v">
-              <img src="images/top4.png" class="productImage"/>
-              <div class="H_20"></div>
-              <button class="Bu_i active disable B_i" onclick="productFlow(this.id)" id="top4">
-                <i class="fas fa-lock" id="topUnlock4"></i>&nbsp;&nbsp;Marathon
-              </button>
-              <div class="H_50"></div>
-            </div>
-          </div>
-        </div>
-        <!--Product Block 1-->
-
-        <!--Product Block 2-->
-
-        <!--Unlock Products-->
-
-        <div class="H_50"></div>
-        <div class="BI_iii H_10 M_L_20 M_R_20"></div>
-        <div class="H_20"></div>
-        <div class="p3 M_L_20 M_R_20 LH_25">
-          <span class="FW_600">Account Settings:</span> 
-          Your account is connected to Strava <button class="active Bu_ii BS B_iv" onclick="disconnect()"><i class="fas fa-unlink"></i>&nbsp;&nbsp;Disconnect</button> 
-
-          <span id="notifications1" style="display:none">Unlock notifications are on <button class="active Bu_ii BS B_i" onclick="notificationsOff()"><i class="fas fa-bell"></i>&nbsp;&nbsp;Turn off</button></span>
-
-          <span id="notifications2" style="display:none">Unlock notifications are off <button class="active Bu_ii BS B_i" onclick="notificationsOn()"><i class="fas fa-bell"></i>&nbsp;&nbsp;Turn on</button></span>
-
-          <span id="preferences1" style="display:none">You are receiving updates and offers from Kick.run <button class="active Bu_ii BS B_i" onclick="preferencesOff()"><i class="fas fa-bullhorn"></i>&nbsp;&nbsp;Stop updates</button></span>
-
-          <span id="preferences2" style="display:none">You are not receiving updates and offers from Kick.run <button class="active Bu_ii BS B_i" onclick="preferencesOn()"><i class="fas fa-bullhorn"></i>&nbsp;&nbsp;Receive updates</button></span>
-
-          Any other queries? Just <button class="active Bu_ii BS B_i" onclick="location.href='mailto:hello@kick.run';"><i class="fas fa-envelope"></i>&nbsp;&nbsp;Get in touch</button>
-
-        </div>
-
-        <div class="H_50"></div>
-      </div>
-
-      <!-- Gender ******************************************************************************** -->
-
-      <div id="buyOne" class="hide">
-        <div class="FR M_A JC_C H_75 AI_C" style="max-width:600px;,">
-          <div class="F_025"></div>
-          <div class="F_1 B_i progress" id="progressOne"></div>
-          <div class="F_1 progress" id="progressTwo"></div>
-          <div class="F_1 progress" id="progressThree"></div>
-          <div class="F_1 progress" id="progressFour"></div>
-          <div class="F_025"></div>
-        </div>
-        <div class="h3 TA_C M_L_20 M_R_20" >
-          Mens or womens?
-        </div>
-        <div class="H_20"></div>
-        <div class="TA_C h4 M_L_20 M_R_20">
-          Would you prefer a mens or womens fit? 
-        </div>
-        <div class="H_50"></div>
-        <div class="FR">
-          <div class="F_1 flexCell_vi M_R_20" onclick="storeLocal('G','M'); hideShowBlock('buyOne','buyTwo')">
-            <div class="productBackground flexCell_v FoC_i h2 FW_500 active" style="background-image:url('images/top1.png')">
-            </div>
-            <div class="H_20"></div>
-            <button class="Bu_i active B_i">Mens</button>
-          </div>
-
-          <div class="F_1 flexCell_iv M_L_20" onclick="storeLocal('G','F'); hideShowBlock('buyOne','buyTwo')">
-            <div class="productBackground flexCell_v FoC_i h2 FW_500 active" onclick="storeLocal('G','F'); hideShowBlock('buyOne','buyTwo')" style="background-image:url('images/top2.png')">
-            </div>
-            <div class="H_20"></div>
-            <button class="Bu_i active B_i">Womens</button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Material ******************************************************************************** -->
-
-      <div id="buyTwo" class="hide">
-        <div class="FR M_A JC_C H_75 AI_C" style="max-width:600px;,">
-          <div class="F_025"></div>
-          <div class="F_1 B_i progress" id="progressOne"></div>
-          <div class="F_1 B_i progress" id="progressTwo"></div>
-          <div class="F_1 progress" id="progressThree"></div>
-          <div class="F_1 progress" id="progressFour"></div>
-          <div class="F_025"></div>
-        </div>
-        <div class="h3 TA_C M_L_20 M_R_20" >  
-          T-shirt or Technical?
-        </div>
-        <div class="H_20"></div>
-        <div class="TA_C h4 M_L_20 M_R_20">
-          Our 100% polyester TriDri technical tops are ideal for working up a bit of a sweat whilst our 100% ringspun cotton is perfect for relaxing with a post race beer!
-        </div>
-        <div class="H_50"></div>
-        <div class="FR">
-          <div class="F_1 flexCell_vi M_R_20" onclick="storeLocal('G','M'); hideShowBlock('buyOne','buyTwo')">
-            <div class="productBackground flexCell_v FoC_i h2 FW_500 active" style="background-image:url('images/top2.png')">
-            </div>
-            <div class="H_20"></div>
-            <button class="Bu_i active B_i">T-shirt</button>
-          </div>
-          <div class="F_1 flexCell_iv M_L_20" onclick="storeLocal('G','F'); hideShowBlock('buyOne','buyTwo')">
-            <div class="productBackground flexCell_v FoC_i h2 FW_500 active" onclick="storeLocal('G','F'); hideShowBlock('buyOne','buyTwo')" style="background-image:url('images/top1.png')">
-            </div>
-            <div class="H_20"></div>
-            <button class="Bu_i active B_i">Womens</button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Size ******************************************************************************** -->
-
-      <div id="buyThree" class="hide">
-        <div class="FR M_A JC_C H_75 AI_C" style="max-width:600px;">
-          <div class="F_025"></div>
-          <div class="F_1 B_i progress" id="progressOne"></div>
-          <div class="F_1 B_i progress" id="progressTwo"></div>
-          <div class="F_1 B_i progress" id="progressThree"></div>
-          <div class="F_1 progress" id="progressFour"></div>
-          <div class="F_025"></div>
-        </div>
-
-        <div class="h3 TA_C M_L_20 M_R_20" >
-          Choose your size
-        </div>
-        <div class="H_20"></div>
-        <div class="flexCell_v"><div>Womens sizes</div></div>
-        <div class="FR M_A JC_C H_75 AI_C" style="max-width:600px;">
-          <div class="F_025"></div>
-          <div class="F_1 size B_i flexCell_v h4 active link" onclick="storeLocal('S','S'); hideShowBlock('buyThree','cart')" id="progressOne">
-            <div>S</div>
-          </div>
-          <div class="F_1 size B_i flexCell_v h4 active link" id="progressOne">
-            <div>M</div>
-          </div>
-          <div class="F_1 size B_i flexCell_v h4 active link" id="progressOne">
-            <div>L</div>
-          </div>
-          <div class="F_1 size B_i flexCell_v h4 active link" id="progressOne">
-            <div>XL</div>
-          </div>
-          <div class="F_1 size B_i flexCell_v h4 active link" id="progressOne">
-            <div>XXL</div>
-          </div>
-          <div class="F_025"></div>
-        </div>
-        <div class="H_30"></div>
-        <div class="FR flexCell_v">
-          <div id='product-component-af794437882'></div>        
-        </div>
-      </div>
-
-      <!-- Cart ******************************************************************************** -->
-
-      <div id="cart" class="hide">
-        <div class="H_40"></div>
         <div class="h1 TA_C M_L_10 M_R_10" >
-          <i class="fas fa-shopping-cart"></i> Cart 
+          <i class="fas fa-shopping-cart"></i>&nbsp;&nbsp;Cart 
+        <div class="H_20"></div>
         </div>
-        <div class="H_20"></div>
-        <div class="BI_iv H_10 M_L_20 M_R_20"></div>
-        <div class="H_30"></div>
-        <span id="cartContents"></span> 
-        <div class="H_20"></div>
-        <div class="flexCell_v hide" id="fullCart">
-          <button class="Bu_i active B_i">Checkout</button>
+        
+        <div class="FC AI_C">
+          <div class="BI_iv H_10 W_400"></div>
+          <div class="H_50"></div>
+          <div class="FR h4 " style="max-width:650px" >
+            <div class="F_1 flexCell_v M_L_20"><img src="https://cdn.shopify.com/s/files/1/1368/7687/products/mara-royal-mens_480x480.png?v=1535690526" class="H_60 BoR_5"/></div>
+            <div class="F_3 flexCell_iv TA_L">5k Tech (Mens, XX Large)</div>
+            <div class="F_1 flexCell_v M_R_20">
+              <div><i class="fas fa-minus-circle"></i>&nbsp;&nbsp;1&nbsp;&nbsp;<i class="fas fa-plus-circle"></i>
+              </div>
+            </div>
+          </div>
+          <div class="H_20"></div>
+          <div class="FR h4 " style="max-width:650px" >
+            <div class="F_1 flexCell_v M_L_20"><img src="https://cdn.shopify.com/s/files/1/1368/7687/products/KickBlanks28_480x480.jpg?v=1535690817" class="H_60 BoR_5"/></div>
+            <div class="F_3 flexCell_v TA_L">Half Marathon Tech (Womens, Smal)</div>
+            <div class="F_1 flexCell_v M_R_20">
+              <div><i class="fas fa-minus-circle"></i>&nbsp;&nbsp;1&nbsp;&nbsp;<i class="fas fa-plus-circle"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="H_50"></div>
+          <button class="Bu_i active B_i" id="cartFull">Checkout</button>
+          <button class="Bu_i disable hide B_i" id="cartEmpty">Cart Empty</button>
           <div class="H_20"></div>
           <div class="active" onclick="exitCart()">Continue shopping</div>
-        </div>
-        <div class="flexCell_v hide" id="emptyCart">
+          <div class="H_20"></div>
 
-          <div class="active Bu_ii BS B_i flexCell_v P_L_10 P_R_10"  onclick="exitCart()">Continue shopping</div>
         </div>
-      </div>
 
-    </div>
-  </div>
 
   <footer class="F_1 B_i FR H_75">
     <div class="footerContainer FR H_75 ">
@@ -326,132 +86,6 @@
 
 <script>
 
-var accessTokenURL = getQueryVariable("accesstoken")
-var accessTokenCookie = getCookie("accesstoken")
-
-// Start spinner
-
-if(accessTokenCookie.length>0){
-
-var accessToken = accessTokenCookie
-
-startParse();
-Parse.Cloud.run('retrieveUser', {
-  AccessToken: accessTokenCookie
-  }, {
-  success: function(result) {
-
-    if (result.activeUser == false) {
-      document.getElementById("deleteNotice").innerHTML = '<div onclick="reconnect()" class="active FR H_50 flexCell_v M_L_10 M_R_10 TA_C B_iv BoR_10_B">Your account has been queued for deletion. <span class="FW_500">Please click here to undo this action.</span></div>'
-    }
-
-    document.getElementById('loading').style.display = "none";
-    document.getElementById('connected').style.display = "block";
-    document.getElementById("firstName").innerHTML = result.tokenResponse.athlete.firstname
-    
-    var tops = result.tops
-    for (i = 0; i < tops.length; i++){
-      
-      if(tops[i]){
-          var topNumber = i+1
-          var topNumberString =topNumber.toString();
-          var element = document.getElementById("top"+topNumberString);
-          element.classList.remove("disable");
-          var element1 = document.getElementById("topUnlock"+topNumberString);
-          element1.classList.remove("fa-lock");
-          element1.classList.add("fa-check");
-      }
-    };
-
-    var notifications = result.notifications
-
-    if (notifications){
-      document.getElementById('notifications1').style.display = "inline";
-    }
-    else{
-      document.getElementById('notifications2').style.display = "inline";
-    }
-
-    var preferences = result.updates
-    if (preferences){
-      document.getElementById('preferences1').style.display = "inline";
-    }
-    else{
-      document.getElementById('preferences2').style.display = "inline";
-    }
-  },
-  error: function(error){ 
-  document.getElementById('loading').style.display = "none";
-  document.getElementById('connect').style.display = "flex";
-  }
-});
-} 
-
-
-else if(accessTokenURL.length>0){
-
-var accessToken = accessTokenURL
-
-startParse();
-Parse.Cloud.run('retrieveUser', {
-  AccessToken: accessTokenURL
-  }, {
-  success: function(result) {
-
-    document.getElementById('loading').style.display = "none";
-    document.getElementById('connected').style.display = "block";
-    document.cookie = "accesstoken="+accessTokenURL+";max-age=2678400; path=/"
-    document.getElementById("firstName").innerHTML = result.tokenResponse.athlete.firstname
-    
-    var tops = result.tops
-
-    for (i = 0; i < tops.length; i++){
-      
-      if(tops[i]){
-          var topNumber = i+1
-          var topNumberString =topNumber.toString();
-          var element = document.getElementById("top"+topNumberString);
-          element.classList.remove("disable");
-          var element1 = document.getElementById("topUnlock"+topNumberString);
-          element1.classList.remove("fa-lock");
-          element1.classList.add("fa-check");
-      }
-    };
-    
-
-    var notifications = result.notifications
-    if (notifications){
-      document.getElementById('notifications1').style.display = "inline";
-    }
-    else{
-      document.getElementById('notifications2').style.display = "inline";
-    }
-
-    var preferences = result.updates
-    if (preferences){
-      document.getElementById('preferences1').style.display = "inline";
-    }
-    else{
-      document.getElementById('preferences2').style.display = "inline";
-    }
-
-  },
-  error: function(error){ 
-
-  document.getElementById('loading').style.display = "none";
-  document.getElementById('connect').style.display = "flex";
-
-  }
-});
-
-}
-
-else  {
-  document.getElementById('loading').style.display = "none";
-  document.getElementById('connect').style.display = "flex";
-}
-
-
 // Cart Functions *********************************************************************
 
 
@@ -468,8 +102,6 @@ var cartString = localStorage.getItem("cart")
 
 if(cartString.length>0){
 
-document.getElementById("mainContent").style.display = "none";
-document.getElementById("cart").style.display = "block";
 document.getElementById("fullCart").style.display = "flex";
 
 
@@ -499,34 +131,5 @@ document.getElementById("emptyCart").style.display = "flex";
 }
 
 
-// Cart Functions *********************************************************************
-
-function productFlow(x){
-
-  document.getElementById("mainContent").style.display = "none";
-  document.getElementById("orderFlow").style.display = "block";
-  document.getElementById("buyOne").style.display = "block";
-  localStorage.setItem("tempCartProduct", x);
-}
-
-function storeLocal(x,y){
-  localStorage.setItem(x, y);
-}
-
-function hideShowBlock(x,y){
-  document.getElementById(x).style.display = "none";
-  document.getElementById(y).style.display = "block";
-
-}
-
-function hideShowFlex(x,y){
-  document.getElementById(x).style.display = "none";
-  document.getElementById(y).style.display = "flex";
-}
-
-function hideShowInline(x,y){
-  document.getElementById(x).style.display = "none";
-  document.getElementById(y).style.display = "inline";
-}
 
 </script>

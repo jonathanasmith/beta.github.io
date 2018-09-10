@@ -51,7 +51,6 @@ function updateUser(x,y,z) {
 }
 
 
-
 // Settings Functions *********************************************************************
 
 function notificationsOn(){
@@ -98,4 +97,33 @@ document.getElementById("deleteNotice").style.display = "none";
 }
 
 
+// Cart Functions *********************************************************************
+
+function productFlow(x){
+
+  document.getElementById("mainContent").style.display = "none";
+  document.getElementById("orderFlow").style.display = "block";
+  document.getElementById("buyOne").style.display = "block";
+  localStorage.setItem("tempCartProduct", x);
+}
+
+function storeLocal(x,y){
+  localStorage.setItem(x, y);
+}
+
+function hideShowBlock(x,y){
+  document.getElementById(x).style.display = "none";
+  document.getElementById(y).style.display = "block";
+
+}
+
+function hideShowFlex(x,y){
+  document.getElementById(x).style.display = "none";
+  document.getElementById(y).style.display = "flex";
+}
+
+function hideShowInline(x,y){
+  document.getElementById(x).style.display = "none";
+  document.getElementById(y).style.display = "inline";
+}
 
