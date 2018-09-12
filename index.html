@@ -330,7 +330,8 @@ var accessTokenCookie = getCookie("accesstoken")
 
 if(accessTokenCookie.length>0){
 
-var accessToken = accessTokenCookie
+storeLocal('accessToken',accessTokenCookie);
+//var accessToken = accessTokenCookie
 
 startParse();
 Parse.Cloud.run('retrieveUser', {
@@ -414,7 +415,9 @@ Parse.Cloud.run('retrieveUser', {
 
 else if(accessTokenURL.length>0){
 
-var accessToken = accessTokenURL
+storeLocal('accessToken',accessTokenURL);
+
+//var accessToken = accessTokenURL
 
 startParse();
 Parse.Cloud.run('retrieveUser', {
