@@ -54,28 +54,29 @@ function updateUser(x,y,z) {
 // Settings Functions *********************************************************************
 
 function notificationsOn(){
-
-updateUser(accessToken,"notifications",true);
-document.getElementById("notifications2").style.display = "none";
-document.getElementById("notifications1").style.display = "inline";
+  var accessToken = localStorage.getItem("accessToken");
+  updateUser(accessToken,"notifications",true);
+  document.getElementById("notifications2").style.display = "none";
+  document.getElementById("notifications1").style.display = "inline";
 }
 
 function notificationsOff(){
-
-updateUser(accessToken,"notifications",false);
+  var accessToken = localStorage.getItem("accessToken");
+  updateUser(accessToken,"notifications",false);
   document.getElementById("notifications1").style.display = "none";
   document.getElementById("notifications2").style.display = "inline";
 }
 
 function preferencesOn(){
-
-updateUser(accessToken,"updates",true);
+  var accessToken = localStorage.getItem("accessToken");
+  updateUser(accessToken,"updates",true);
   document.getElementById("preferences2").style.display = "none";
   document.getElementById("preferences1").style.display = "inline";
 }
 
 function preferencesOff(){
-updateUser(accessToken,"updates",false);
+  var accessToken = localStorage.getItem("accessToken");
+  updateUser(accessToken,"updates",false);
   document.getElementById("preferences1").style.display = "none";
   document.getElementById("preferences2").style.display = "inline";
 }
@@ -84,9 +85,8 @@ function disconnect(){
 
   if (confirm("Are you sure? Disconnecting will completely remove your Kick.run achievements to date.")) {
     var accessToken = localStorage.getItem("accessToken");
-    alert(accessToken);
-    //updateUser(accessToken,"activeUser",false) 
-    //location.reload();
+    updateUser(accessToken,"activeUser",false) 
+    location.reload();
   } else {
     return false;
   }
