@@ -47,12 +47,12 @@
           </div>
         </div>
         <div class="H_20"></div>
-        <div id="demo" class="FR collapse fade">
+        <div id="demo" class="FR fade">
           <div id="demoContent" class="F_1 behind productContainer">
             <div class="BI_iv H_10 M_L_20 M_R_20"></div>
             <div class="H_30"></div>
             <div class="FR ">
-              <div class="F_1  FR">
+              <div class="F_1 collapse FR">
                 <div class="F_1 flexCell_v">
                   <img src="images/top1.png" class="productImage"/>
                 </div>
@@ -61,7 +61,7 @@
                   <img src="images/top2.png" class="productImage"/>
                 </div>
               </div>
-              <div class="F_1 FR ">
+              <div class="F_1 collapse FR ">
                 <div class="F_1 flexCell_v">
                   <img src="images/top3.png" class="productImage"/>
                 </div>
@@ -81,7 +81,11 @@
       <div id="loading">
         <div class="H_150"></div>
         <img src="https://cdn.shopify.com/s/files/1/1368/7687/files/Spinner.gif?1196196044267427305" class="H_75">
+        <div class="H20"></div>
+        <div id="settingUp" class="h3">Getting set up...</div>
+        <div id="activityHistory" class="h3">Looking at your past activities...</div>
       </div>
+
       <!--Loading Block-->
 
       <!--Connected Block-->
@@ -91,8 +95,16 @@
         <div class="h3 TA_C M_L_50 M_R_50 LH_15">👋 Hi, <span id="firstName"></span>, welcome to Kick.run! Check out your tops and challenges below</div>
       </div>
 
+            <!--Activies Block-->
+      <div id="activityHistory" style="display:none">
+        <div class="H_150"></div>
+        <img src="https://cdn.shopify.com/s/files/1/1368/7687/files/Spinner.gif?1196196044267427305" class="H_75">
+        <div class="H20"></div>
+        <div id="activityHistory" class="h3">Looking at your past activities...</div>
+      </div>
+
       <!--Unlockable Products-->
-      
+      <div id="connectedProducts" style="display:none">
         <!--Product Block 1-->
         <div class="H_50"></div>
         <div class="h3 FR AI_C JC_C M_L_20 M_R_20 M_B_10">
@@ -138,32 +150,33 @@
             </div>
           </div>
         </div>
+      </div>
         <!--Product Block 1-->
 
         <!--Product Block 2-->
 
         <!--Unlock Products-->
 
-        <div class="H_50"></div>
-        <div class="BI_iii H_10 M_L_20 M_R_20"></div>
-        <div class="H_20"></div>
-        <div class="p3 M_L_20 M_R_20 LH_25">
-          <span class="FW_600">Account Settings:</span> 
-          Your account is connected to Strava <button class="active Bu_ii BS B_iv" onclick="disconnect()"><i class="fas fa-unlink"></i>&nbsp;&nbsp;Disconnect</button> 
+      <div class="H_50"></div>
+      <div class="BI_iii H_10 M_L_20 M_R_20"></div>
+      <div class="H_20"></div>
+      <div class="p3 M_L_20 M_R_20 LH_25">
+        <span class="FW_600">Account Settings:</span> 
+        Your account is connected to Strava <button class="active Bu_ii BS B_iv" onclick="disconnect()"><i class="fas fa-unlink"></i>&nbsp;&nbsp;Disconnect</button> 
 
-          <span id="notifications1" style="display:none">Unlock notifications are on <button class="active Bu_ii BS B_i" onclick="notificationsOff()"><i class="fas fa-bell"></i>&nbsp;&nbsp;Turn off</button></span>
+        <span id="notifications1" style="display:none">Unlock notifications are on <button class="active Bu_ii BS B_i" onclick="notificationsOff()"><i class="fas fa-bell"></i>&nbsp;&nbsp;Turn off</button></span>
 
-          <span id="notifications2" style="display:none">Unlock notifications are off <button class="active Bu_ii BS B_i" onclick="notificationsOn()"><i class="fas fa-bell"></i>&nbsp;&nbsp;Turn on</button></span>
+        <span id="notifications2" style="display:none">Unlock notifications are off <button class="active Bu_ii BS B_i" onclick="notificationsOn()"><i class="fas fa-bell"></i>&nbsp;&nbsp;Turn on</button></span>
 
-          <span id="preferences1" style="display:none">You are receiving updates and offers from Kick.run <button class="active Bu_ii BS B_i" onclick="preferencesOff()"><i class="fas fa-bullhorn"></i>&nbsp;&nbsp;Stop updates</button></span>
+        <span id="preferences1" style="display:none">You are receiving updates and offers from Kick.run <button class="active Bu_ii BS B_i" onclick="preferencesOff()"><i class="fas fa-bullhorn"></i>&nbsp;&nbsp;Stop updates</button></span>
 
-          <span id="preferences2" style="display:none">You are not receiving updates and offers from Kick.run <button class="active Bu_ii BS B_i" onclick="preferencesOn()"><i class="fas fa-bullhorn"></i>&nbsp;&nbsp;Receive updates</button></span>
+        <span id="preferences2" style="display:none">You are not receiving updates and offers from Kick.run <button class="active Bu_ii BS B_i" onclick="preferencesOn()"><i class="fas fa-bullhorn"></i>&nbsp;&nbsp;Receive updates</button></span>
 
-          Any other queries? Just <button class="active Bu_ii BS B_i" onclick="location.href='mailto:hello@kick.run';"><i class="fas fa-envelope"></i>&nbsp;&nbsp;Get in touch</button>
+        Any other queries? Just <button class="active Bu_ii BS B_i" onclick="location.href='mailto:hello@kick.run';"><i class="fas fa-envelope"></i>&nbsp;&nbsp;Get in touch</button>
 
-        </div>
+      </div>
 
-        <div class="H_50"></div>
+      <div class="H_50"></div>
       </div>
 
       <!-- Gender ******************************************************************************** -->
@@ -343,44 +356,41 @@ Parse.Cloud.run('retrieveUser', {
       document.getElementById("deleteNotice").innerHTML = '<div onclick="reconnect()" class="active FR H_50 flexCell_v TA_C B_iv BoR_10_B">Your account has been queued for deletion. <span class="FW_500">Please click here to undo this action.</span></div>'
     }
 
-    document.getElementById('loading').style.display = "none";
-    document.getElementById('connected').style.display = "block";
+    //document.getElementById('loading').style.display = "none";
     document.getElementById("firstName").innerHTML = result.tokenResponse.athlete.firstname
 
-    /*
-
+    
     if (result.firstSweep == false){
+
+      document.getElementById('loading').style.display = "none";
+      document.getElementById('connected').style.display = "block";
+      document.getElementById('activityHistory').style.display = "block";
 
       Parse.Cloud.run('StravaTempActivities', {
         Accesstoken: result.username,
       }, {
         success: function(result) {
-
           var distances = [];
-
           for(j = 0; j<4; j++){
-
             var result1 = result[j].data;
-
             for (i = 0; i < result1.length; i++){
               if(result1[i].type == "Run"){
                 var resultsloop = result1[i].distance;
                 distances.push(resultsloop) 
               }
             }
-
           }
           var maxDistance = Math.max(...distances)
-
+          document.getElementById('connectedProducts').style.display = "block";
 
         },
-
         error: function(error) {
         }
       });
 
-    }*/
-    
+    }
+
+      
     var tops = result.tops
     for (i = 0; i < tops.length; i++){
       
