@@ -363,7 +363,7 @@ Parse.Cloud.run('retrieveUser', {
 
       document.getElementById('loading').style.display = "none";
       document.getElementById('connected').style.display = "block";
-      document.getElementById('activityHistory').style.display = "block";
+      document.getElementById('activityHistory').style.display = "flex";
 
       Parse.Cloud.run('StravaTempActivities', {
         Accesstoken: result.username,
@@ -380,6 +380,7 @@ Parse.Cloud.run('retrieveUser', {
             }
           }
           var maxDistance = Math.max(...distances)
+          document.getElementById('activityHistory').style.display = "none";
           document.getElementById('connectedProducts').style.display = "block";
 
         },
