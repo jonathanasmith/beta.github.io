@@ -93,9 +93,9 @@ function disconnect(){
 }
 
 function reconnect(){
-updateUser(accessToken,"activeUser",true)
-document.getElementById("deleteNotice").style.display = "none";
-
+    var accessToken = localStorage.getItem("accessToken");
+    updateUser(accessToken,"activeUser",true)
+    document.getElementById("deleteNotice").style.display = "none";
 }
 
 
