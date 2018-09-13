@@ -347,11 +347,37 @@ Parse.Cloud.run('retrieveUser', {
     document.getElementById('connected').style.display = "block";
     document.getElementById("firstName").innerHTML = result.tokenResponse.athlete.firstname
 
-
     if (result.firstSweep == false){
-      alert("FS False pathway")
-    } 
 
+      Parse.Cloud.run('StravaTempActivities', {
+        Accesstoken: result.username,
+      }, {
+        success: function(result) {
+
+          var distances = [];
+
+          for(j = 0; j<4; j++){
+
+            var result1 = result[j].data;
+
+            for (i = 0; i < result1.length; i++){
+              if(result1[i].type == "Run"){
+                var resultsloop = result1[i].distance;
+                distances.push(resultsloop) 
+              }
+            }
+
+          }
+          alert(Math.max(...distances));
+
+        },
+
+        error: function(error) {
+        }
+      });
+
+    }
+    
     var tops = result.tops
     for (i = 0; i < tops.length; i++){
       
