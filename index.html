@@ -346,7 +346,14 @@ Parse.Cloud.run('retrieveUser', {
     document.getElementById('loading').style.display = "none";
     document.getElementById('connected').style.display = "block";
     document.getElementById("firstName").innerHTML = result.tokenResponse.athlete.firstname
-    
+
+
+    if (result.firstSweep == false){
+      alert("FS False pathway")
+    } 
+
+    else (
+
     var tops = result.tops
     for (i = 0; i < tops.length; i++){
       
@@ -360,6 +367,8 @@ Parse.Cloud.run('retrieveUser', {
           element1.classList.add("fa-check");
       }
     };
+
+    )
 
     var notifications = result.notifications
 
@@ -378,32 +387,7 @@ Parse.Cloud.run('retrieveUser', {
       document.getElementById('preferences2').style.display = "inline";
     }
 
-    Parse.Cloud.run('StravaTempActivities', {
-      Accesstoken: result.username,
-    }, {
-      success: function(result) {
 
-        var distances = [];
-
-        for(j = 0; j<4; j++){
-
-          var result1 = result[j].data;
-
-          for (i = 0; i < result1.length; i++){
-            if(result1[i].type == "Run"){
-              var resultsloop = result1[i].distance;
-              distances.push(resultsloop) 
-            }
-          }
-
-        }
-        console.log(Math.max(...distances));
-
-      },
-
-      error: function(error) {
-      }
-    });
 
   },
   error: function(error){ 
