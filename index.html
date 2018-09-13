@@ -347,6 +347,8 @@ Parse.Cloud.run('retrieveUser', {
     document.getElementById('connected').style.display = "block";
     document.getElementById("firstName").innerHTML = result.tokenResponse.athlete.firstname
 
+    /*
+
     if (result.firstSweep == false){
 
       Parse.Cloud.run('StravaTempActivities', {
@@ -377,7 +379,7 @@ Parse.Cloud.run('retrieveUser', {
         }
       });
 
-    }
+    }*/
     
     var tops = result.tops
     for (i = 0; i < tops.length; i++){
