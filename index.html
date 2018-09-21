@@ -29,157 +29,161 @@
 
   <div class="flexCell_v">
     <div style="max-width:800px;margin:auto">
+      <div class="frontPage">
 
-      <span id="deleteNotice"></span>
+        <span id="deleteNotice"></span>
 
-      <!-- Connect ******************************************************************************** -->
+        <!-- Connect ******************************************************************************** -->
 
-      <div id="connect" class="flexCell_v hide">
-        <div class="M_L_50 M_R_50 FC">
-          <div class="H_50"></div>
-          <div class="F_1 h3 TA_C">We make gear you unlock by running. Connect with Strava below to get started (or to log back in)</div>
-          <div class="H_20"></div>
-          <div class="F_1 TA_C">
-            <a href="https://www.strava.com/oauth/authorize?client_id=7316&response_type=code&redirect_uri=https://api.kick.run/beta&approval_prompt=force&scope=view_private,write">
-              <img src="images/btn_strava_connectwith_orange@2x.png" class="active H_50"/>
-            </a>
+        <div id="connect" class="flexCell_v hide">
+          <div class="M_L_50 M_R_50 FC">
+            <div class="H_50"></div>
+            <div class="F_1 h3 TA_C">We make gear you unlock by running. Connect with Strava below to get started (or to log back in)</div>
             <div class="H_20"></div>
+            <div class="F_1 TA_C">
+              <a href="https://www.strava.com/oauth/authorize?client_id=7316&response_type=code&redirect_uri=https://api.kick.run/beta&approval_prompt=force&scope=view_private,write">
+                <img src="images/btn_strava_connectwith_orange@2x.png" class="active H_50"/>
+              </a>
+              <div class="H_20"></div>
+            </div>
           </div>
-        </div>
-        <div class="H_20"></div>
-        <div id="demo" class="FR fade">
-          <div id="demoContent" class="F_1 behind productContainer">
-            <div class="BI_iv H_10 M_L_20 M_R_20"></div>
-            <div class="H_30"></div>
-            <div class="FR">
-              <div class="F_1 flexCell_v">
-                <img src="images/top1.png" class="demoImage"/>
-                <div class="H_20"></div>
-              </div>
-              <div class="F_1 flexCell_v">
-                <img src="images/top2.png" class="demoImage"/>
-                <div class="H_20"></div>
-              </div>
-              <div class="F_1 flexCell_v">
-                <img src="images/top3.png" class="demoImage"/>
-                <div class="H_20"></div>
+          <div class="H_20"></div>
+          <div id="demo" class="FR fade">
+            <div id="demoContent" class="F_1 behind productContainer">
+              <div class="BI_iv H_10 M_L_20 M_R_20"></div>
+              <div class="H_30"></div>
+              <div class="FR">
+                <div class="F_1 flexCell_v">
+                  <img src="images/top1.png" class="demoImage"/>
+                  <div class="H_20"></div>
+                </div>
+                <div class="F_1 flexCell_v">
+                  <img src="images/top2.png" class="demoImage"/>
+                  <div class="H_20"></div>
+                </div>
+                <div class="F_1 flexCell_v">
+                  <img src="images/top3.png" class="demoImage"/>
+                  <div class="H_20"></div>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <!--Connect Block-->
+        <!--Connect Block-->
 
 
-      <!--Loading Block-->
-      <div id="loading" class="flexCell_v">
-        <div class="H_150"></div>
-        <img src="https://cdn.shopify.com/s/files/1/1368/7687/files/Spinner.gif?1196196044267427305" class="H_75">
-        <div class="H40"></div>
-        <div id="activityHistory" style="display:none" class="h3 M_L_20 M_R_20 TA_C">Welcome, <span id="firstNameConnecting"></span>, analysing your past activities.</div>
-      </div>
-
-      <!--Loading Block-->
-
-      <!--Connected Block-->
-      <div class="H_50"></div>
-      <div id="connected" class="hide">
-      <div class="flexCell_v" id="connected">
-        <div class="h3 TA_C M_L_50 M_R_50 LH_15">👋 Hi, <span id="firstName"></span>, welcome to Kick.run! Check out your tops and challenges below</div>
-      </div>
-
-      <!--Unlockable Products-->
-
-      <!--Product Block 1-->
-      <div class="H_50"></div>
-      <div class="h3 FR AI_C JC_C M_B_10">
-        <div class="F_10 centerSmall TI_20">Have you run the distance?</div>
-      </div>
-      <div class="H20"></div>
-      <div class="BI_iii H_10 M_L_20 M_R_20"></div>
-      <div class="H_50"></div>
-      <div class="FR collapse">
-
-          <div class="F_1 flexCell_v">
-            <img src="images/top1.png" class="productImage"/>
-            <div class="H_20"></div>
-            <button class="Bu_i active disable B_i" value="5k" onclick="productFlow(this.id)" id="top1">
-              <i class="fas fa-lock" id="topUnlock1"></i>&nbsp;&nbsp;5k
-            </button>
-            <div class="H_50"></div>
-          </div>
-
-          <div class="F_1 flexCell_v">
-            <img src="images/top2.png" class="productImage"/>
-            <div class="H_20"></div>
-            <button class="Bu_i active disable B_i" onclick="productFlow(this.id)" id="top2">
-              <i class="fas fa-lock" id="topUnlock2"></i>&nbsp;&nbsp;10k
-            </button>
-            <div class="H_50"></div>
-          </div>
-
-          <div class="F_1 flexCell_v">
-            <img src="images/top3.png" class="productImage"/>
-            <div class="H_20"></div>
-            <button class="Bu_i active disable B_i" onclick="productFlow(this.id)" id="top3">
-              <i class="fas fa-lock" id="topUnlock3"></i>&nbsp;&nbsp;Half Marathon
-            </button>
-            <div class="H_50"></div>
-          </div>
+        <!--Loading Block-->
+        <div id="loading" class="flexCell_v">
+          <div class="H_150"></div>
+          <img src="https://cdn.shopify.com/s/files/1/1368/7687/files/Spinner.gif?1196196044267427305" class="H_75">
+          <div class="H40"></div>
+          <div id="settingUp" class="h3 textAlign_center">Loading...</div>
+          <div id="activityHistory" style="display:none" class="h3 M_L_20 M_R_20 TA_C">Welcome, <span id="firstNameConnecting"></span>, analysing your past activities.</div>
         </div>
-      <div class="FR collapse">
 
-          <div class="F_1 flexCell_v">
-            <img src="images/top4.png" class="productImage"/>
-            <div class="H_20"></div>
-            <button class="Bu_i active disable B_i" onclick="productFlow(this.id)" id="top4">
-              <i class="fas fa-lock" id="topUnlock4"></i>&nbsp;&nbsp;Marathon
-            </button>
-            <div class="H_50"></div>
-          </div>
+        <!--Loading Block-->
 
-          <div class="F_1 flexCell_v">
-            <img src="images/top5.png" class="productImage"/>
-            <div class="H_20"></div>
-            <button class="Bu_i active disable B_i" onclick="productFlow(this.id)" id="top5">
-              <i class="fas fa-lock" id="topUnlock5"></i>&nbsp;&nbsp;Ultra
-            </button>
-            <div class="H_50"></div>
-          </div>
-
-          <div class="F_1 flexCell_v">
-
-          </div>
-
-
-        </div>
-      </div>
-      <!--Product Block 1-->
-
-        <!--Product Block 2-->
-
-        <!--Unlock Products-->
-
-      <div id="accountSettings" style="display:none">
+        <!--Connected Block-->
         <div class="H_50"></div>
+        <div id="connected" class="hide">
+        <div class="flexCell_v" id="connected">
+          <div class="h3 TA_C M_L_50 M_R_50 LH_15">👋 Hi, <span id="firstName"></span>, welcome to Kick.run! Check out your tops and challenges below</div>
+        </div>
+
+        <!--Unlockable Products-->
+
+        <!--Product Block 1-->
+        <div class="H_50"></div>
+        <div class="h3 FR AI_C JC_C M_B_10">
+          <div class="F_10 centerSmall TI_20">Have you run the distance?</div>
+        </div>
+        <div class="H20"></div>
         <div class="BI_iii H_10 M_L_20 M_R_20"></div>
-        <div class="H_20"></div>
-        <div class="p3 M_L_20 M_R_20 LH_25">
-          <span class="FW_600">Account Settings:</span> 
-          Your account is connected to Strava <button class="active Bu_ii BS B_iv" onclick="disconnect()"><i class="fas fa-unlink"></i>&nbsp;&nbsp;Disconnect</button> 
-
-          <span id="notifications1" style="display:none">Unlock notifications are on <button class="active Bu_ii BS B_i" onclick="notificationsOff()"><i class="fas fa-bell"></i>&nbsp;&nbsp;Turn off</button></span>
-
-          <span id="notifications2" style="display:none">Unlock notifications are off <button class="active Bu_ii BS B_i" onclick="notificationsOn()"><i class="fas fa-bell"></i>&nbsp;&nbsp;Turn on</button></span>
-
-          <span id="preferences1" style="display:none">You are receiving updates and offers from Kick.run <button class="active Bu_ii BS B_i" onclick="preferencesOff()"><i class="fas fa-bullhorn"></i>&nbsp;&nbsp;Stop updates</button></span>
-
-          <span id="preferences2" style="display:none">You are not receiving updates and offers from Kick.run <button class="active Bu_ii BS B_i" onclick="preferencesOn()"><i class="fas fa-bullhorn"></i>&nbsp;&nbsp;Receive updates</button></span>
-
-          Any other queries? Just <button class="active Bu_ii BS B_i" onclick="location.href='mailto:hello@kick.run';"><i class="fas fa-envelope"></i>&nbsp;&nbsp;Get in touch</button>
-        </div>
         <div class="H_50"></div>
+        <div class="FR collapse">
+
+            <div class="F_1 flexCell_v">
+              <img src="images/top1.png" class="productImage"/>
+              <div class="H_20"></div>
+              <button class="Bu_i active disable B_i" value="5k" onclick="productFlow(this.id)" id="top1">
+                <i class="fas fa-lock" id="topUnlock1"></i>&nbsp;&nbsp;5k
+              </button>
+              <div class="H_50"></div>
+            </div>
+
+            <div class="F_1 flexCell_v">
+              <img src="images/top2.png" class="productImage"/>
+              <div class="H_20"></div>
+              <button class="Bu_i active disable B_i" onclick="productFlow(this.id)" id="top2">
+                <i class="fas fa-lock" id="topUnlock2"></i>&nbsp;&nbsp;10k
+              </button>
+              <div class="H_50"></div>
+            </div>
+
+            <div class="F_1 flexCell_v">
+              <img src="images/top3.png" class="productImage"/>
+              <div class="H_20"></div>
+              <button class="Bu_i active disable B_i" onclick="productFlow(this.id)" id="top3">
+                <i class="fas fa-lock" id="topUnlock3"></i>&nbsp;&nbsp;Half Marathon
+              </button>
+              <div class="H_50"></div>
+            </div>
+          </div>
+        <div class="FR collapse">
+
+            <div class="F_1 flexCell_v">
+              <img src="images/top4.png" class="productImage"/>
+              <div class="H_20"></div>
+              <button class="Bu_i active disable B_i" onclick="productFlow(this.id)" id="top4">
+                <i class="fas fa-lock" id="topUnlock4"></i>&nbsp;&nbsp;Marathon
+              </button>
+              <div class="H_50"></div>
+            </div>
+
+            <div class="F_1 flexCell_v">
+              <img src="images/top5.png" class="productImage"/>
+              <div class="H_20"></div>
+              <button class="Bu_i active disable B_i" onclick="productFlow(this.id)" id="top5">
+                <i class="fas fa-lock" id="topUnlock5"></i>&nbsp;&nbsp;Ultra
+              </button>
+              <div class="H_50"></div>
+            </div>
+
+            <div class="F_1 flexCell_v">
+
+            </div>
+
+
+          </div>
+        </div>
+        <!--Product Block 1-->
+
+          <!--Product Block 2-->
+
+          <!--Unlock Products-->
+
+        <div id="accountSettings" style="display:none">
+          <div class="H_50"></div>
+          <div class="BI_iii H_10 M_L_20 M_R_20"></div>
+          <div class="H_20"></div>
+          <div class="p3 M_L_20 M_R_20 LH_25">
+            <span class="FW_600">Account Settings:</span> 
+            Your account is connected to Strava <button class="active Bu_ii BS B_iv" onclick="disconnect()"><i class="fas fa-unlink"></i>&nbsp;&nbsp;Disconnect</button> 
+
+            <span id="notifications1" style="display:none">Unlock notifications are on <button class="active Bu_ii BS B_i" onclick="notificationsOff()"><i class="fas fa-bell"></i>&nbsp;&nbsp;Turn off</button></span>
+
+            <span id="notifications2" style="display:none">Unlock notifications are off <button class="active Bu_ii BS B_i" onclick="notificationsOn()"><i class="fas fa-bell"></i>&nbsp;&nbsp;Turn on</button></span>
+
+            <span id="preferences1" style="display:none">You are receiving updates and offers from Kick.run <button class="active Bu_ii BS B_i" onclick="preferencesOff()"><i class="fas fa-bullhorn"></i>&nbsp;&nbsp;Stop updates</button></span>
+
+            <span id="preferences2" style="display:none">You are not receiving updates and offers from Kick.run <button class="active Bu_ii BS B_i" onclick="preferencesOn()"><i class="fas fa-bullhorn"></i>&nbsp;&nbsp;Receive updates</button></span>
+
+            Any other queries? Just <button class="active Bu_ii BS B_i" onclick="location.href='mailto:hello@kick.run';"><i class="fas fa-envelope"></i>&nbsp;&nbsp;Get in touch</button>
+          </div>
+          <div class="H_50"></div>
+        </div>
       </div>
+
     </div>
 
       <!-- Gender ******************************************************************************** -->
