@@ -351,8 +351,6 @@
 var accessTokenURL = getQueryVariable("accesstoken")
 var accessTokenCookie = getCookie("accesstoken")
 
-/*--------*/
-
 if(accessTokenCookie.length>0){
   storeLocal('accessToken',accessTokenCookie);
   var accessToken = localStorage.getItem("accessToken");
@@ -367,19 +365,8 @@ else{
 var accessToken = ""
 }
 
-alert(accessToken.length);
 
-/*--------*/
-
-
-
-/*
-if(accessTokenCookie.length>0){
-
-storeLocal('accessToken',accessTokenCookie);
-var accessToken = localStorage.getItem("accessToken");
-
-//var accessToken = accessTokenCookie
+if(accessToken.length>0){
 
 startParse();
 
@@ -523,71 +510,10 @@ Parse.Cloud.run('retrieveUser', {
 }
 
 
-else if(accessTokenURL.length>0){
-
-storeLocal('accessToken',accessTokenURL);
-
-//var accessToken = accessTokenURL
-
-startParse();
-Parse.Cloud.run('retrieveUser', {
-  AccessToken: accessTokenURL
-  }, {
-  success: function(result) {
-
-    document.getElementById('loading').style.display = "none";
-    document.getElementById('connected').style.display = "block";
-    document.cookie = "accesstoken="+accessTokenURL+";max-age=2678400; path=/"
-    document.getElementById("firstName").innerHTML = result.tokenResponse.athlete.firstname
-    
-    var tops = result.tops
-
-    for (i = 0; i < tops.length; i++){
-      
-      if(tops[i]){
-          var topNumber = i+1
-          var topNumberString =topNumber.toString();
-          var element = document.getElementById("top"+topNumberString);
-          element.classList.remove("disable");
-          var element1 = document.getElementById("topUnlock"+topNumberString);
-          element1.classList.remove("fa-lock");
-          element1.classList.add("fa-check");
-      }
-    };
-    
-
-    document.getElementById('accountSettings').style.display = "block";
-    var notifications = result.notifications
-    if (notifications){
-      document.getElementById('notifications1').style.display = "inline";
-    }
-    else{
-      document.getElementById('notifications2').style.display = "inline";
-    }
-
-    var preferences = result.updates
-    if (preferences){
-      document.getElementById('preferences1').style.display = "inline";
-    }
-    else{
-      document.getElementById('preferences2').style.display = "inline";
-    }
-
-  },
-  error: function(error){ 
-
-  document.getElementById('loading').style.display = "none";
-  document.getElementById('connect').style.display = "flex";
-
-  }
-});
-
-}
-
 else  {
   document.getElementById('loading').style.display = "none";
   document.getElementById('connect').style.display = "flex";
 }
 
-*/
+
 </script>
