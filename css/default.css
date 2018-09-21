@@ -179,7 +179,7 @@ font-weight: 500;
 /* Product Images ---------------------------------------------------*/
 
 
-.productImage{
+.productImage, .demoImage{
     height:190px;
     border-radius: 20px;
 }
@@ -195,6 +195,8 @@ font-weight: 500;
 
 
 @media only screen and (max-width: 1000px) {
+
+
 
 .productImage{
     height:180px;
@@ -219,6 +221,10 @@ font-size: 0.9em;
 }
 
 @media only screen and (max-width: 700px) {
+
+.demoImage{
+    height:100px;
+}
 
 .productImage{
     height:180px;
