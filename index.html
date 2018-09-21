@@ -351,6 +351,25 @@
 var accessTokenURL = getQueryVariable("accesstoken")
 var accessTokenCookie = getCookie("accesstoken")
 
+/*--------*/
+
+if(accessTokenCookie.length>0){
+  storeLocal('accessToken',accessTokenCookie);
+  var accessToken = localStorage.getItem("accessToken");
+}
+
+else if(accessTokenURL.length>0){
+  storeLocal('accessToken',accessTokenURL);
+  var accessToken = localStorage.getItem("accessToken");
+}
+
+alert(accessToken.length);
+
+/*--------*/
+
+
+
+/*
 if(accessTokenCookie.length>0){
 
 storeLocal('accessToken',accessTokenCookie);
@@ -566,5 +585,5 @@ else  {
   document.getElementById('connect').style.display = "flex";
 }
 
-
+*/
 </script>
