@@ -382,10 +382,14 @@ Parse.Cloud.run('retrieveUser', {
           alert("Error retrieving activities, please refresh & contact hello@kick.run if the problem persists")
         }
       });
-
     }
 
-      
+    else{
+
+    document.getElementById('settingUp').style.display = "none";
+    document.getElementById('activityHistory').style.display = "block";
+
+    
     var tops = result.tops
     for (i = 0; i < tops.length; i++){
       
@@ -399,6 +403,8 @@ Parse.Cloud.run('retrieveUser', {
           element1.classList.add("fa-check");
       }
     };
+
+    }
 
     var notifications = result.notifications
 
@@ -416,8 +422,6 @@ Parse.Cloud.run('retrieveUser', {
     else{
       document.getElementById('preferences2').style.display = "inline";
     }
-
-
 
   },
   error: function(error){ 
