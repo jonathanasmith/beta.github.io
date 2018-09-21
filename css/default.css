@@ -256,6 +256,10 @@ font-size: 0.8em;
 
     }
 
+    .centerSmall{
+        text-align: center
+    }
+
 }
 
 #settingsExpand{
