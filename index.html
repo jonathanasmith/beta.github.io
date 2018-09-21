@@ -167,27 +167,27 @@
 
         <!--Unlock Products-->
 
-      <div class="H_50"></div>
-      <div class="BI_iii H_10 M_L_20 M_R_20"></div>
-      <div class="H_20"></div>
-      <div class="p3 M_L_20 M_R_20 LH_25">
-        <span class="FW_600">Account Settings:</span> 
-        Your account is connected to Strava <button class="active Bu_ii BS B_iv" onclick="disconnect()"><i class="fas fa-unlink"></i>&nbsp;&nbsp;Disconnect</button> 
+      <div id="accountSettings" style="display:none">
+        <div class="H_50"></div>
+        <div class="BI_iii H_10 M_L_20 M_R_20"></div>
+        <div class="H_20"></div>
+        <div class="p3 M_L_20 M_R_20 LH_25">
+          <span class="FW_600">Account Settings:</span> 
+          Your account is connected to Strava <button class="active Bu_ii BS B_iv" onclick="disconnect()"><i class="fas fa-unlink"></i>&nbsp;&nbsp;Disconnect</button> 
 
-        <span id="notifications1" style="display:none">Unlock notifications are on <button class="active Bu_ii BS B_i" onclick="notificationsOff()"><i class="fas fa-bell"></i>&nbsp;&nbsp;Turn off</button></span>
+          <span id="notifications1" style="display:none">Unlock notifications are on <button class="active Bu_ii BS B_i" onclick="notificationsOff()"><i class="fas fa-bell"></i>&nbsp;&nbsp;Turn off</button></span>
 
-        <span id="notifications2" style="display:none">Unlock notifications are off <button class="active Bu_ii BS B_i" onclick="notificationsOn()"><i class="fas fa-bell"></i>&nbsp;&nbsp;Turn on</button></span>
+          <span id="notifications2" style="display:none">Unlock notifications are off <button class="active Bu_ii BS B_i" onclick="notificationsOn()"><i class="fas fa-bell"></i>&nbsp;&nbsp;Turn on</button></span>
 
-        <span id="preferences1" style="display:none">You are receiving updates and offers from Kick.run <button class="active Bu_ii BS B_i" onclick="preferencesOff()"><i class="fas fa-bullhorn"></i>&nbsp;&nbsp;Stop updates</button></span>
+          <span id="preferences1" style="display:none">You are receiving updates and offers from Kick.run <button class="active Bu_ii BS B_i" onclick="preferencesOff()"><i class="fas fa-bullhorn"></i>&nbsp;&nbsp;Stop updates</button></span>
 
-        <span id="preferences2" style="display:none">You are not receiving updates and offers from Kick.run <button class="active Bu_ii BS B_i" onclick="preferencesOn()"><i class="fas fa-bullhorn"></i>&nbsp;&nbsp;Receive updates</button></span>
+          <span id="preferences2" style="display:none">You are not receiving updates and offers from Kick.run <button class="active Bu_ii BS B_i" onclick="preferencesOn()"><i class="fas fa-bullhorn"></i>&nbsp;&nbsp;Receive updates</button></span>
 
-        Any other queries? Just <button class="active Bu_ii BS B_i" onclick="location.href='mailto:hello@kick.run';"><i class="fas fa-envelope"></i>&nbsp;&nbsp;Get in touch</button>
-
+          Any other queries? Just <button class="active Bu_ii BS B_i" onclick="location.href='mailto:hello@kick.run';"><i class="fas fa-envelope"></i>&nbsp;&nbsp;Get in touch</button>
+        </div>
+        <div class="H_50"></div>
       </div>
-
-      <div class="H_50"></div>
-      </div>
+    </div>
 
       <!-- Gender ******************************************************************************** -->
 
@@ -471,6 +471,8 @@ Parse.Cloud.run('retrieveUser', {
 
     }
 
+
+
     var notifications = result.notifications
 
     if (notifications){
@@ -528,7 +530,9 @@ Parse.Cloud.run('retrieveUser', {
           element1.classList.add("fa-check");
       }
     };
+    
 
+    document.getElementById('accountSettings').style.display = "block";
     var notifications = result.notifications
     if (notifications){
       document.getElementById('notifications1').style.display = "inline";
