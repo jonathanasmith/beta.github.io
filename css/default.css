@@ -259,18 +259,15 @@ font-size: 0.8em;
 
 
 @media only screen and (max-width: 600px) {
-
+    
     .collapse{
-
         flex-direction:column !important;
-
     }
 
     .centerSmall{
         text-align: center
         text-indent:0px !important;
     }
-
 }
 
 #settingsExpand{
