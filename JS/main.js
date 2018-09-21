@@ -102,9 +102,7 @@ function reconnect(){
 // Cart Functions *********************************************************************
 
 function productFlow(x){
-
-  document.getElementById("mainContent").style.display = "none";
-  document.getElementById("orderFlow").style.display = "block";
+  document.getElementById("fontPage").style.display = "none";
   document.getElementById("buyOne").style.display = "block";
   localStorage.setItem("tempCartProduct", x);
 }
