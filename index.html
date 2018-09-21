@@ -372,8 +372,17 @@ Parse.Cloud.run('retrieveUser', {
             }
           }
           var maxDistance = Math.max(...distances)
+
+          if(maxDistance >= 4950 && maxDistance < 9900){updateUser(accessToken,"tops",[true, false, false, false, false ]);}
+          else if(maxDistance >= 9900 && maxDistance < 20950){updateUser(accessToken,"tops",[true, true, false, false, false]);}
+          else if(maxDistance >= 20950 && maxDistance < 42000){updateUser(accessToken,"tops",[true, true, true, false, false]);}
+          else if(maxDistance >= 42000 && maxDistance < 50000){updateUser(accessToken,"tops",[true, true, true, true, false]);}
+          else if(maxDistance >= 50000){updateUser(accessToken,"tops",[true, true, true, true, true ]);}
+          else{updateUser(accessToken,"tops",[false, false, false, false, false ]);}
+
           document.getElementById('loading').style.display = "none";
           document.getElementById('connected').style.display = "block";
+
           var accessToken = localStorage.getItem("accessToken");
           updateUser(accessToken,"firstSweep",true);
 
