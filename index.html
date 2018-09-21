@@ -359,11 +359,13 @@ if(accessTokenCookie.length>0){
 else if(accessTokenURL.length>0){
   storeLocal('accessToken',accessTokenURL);
   var accessToken = localStorage.getItem("accessToken");
+  document.cookie = "accesstoken="+accessToken+";max-age=2678400; path=/"
 }
 
 else{
 var accessToken = ""
 }
+
 
 if(accessToken.length>0){
 
