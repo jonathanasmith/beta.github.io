@@ -198,7 +198,7 @@ font-weight: 500;
 
 
 
-.productImage{
+.productImage, .demoImage{
     height:180px;
     border-radius: 20px;
 }
