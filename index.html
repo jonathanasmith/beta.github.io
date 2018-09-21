@@ -374,19 +374,58 @@ Parse.Cloud.run('retrieveUser', {
             }
           }
           var maxDistance = Math.max(...distances)
-          alert(maxDistance);
 
-          if(maxDistance >= 4950 && maxDistance < 9900){updateUser(accessToken,"tops",[true, false, false, false, false ]);}
-          else if(maxDistance >= 9900 && maxDistance < 20950){updateUser(accessToken,"tops",[true, true, false, false, false]);}
-          else if(maxDistance >= 20950 && maxDistance < 42000){updateUser(accessToken,"tops",[true, true, true, false, false]);}
-          else if(maxDistance >= 42000 && maxDistance < 50000){updateUser(accessToken,"tops",[true, true, true, true, false]);}
-          else if(maxDistance >= 50000){updateUser(accessToken,"tops",[true, true, true, true, true ]);}
-          else{updateUser(accessToken,"tops",[false, false, false, false, false ]);}
+          if(maxDistance >= 4950 && maxDistance < 9900){
+            var tops = [true, false, false, false, false ] 
+            updateUser(accessToken,"tops",tops);
+            updateUser(accessToken,"firstSweep",true);
+          }
+
+          else if(maxDistance >= 9900 && maxDistance < 20950){
+            var tops = [true, true, false, false, false ] 
+            updateUser(accessToken,"tops",tops);
+            updateUser(accessToken,"firstSweep",true);
+          }
+
+          else if(maxDistance >= 20950 && maxDistance < 42000){
+            var tops = [true, true, true, false, false ] 
+            updateUser(accessToken,"tops",tops);
+            updateUser(accessToken,"firstSweep",true);
+          }
+
+          else if(maxDistance >= 42000 && maxDistance < 50000){
+            var tops = [true, true, true, true, false ] 
+            updateUser(accessToken,"tops",tops);
+            updateUser(accessToken,"firstSweep",true);
+          }
+
+          else if(maxDistance >= 50000){
+            var tops = [true, true, true, true, true ] 
+            updateUser(accessToken,"tops",tops);
+            updateUser(accessToken,"firstSweep",true);
+          }
+
+          else{
+            var tops = [false, false, false, false, false ] 
+            updateUser(accessToken,"tops",tops);
+            updateUser(accessToken,"firstSweep",true);
+          }
 
           document.getElementById('loading').style.display = "none";
           document.getElementById('connected').style.display = "block";
-          updateUser(accessToken,"firstSweep",true);
 
+          for (i = 0; i < tops.length; i++){
+            
+            if(tops[i]){
+                var topNumber = i+1
+                var topNumberString =topNumber.toString();
+                var element = document.getElementById("top"+topNumberString);
+                element.classList.remove("disable");
+                var element1 = document.getElementById("topUnlock"+topNumberString);
+                element1.classList.remove("fa-lock");
+                element1.classList.add("fa-check");
+            }
+          };
         },
         error: function(error) {
           alert("Error retrieving activities, please refresh & contact hello@kick.run if the problem persists")
