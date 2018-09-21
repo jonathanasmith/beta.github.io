@@ -258,6 +258,7 @@ font-size: 0.8em;
 
     .centerSmall{
         text-align: center
+        text-indent:0px !important;
     }
 
 }
@@ -346,6 +347,8 @@ font-size: 0.8em;
 .M_2{margin:2px;}
 
 .M_L_5{margin-left:5px;} .M_T_5{margin-top:5px;} .M_R_5{margin-right:5px;} .M_B_5{margin-bottom:5px;} .M_L_10{margin-left:10px;} .M_T_10{margin-top:10px;} .M_R_10{margin-right:10px;} .M_B_10{margin-bottom:10px;} .M_L_20{margin-left:20px;} .M_T_20{margin-top:20px;} .M_R_20{margin-right:20px;} .M_B_20{margin-bottom:20px;} .M_L_50{margin-left:50px;} .M_T_50{margin-top:50px;} .M_R_50{margin-right:50px;} .M_B_50{margin-bottom:50px;} .P_L_5{padding-left:5px;} .P_T_5{padding-top:5px;} .P_R_5{padding-right:5px;} .P_B_5{padding-bottom:5px;} .P_L_10{padding-left:10px;} .P_T_10{padding-top:10px;} .P_R_10{padding-right:10px;} .P_B_10{padding-bottom:10px;} .P_L_20{padding-left:20px;} .P_T_20{padding-top:20px;} .P_R_20{padding-right:20px;} .P_B_20{padding-bottom:20px;} .P_L_50{padding-left:50px;} .P_T_50{padding-top:50px;} .P_R_50{padding-right:50px;} .P_B_50{padding-bottom:50px;}
+
+.TI_20{text-indent: 20px;}
 
 /* Type ----------------------------------------------------------------*/
 
