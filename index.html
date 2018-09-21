@@ -365,17 +365,12 @@ else{
 var accessToken = ""
 }
 
-alert(accessToken)
-
-
-
-
 if(accessToken.length>0){
 
 startParse();
 
 Parse.Cloud.run('retrieveUser', {
-  AccessToken: accessTokenCookie
+  AccessToken: accessToken
   }, {
   success: function(result) {
 
