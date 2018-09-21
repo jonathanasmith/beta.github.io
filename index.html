@@ -374,9 +374,11 @@ Parse.Cloud.run('retrieveUser', {
           var maxDistance = Math.max(...distances)
           document.getElementById('loading').style.display = "none";
           document.getElementById('connected').style.display = "block";
+          updateUser(accessToken,"firstSweep",true);
 
         },
         error: function(error) {
+          //Error function
         }
       });
 
