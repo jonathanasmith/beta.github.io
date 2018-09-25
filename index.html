@@ -438,6 +438,7 @@ Parse.Cloud.run('retrieveUser', {
 
           document.getElementById('loading').style.display = "none";
           document.getElementById('connected').style.display = "block";
+          document.getElementById('accountSettings').style.display = "block";
 
           for (i = 0; i < tops.length; i++){
             
@@ -461,6 +462,8 @@ Parse.Cloud.run('retrieveUser', {
     else{
       document.getElementById('loading').style.display = "none";
       document.getElementById('connected').style.display = "block";
+      document.getElementById('accountSettings').style.display = "block";
+
       var tops = result.tops
       for (i = 0; i < tops.length; i++){
         
@@ -476,7 +479,6 @@ Parse.Cloud.run('retrieveUser', {
       };
     }
 
-    document.getElementById('accountSettings').style.display = "block";
 
     var notifications = result.notifications
 
