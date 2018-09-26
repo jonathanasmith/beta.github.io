@@ -50,7 +50,6 @@ function updateUser(x,y,z) {
   });
 }
 
-
 // Settings Functions *********************************************************************
 
 function notificationsOn(){
