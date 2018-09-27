@@ -103,7 +103,7 @@ function reconnect(){
 function productFlow(x){
   document.getElementById("frontPage").style.display = "none";
   document.getElementById("productFlow").style.display = "block";
-  localStorage.setItem("tempCartProduct", x);
+  localStorage.setItem("T", x);
 }
 
 function storeLocal(x,y){
@@ -113,7 +113,6 @@ function storeLocal(x,y){
 function hideShowBlock(x,y){
   document.getElementById(x).style.display = "none";
   document.getElementById(y).style.display = "block";
-
 }
 
 function hideShowFlex(x,y){
