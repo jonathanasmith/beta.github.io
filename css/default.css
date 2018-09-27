@@ -53,6 +53,11 @@
     margin:0em;
     font-weight: 500;
     }
+
+    header{
+    height:150px;
+    }
+
 }
 
 @media only screen and (max-width: 400px) {
@@ -100,13 +105,14 @@
     font-weight: 500;
     }
 
+    header{
+
+    height:100px;
+
+    }
 }
 
 
-header{
-    max-height:150px;
-    min-height:150px;
-}
 
 footer {
   max-height:75px;
@@ -134,13 +140,30 @@ footer {
 }
 
 .Bu_ii{
-    min-height:25px;
+    min-height:40px;
+    width:100px;
+    margin-left: 10px;
+    margin-right: 10px;
     border-radius: 5px;
     color:white;
     border:none;
     font-family: inherit;
-    font-size:0.9em;
+    font-size:0.9em ;
     cursor: pointer;
+}
+
+.Bu_iii{
+    min-height:40px;
+    width:130px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+    border:none;
+    font-family: inherit;
+    font-size:0.9em ;
+    cursor: pointer;
+    color:inherit;
+    background:lightgray;
 }
 
 .Bu_i:focus, .Bu_ii:focus{
@@ -160,8 +183,7 @@ footer {
 
 .FoC_i{color: #ffffff;}
 .FoC_ii{color:#6E6E6E;}
-.FoC_iii{color:#308014;}
-.FoC_iv{color:#7f0000;}
+.FoC_iii{color:#146DFB;}
 
 
 .LH_15{line-height: 1.5;}
@@ -174,7 +196,7 @@ footer {
 .B_ii{background: linear-gradient(-150deg, #136EFB, #0000FF); color:white;}
 .B_iii{background:white; color:#413f42;}
 .B_iv{background: linear-gradient(-150deg, #8C0000, #B20000); color:white;}
-.B_v{background:;}
+.B_v{background: color:#413f42;}
 
 /* Borders --------------------------------------------------------------------------------*/
 
@@ -419,6 +441,7 @@ font-size: 0.8em;
 .FW_700{font-weight: 700;}
 .FW_800{font-weight: 800;}
 
+
 /* Operators -----------------------------------------------------------*/
 
 .scroll{overflow: scroll;}
@@ -453,7 +476,7 @@ margin:auto;
     margin-right:5px;
     border-radius:2px;
     border: 1px solid #136EFB;
-    height:3px;
+    height:5px;
 }
 
 
@@ -462,7 +485,8 @@ margin:auto;
     margin-right:5px;
     border-radius:5px;
     border: 1px solid #136EFB;
-    height:30px;
+    height:50px;
+    font-size: 0.9em
 }
 
 .hide{

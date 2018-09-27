@@ -102,7 +102,7 @@ function reconnect(){
 
 function productFlow(x){
   document.getElementById("frontPage").style.display = "none";
-  document.getElementById("buyOne").style.display = "block";
+  document.getElementById("productFlow").style.display = "block";
   localStorage.setItem("tempCartProduct", x);
 }
 
