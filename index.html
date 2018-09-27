@@ -29,7 +29,7 @@
 
   <div class="flexCell_v">
     <div style="max-width:800px;margin:auto">
-      <div id="frontPage" class="FC">
+      <div id="frontPage" class="FC hide">
         <span id="deleteNotice"></span>
 
         <!-- Connect ******************************************************************************** -->
@@ -185,7 +185,7 @@
 
     </div>
 
-    <div id="productFlow" class="hide FR">
+    <div id="productFlow" class=" FR">
 
       <!-- Gender ******************************************************************************** -->
 
@@ -199,7 +199,7 @@
           <div class="F_1 progress" id="progressTwo"></div>
           <div class="F_1 progress" id="progressThree"></div>
           <div class="F_025"></div>
-          <div class="F_1 h2 flexCell_v  FoC_iii">
+          <div class="F_1 h2 flexCell_v FoC_iii" onclick="hideShowBlock('productFlow','frontPage')">
             <i class="far fa-times-circle"></i>
           </div>        
         </div>
@@ -245,7 +245,7 @@
               <div class="F_1 B_i progress" id="progressTwo"></div>
               <div class="F_1 progress" id="progressThree"></div>
               <div class="F_025"></div>
-              <div class="F_1 h2 flexCell_v  FoC_iii">
+              <div class="F_1 h2 flexCell_v FoC_iii" onclick="hideShowBlock('productFlow','frontPage')">
                 <i class="far fa-times-circle"></i>
               </div>        
             </div>
@@ -310,17 +310,25 @@
               <div class="F_025"> </div>
               <div class="F_1 B_i progress" id="progressOne"></div>
               <div class="F_1 B_i progress" id="progressTwo"></div>
-              <div class="F_1 progress" id="progressThree"></div>
+              <div class="F_1 B_i progress" id="progressThree"></div>
               <div class="F_025"></div>
-              <div class="F_1 h2 flexCell_v  FoC_iii">
+              <div class="F_1 h2 flexCell_v FoC_iii" onclick="hideShowBlock('productFlow','frontPage')">
                 <i class="far fa-times-circle"></i>
               </div>        
             </div>
             <div class="H_30"></div>
-            <div class="h3 TA_C M_L_20 M_R_20" >
-             <i class="fas fa-shopping-cart"></i>&nbsp;&nbsp;Item added to cart
+
+            <div class="FR">
+              <div class="F_1 flexCell_v" onclick="storeLocal('G','M'); hideShowBlock('buyOne','buyTwo')">
+                <div class="productBackground flexCell_v FoC_i h2 FW_500 active" style="background-image:url('images/top1.png')">
+                </div>
+              </div>
             </div>
-            <div class="H_50"></div>
+            <div class="H_30"></div>
+            <div class="h3 TA_C M_L_20 M_R_20" >
+             <i class="fas fa-check"></i>&nbsp;&nbsp;#Small Mens 5k# added to cart
+            </div>
+            <div class="H_30"></div>
             <div class="FR M_A JC_C H_75 AI_C" style="max-width:600px; margin:auto">
               <div class="F_025"></div>
               <button class="Bu_iii active B_i"><i class="fas fa-shopping-cart"></i>&nbsp;&nbsp;Checkout</button>
@@ -352,7 +360,6 @@
           <div class="active" onclick="exitCart()">Continue shopping</div>
         </div>
         <div class="flexCell_v hide" id="emptyCart">
-
           <div class="active Bu_ii BS B_i flexCell_v P_L_10 P_R_10"  onclick="exitCart()">Continue shopping</div>
         </div>
       </div>
