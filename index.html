@@ -482,7 +482,7 @@ Parse.Cloud.run('retrieveUser', {
             if(tops[i]){
                 var topNumber = i+1
                 var topNumberString =topNumber.toString();
-                var element = document.getElementById("top"+topNumberString);
+                var element = document.getElementById(topNumberString);
                 element.classList.remove("disable");
                 var element1 = document.getElementById("topUnlock"+topNumberString);
                 element1.classList.remove("fa-lock");
@@ -507,7 +507,7 @@ Parse.Cloud.run('retrieveUser', {
         if(tops[i]){
             var topNumber = i+1
             var topNumberString =topNumber.toString();
-            var element = document.getElementById("top"+topNumberString);
+            var element = document.getElementById(topNumberString);
             element.classList.remove("disable");
             var element1 = document.getElementById("topUnlock"+topNumberString);
             element1.classList.remove("fa-lock");
