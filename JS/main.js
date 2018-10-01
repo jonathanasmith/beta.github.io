@@ -111,10 +111,19 @@ function storeLocal(x,y){
 }
 
 function removeLocal(x,y,z){
-
   localStorage.removeItem(x);
   localStorage.removeItem(y);
   localStorage.removeItem(z);
+}
+
+
+function addToCart(){
+  
+var T = localStorage.getItem("T");
+var S = localStorage.getItem("S");
+var G = localStorage.getItem("G");
+
+cart.push(T+S+G) 
 
 }
 
