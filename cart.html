@@ -27,9 +27,9 @@
   </header>
 
 
-      <!-- Cart ******************************************************************************** -->
+  <!-- Cart Empty ******************************************************************************** -->
 
-  <div style="max-width:800px;margin:0 auto">
+  <div style="max-width:800px;margin:0 auto" id="cartEmpty" class="hide">
     <div class="H_50"></div>
     <div class="h1 TA_C M_L_10 M_R_10" >
       <i class="fas fa-shopping-cart"></i>&nbsp;&nbsp;Cart Empty
@@ -38,7 +38,25 @@
     </div>
     <div class="FC AI_C">
       <div class="H_50"></div>
-      <!--
+      <div class="h2"> ¯\_(ツ)_/¯</div>
+      <div class="H_50"></div>
+      <button class="Bu_i active B_i" id="cartFull">Continue Shopping</button>
+      <button class="Bu_i disable hide B_i" id="cartEmpty">Cart Empty</button>
+    </div>
+  </div>
+
+  <!-- Cart Full ******************************************************************************** -->
+
+  <div style="max-width:800px;margin:0 auto" id="cartContents" class="hide">
+    <div class="H_50"></div>
+    <div class="h1 TA_C M_L_10 M_R_10" >
+      <i class="fas fa-shopping-cart"></i>&nbsp;&nbsp;Cart
+    <div class="H_20"></div>
+    <div class="BI_iii H_10 M_L_20 M_R_20"></div>
+    </div>
+    <div class="FC AI_C">
+      <div class="H_50"></div>
+
       <div class="FR h4" style="max-width:650px" >
         <div class="F_1 flexCell_v M_L_20"><img src="https://cdn.shopify.com/s/files/1/1368/7687/products/mara-royal-mens_480x480.png?v=1535690526" class="H_60 BoR_5"/></div>
         <div class="F_3 flexCell_iv TA_L">5k Tech (Mens, XX Large)</div>
@@ -56,7 +74,6 @@
           </div>
         </div>
       </div>
-    -->
 
       <div class="H_50"></div>
       <button class="Bu_i active B_i" id="cartFull"><i class="fas fa-shopping-cart"></i>&nbsp;&nbsp;Checkout</button>
@@ -95,7 +112,7 @@ alert(cartString)
 
 if(cartString.length>2){
 
-document.getElementById("fullCart").style.display = "flex";
+document.getElementById("cartContents").style.display = "block";
 
 var cartString = get("cart")
 var cartArray =  cartString.split(',')
@@ -112,12 +129,7 @@ document.getElementById("cartContents").innerHTML = ccart
 }
 
 else{
-
-document.getElementById("cartContents").innerHTML = "<div class='flexCell_v h2'>Your cart is empty</div>"
-document.getElementById("mainContent").style.display = "none";
-document.getElementById("cart").style.display = "block";
-document.getElementById("emptyCart").style.display = "flex";
-
+document.getElementById("cartEmpty").style.display = "block";
 }
 
 
