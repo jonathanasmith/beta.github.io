@@ -376,7 +376,10 @@
 <script>
 
 var cart = getCookie(cart);
-alert(cart.length)
+if (cart.length == 0){
+  document.cookie = "cart="+""+";max-age=2678400; path=/"
+}
+
  
 var accessTokenURL = getQueryVariable("accesstoken")
 var accessTokenCookie = getCookie("accesstoken")
