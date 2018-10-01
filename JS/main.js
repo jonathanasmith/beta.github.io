@@ -110,6 +110,14 @@ function storeLocal(x,y){
   localStorage.setItem(x, y);
 }
 
+function removeLocal(x,y,z){
+
+  localStorage.removeItem(x);
+  localStorage.removeItem(y);
+  localStorage.removeItem(z);
+
+}
+
 function hideShowBlock(x,y){
   document.getElementById(x).style.display = "none";
   document.getElementById(y).style.display = "block";
