@@ -118,7 +118,8 @@ function removeLocal(x,y,z){
 
 
 function addToCart(){
-var cart = getCookie(cart);
+
+var cart = getCookie("cart");
 
 alert(cart)
 
