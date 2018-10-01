@@ -376,7 +376,17 @@
 <script>
 
 var cart = localStorage.getItem("cart");
-alert(typeof cart)
+
+if (cart == null){
+  alert("null")
+  storeLocal('cart',":");
+}
+
+else(
+  alert(cart);
+
+)
+
  
 var accessTokenURL = getQueryVariable("accesstoken")
 var accessTokenCookie = getCookie("accesstoken")
