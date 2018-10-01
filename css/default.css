@@ -451,6 +451,8 @@ font-size: 0.8em;
 .blur{filter: blur(3px);opacity: 0.5;}
 .greyScale{filter: grayscale(0.9); -webkit-filter: grayscale(0.9);}
 
+.pointer{cursor: pointer}
+
 /* Opacity -----------------------------------------------------------*/
 
 .O_1{opacity: 0.1};
