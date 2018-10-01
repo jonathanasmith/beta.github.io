@@ -118,12 +118,14 @@ function removeLocal(x,y,z){
 
 
 function addToCart(){
-  
-var T = localStorage.getItem("T");
-var S = localStorage.getItem("S");
-var G = localStorage.getItem("G");
 
-cart.push(T+S+G) 
+var cart = localStorage.getItem("cart")
+alert(cart);
+
+//var T = localStorage.getItem("T");
+//var S = localStorage.getItem("S");
+//var G = localStorage.getItem("G");
+
 
 }
 
