@@ -97,6 +97,11 @@ function reconnect(){
     document.getElementById("deleteNotice").style.display = "none";
 }
 
+function linkTo(x){
+  window.location.href = x;
+
+}
+
 
 // Cart Functions *********************************************************************
 
