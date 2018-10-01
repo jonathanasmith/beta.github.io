@@ -119,6 +119,7 @@ function removeLocal(x,y,z){
 
 function addToCart(){
 var cart = getCookie(cart);
+
 alert(cart)
 
 var T = localStorage.getItem("T");
@@ -126,7 +127,9 @@ var G = localStorage.getItem("G");
 var S = localStorage.getItem("S");
 
 var cart = cart+":"+T+G+S
+
 alert(cart)
+
 document.cookie = "cart="+cart+";max-age=2678400; path=/"
 }
 
