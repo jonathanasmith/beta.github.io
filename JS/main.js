@@ -119,8 +119,8 @@ function removeLocal(x,y,z){
 
 function addToCart(){
 
-var cart = localStorage.getItem("cart")
-alert(cart);
+var cart = getCookie(cart);
+alert(cart)
 
 //var T = localStorage.getItem("T");
 //var S = localStorage.getItem("S");
