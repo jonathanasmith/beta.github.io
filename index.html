@@ -375,8 +375,8 @@
 
 <script>
 
-var cart = localStorage.getItem("cart");
-storeLocal('cart',cart+"asdasd");
+var cart = getCookie(cart);
+alert(cart.length)
  
 var accessTokenURL = getQueryVariable("accesstoken")
 var accessTokenCookie = getCookie("accesstoken")
