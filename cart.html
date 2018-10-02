@@ -173,11 +173,15 @@ for (var i in cartArray) {
   cartArrayi = cartArray[i];
   var cartArrayi = cartArrayi.replace(/\,/g,"");
   var cartArrayi = cartArrayi.replace(/\-/g,"");
+  var cartArrayi = cartArrayi.replace(/\s/g, "");
   var cartArrayi = cartArrayi.substr(1);
   linkString += cartArrayi+","
 }
 
 var linkString =  linkString.split(',')
+
+linkString.splice(-1,1)
+
 alert(linkString.length)
 
 
