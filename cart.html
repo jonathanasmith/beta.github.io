@@ -177,7 +177,7 @@ alert(linkString)
 
 for (var i in cartArray) {
   cartArrayi = cartArray[i];
-  cartArrayi.replace(/^,+/i, '');
+  cartArrayi.replace(/\,/g,"");
   linkString += cartArrayi+","
 }
 
