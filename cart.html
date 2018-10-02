@@ -18,18 +18,17 @@
 
 </head>
 <body>
-  <header class="B_i">
-    <div class="FR header" style="max-width:900px;">
+  <header class="B_i F_1 flexCell_v">
+    <div class="FR " style="max-width:900px;">
       <div class="F_1 flexCell_v"></div>
       <div class="F_1 flexCell_v"><img src="images/logo_white.png" class="H_50"/></div>
       <div id="cartIcon" class="F_1 h3 flexCell_v " onclick="linkTo('index.html')"><i class="fas fa-home"></i></div>
     </div>
   </header>
 
-
   <!-- Cart Empty ******************************************************************************** -->
 
-  <div style="max-width:800px;margin:0 auto" id="cartEmpty" class="hide">
+  <div style="max-width:800px;" id="cartEmpty" class="F_1 FC hide">
     <div class="H_50"></div>
     <div class="h1 TA_C M_L_10 M_R_10" >
       <i class="fas fa-shopping-cart"></i>&nbsp;&nbsp;Cart Empty
@@ -47,7 +46,7 @@
 
   <!-- Cart Full ******************************************************************************** -->
 
-  <div style="max-width:800px;margin:0 auto" id="cartContents" class="hide">
+  <div style="max-width:800px;margin:0 auto" id="cartContents" class="F_1 FC hide">
     <div class="H_50"></div>
     <div class="h1 TA_C M_L_10 M_R_10" >
       <i class="fas fa-shopping-cart"></i>&nbsp;&nbsp;Cart
@@ -56,9 +55,7 @@
     </div>
     <div class="FC AI_C">
       <div class="H_50"></div>
-
       <span id="cartItems"></span>
-
       <div class="H_50"></div>
       <button class="Bu_i active B_i" id="cartFull"><i class="fas fa-shopping-cart"></i>&nbsp;&nbsp;Checkout</button>
       <button class="Bu_i disable hide B_i" id="cartEmpty">Cart Empty</button>
