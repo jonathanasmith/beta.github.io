@@ -108,7 +108,7 @@ function linkTo(x){
 function productFlow(x){
   document.getElementById("frontPage").style.display = "none";
   document.getElementById("productFlow").style.display = "block";
-  localStorage.setItem("T,", x);
+  localStorage.setItem("T", x+",");
 }
 
 function storeLocal(x,y){
