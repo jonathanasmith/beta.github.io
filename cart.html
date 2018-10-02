@@ -87,7 +87,7 @@
 
 
 
-var chckoutObject={
+var checkoutObject={
 
   WomensXSmall5k:"link1_1",
   WomensSmall5k:"link2_1",
@@ -150,6 +150,7 @@ var chckoutObject={
   MensXLargeUltra:"link5_10"
 }
 
+alert(checkoutObject.MensXLargeUltra)
 
 var cartString = getCookie("cart");
 
@@ -170,16 +171,16 @@ for (var i in cartArray) {
 
 var linkString=""
 
-alert(linkString)
-
 for (var i in cartArray) {
   cartArrayi = cartArray[i];
   var cartArrayi = cartArrayi.replace(/\,/g,"");
+  var cartArrayi = cartArrayi.replace(/\-/g,"");
   var cartArrayi = cartArrayi.substr(1);
   linkString += cartArrayi+","
 }
 
 alert(linkString)
+
 
 document.getElementById("cartItems").innerHTML = ccart
 
