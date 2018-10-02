@@ -102,8 +102,8 @@
             <div class="F_1 flexCell_v">
               <img src="images/top1.png" class="productImage"/>
               <div class="H_20"></div>
-              <button class="Bu_i active disable B_i" value="5k" onclick="productFlow(this.id)" id="1">
-                <i class="fas fa-lock" id="topUnlock1"></i>&nbsp;&nbsp;5k
+              <button class="Bu_i active disable B_i" value="5k" onclick="productFlow(this.id)" id="5k">
+                <i class="fas fa-lock" id="topUnlock5k"></i>&nbsp;&nbsp;5k
               </button>
               <div class="H_50"></div>
             </div>
@@ -111,16 +111,16 @@
             <div class="F_1 flexCell_v">
               <img src="images/top2.png" class="productImage"/>
               <div class="H_20"></div>
-              <button class="Bu_i active disable B_i" onclick="productFlow(this.id)" id="2">
-                <i class="fas fa-lock" id="topUnlock2"></i>&nbsp;&nbsp;10k
+              <button class="Bu_i active disable B_i" onclick="productFlow(this.id)" id="10k">
+                <i class="fas fa-lock" id="topUnlock10k"></i>&nbsp;&nbsp;10k
               </button>
               <div class="H_50"></div>
             </div>
             <div class="F_1 flexCell_v">
               <img src="images/top3.png" class="productImage"/>
               <div class="H_20"></div>
-              <button class="Bu_i active disable B_i" onclick="productFlow(this.id)" id="3">
-                <i class="fas fa-lock" id="topUnlock3"></i>&nbsp;&nbsp;Half Marathon
+              <button class="Bu_i active disable B_i" onclick="productFlow(this.id)" id="Half_Marathon">
+                <i class="fas fa-lock" id="topUnlockHalf_Marathon"></i>&nbsp;&nbsp;Half Marathon
               </button>
               <div class="H_50"></div>
             </div>
@@ -129,16 +129,16 @@
             <div class="F_1 flexCell_v">
               <img src="images/top4.png" class="productImage"/>
               <div class="H_20"></div>
-              <button class="Bu_i active disable B_i" onclick="productFlow(this.id)" id="4">
-                <i class="fas fa-lock" id="topUnlock4"></i>&nbsp;&nbsp;Marathon
+              <button class="Bu_i active disable B_i" onclick="productFlow(this.id)" id="Marathon">
+                <i class="fas fa-lock" id="topUnlockMarathon"></i>&nbsp;&nbsp;Marathon
               </button>
               <div class="H_50"></div>
             </div>
             <div class="F_1 flexCell_v">
               <img src="images/top5.png" class="productImage"/>
               <div class="H_20"></div>
-              <button class="Bu_i active disable B_i" onclick="productFlow(this.id)" id="5">
-                <i class="fas fa-lock" id="topUnlock5"></i>&nbsp;&nbsp;Ultra (50+ km)
+              <button class="Bu_i active disable B_i" onclick="productFlow(this.id)" id="Ultra">
+                <i class="fas fa-lock" id="topUnlockUltra"></i>&nbsp;&nbsp;Ultra (50+ km)
               </button>
               <div class="H_50"></div>
             </div>
@@ -221,7 +221,6 @@
     </div>
 
       <!-- Size ******************************************************************************** -->
-
 
       <div id="buyTwo" class="FR hide">
         <div class="F_1" style="max-width:800px;margin:auto">
@@ -408,7 +407,6 @@ Parse.Cloud.run('retrieveUser', {
       document.getElementById("deleteNotice").innerHTML = '<div onclick="reconnect()" class="active FR H_75 flexCell_v TA_C B_iv BoR_10_B">Your account has been queued for deletion and will be removed during the next 24 hours. <span class="FW_500">Please click here to undo this action now.</span></div>'
     }
 
-    //document.getElementById("firstNameConnecting").innerHTML = result.tokenResponse.athlete.firstname
     document.getElementById("firstName").innerHTML = result.tokenResponse.athlete.firstname
     
     if (result.firstSweep == false){
