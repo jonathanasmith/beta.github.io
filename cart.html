@@ -150,8 +150,6 @@ var checkoutObject={
   MensXLargeUltra:"link5_10"
 }
 
-alert(checkoutObject.MensXLargeUltra)
-
 var cartString = getCookie("cart");
 
 if(cartString.length>2){
@@ -179,8 +177,17 @@ for (var i in cartArray) {
   linkString += cartArrayi+","
 }
 
-alert(linkString)
+var linkString =  linkString.split(',')
 
+var finalLink = ""
+
+for (var i in linkString) {
+  var linkStringi = linkString[i];
+  var finalLinki = checkoutObject[linkStringi];
+  finalLink =+ finalLinki+","
+}
+
+alert(finalLink);
 
 document.getElementById("cartItems").innerHTML = ccart
 
