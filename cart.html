@@ -63,7 +63,6 @@
       <div class="H_20"></div>
     </div>
   </div>
-
   <footer class="F_1 B_i FR H_75">
     <div class="footerContainer FR H_75 ">
       <div class="F_1 flexCell_iv M_L_20">&copy; Runwithkick Limited 2018</div>
@@ -87,6 +86,71 @@
 // Cart Functions *********************************************************************
 
 
+
+var chckoutObject={
+
+  WomensXSmall5k:"link1_1",
+  WomensSmall5k:"link2_1",
+  WomensMedium5k:"link3_1",
+  WomensLarge5k:"link4_1",
+  WomensXLarge5k:"link5_1",
+
+  MensXSmall5k:"link1_2",
+  MensSmall5k:"link2_2",
+  MensMedium5k:"link3_2",
+  MensLarge5k:"link4_2",
+  MensXLarge5k:"link5_2",
+
+  WomensXSmall10k:"link1_3",
+  WomensSmall10k:"link2_3",
+  WomensMedium10k:"link3_3",
+  WomensLarge10k:"link4_3",
+  WomensXLarge10k:"link5_3",
+
+  MensXSmall10k:"link1_4",
+  MensSmall10k:"link2_4",
+  MensMedium10k:"link3_4",
+  MensLarge10k:"link4_4",
+  MensXLarge10k:"link5_4",
+
+  WomensXSmallHalfMarathon:"link1_5",
+  WomensSmallHalfMarathon:"link2_5",
+  WomensMediumHalfMarathon:"link3_5",
+  WomensLargeHalfMarathon:"link4_5",
+  WomensXLargeHalfMarathon:"link5_5",
+
+  MensXSmallHalfMarathon:"link1_6",
+  MensSmallHalfMarathon:"link2_6",
+  MensMediumHalfMarathon:"link3_6",
+  MensLargeHalfMarathon:"link4_6",
+  MensXLargeHalfMarathon:"link5_6",
+
+  WomensXSmallMarathon:"link1_7",
+  WomensSmallMarathon:"link2_7",
+  WomensMediumMarathon:"link3_7",
+  WomensLargeMarathon:"link4_7",
+  WomensXLargeMarathon:"link5_7",
+
+  MensXSmallMarathon:"link1_8",
+  MensSmallMarathon:"link2_8",
+  MensMediumMarathon:"link3_8",
+  MensLargeMarathon:"link4_8",
+  MensXLargeMarathon:"link5_8",
+
+  WomensXSmallUltra:"link1_9",
+  WomensSmallUltra:"link2_9",
+  WomensMediumUltra:"link3_9",
+  WomensLargeUltra:"link4_9",
+  WomensXLargeUltra:"link5_9",
+
+  MensXSmallUltra:"link1_10",
+  MensSmallUltra:"link2_10",
+  MensMediumUltra:"link3_10",
+  MensLargeUltra:"link4_10",
+  MensXLargeUltra:"link5_10"
+}
+
+
 var cartString = getCookie("cart");
 
 if(cartString.length>2){
@@ -94,6 +158,8 @@ if(cartString.length>2){
 document.getElementById("cartContents").style.display = "block";
 
 var cartArray =  cartString.split(':')
+
+var cartArray = ["2,10k,Mens,Medium", "2,10k,Mens,Medium"]
 
 cartArray.shift();
 
@@ -103,6 +169,17 @@ for (var i in cartArray) {
   var itemArray = cartArray[i].split(",")
   ccart = ccart+'<div class="FR h4 cartLine"><div class="F_1 flexCell_v"><img src="images/top'+itemArray[0]+'.png" class="H_50 BoR_5"/></div><div class="F_1  flexCell_iv TA_L M_L_10">'+itemArray[1]+'</div><div class="F_1 flexCell_iv">'+itemArray[2]+'</div><div class="F_1 flexCell_iv"><div>'+itemArray[3]+'</div></div></div><div class="H_20"></div>'
 }
+
+
+var linkString=""
+alert(linkString)
+
+for (var i in cartArray) {
+  linkString += cartArray[i]+","
+}
+
+alert(linkString)
+
 
 document.getElementById("cartItems").innerHTML = ccart
 

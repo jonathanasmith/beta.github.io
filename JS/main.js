@@ -130,7 +130,7 @@ var M = localStorage.getItem("M");
 var G = localStorage.getItem("G");
 var S = localStorage.getItem("S");
 
-var cart = cart+":"+T+M+G+S
+var cart = cart+":"+T+G+S+M
 
 document.cookie = "cart="+cart+";max-age=2678400; path=/"
 }
