@@ -102,7 +102,7 @@ var ccart = ""
 
 for (var i in cartArray) {
   var itemArray = cartArray[i].split(",")
-  ccart = ccart+'<div class="FR h4" style="width:100%"><div class="F_1 flexCell_v"><img src="images/top'+itemArray[0]+'.png" class="H_50 BoR_5"/></div><div class="F_2  flexCell_v TA_L M_L_10">'+itemArray[1]+'</div><div class="F_1 flexCell_v">'+itemArray[2]+'</div><div class="F_1 flexCell_v"><div>'+itemArray[3]+'</div></div></div><div class="H_20"></div>'
+  ccart = ccart+'<div class="FR h4" style="min-width:300px"><div class="F_1 flexCell_v"><img src="images/top'+itemArray[0]+'.png" class="H_50 BoR_5"/></div><div class="F_1  flexCell_iv TA_L M_L_10">'+itemArray[1]+'</div><div class="F_1 flexCell_iv">'+itemArray[2]+'</div><div class="F_1 flexCell_iv"><div>'+itemArray[3]+'</div></div></div><div class="H_20"></div>'
 }
 
 document.getElementById("cartItems").innerHTML = ccart
