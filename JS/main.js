@@ -127,7 +127,7 @@ var cart = getCookie("cart");
 
 var M = localStorage.getItem("M");
 var G = localStorage.getItem("G");
-var M = localStorage.getItem("S");
+var S = localStorage.getItem("S");
 
 var cart = cart+":"+M+G+S
 
