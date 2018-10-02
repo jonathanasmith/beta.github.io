@@ -178,7 +178,7 @@ alert(linkString)
 for (var i in cartArray) {
   cartArrayi = cartArray[i];
   cartArrayi.replace(/\,/g,"");
-  linkString += cartArrayi+","
+  linkString += cartArrayi
 }
 
 alert(linkString)
@@ -190,8 +190,6 @@ document.getElementById("cartItems").innerHTML = ccart
 else{
 document.getElementById("cartEmpty").style.display = "block";
 }
-
-
 
 
 
