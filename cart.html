@@ -82,18 +82,6 @@
 <script src="JS/main.js"></script>
 
 
-
-<div class="FR h4 cartLine">
-  <div class="F_1 flexCell_v"><img src="images/top'+itemArray[0]+'.png" class="H_50 BoR_5"/></div>
-  <div class="F_3  flexCell_iv TA_L M_L_10">'+itemArray[1]+' '+</div>
-  <div class="F_1 flexCell_iv">'+itemArray[2]+'</div>
-  <div class="F_1 flexCell_iv">
-    <div>'+itemArray[3]+'</div>
-  </div>
-</div>
-<div class="H_20"></div>
-
-
 <script>
 
 // Cart Functions *********************************************************************
@@ -195,9 +183,6 @@ var linkString =  linkString.split(',')
 
 linkString.splice(-1,1)
 
-alert(linkString.length)
-
-
 var finalLink = ""
 
 for (var i in linkString) {
@@ -206,9 +191,8 @@ for (var i in linkString) {
   finalLink += finalLinki+":1,"
 }
 
-alert(finalLink);
-
 var finalLink2 = "https://kick-10.myshopify.com/cart/"+finalLink
+
 alert(finalLink2)
 
 document.getElementById("cartItems").innerHTML = ccart
