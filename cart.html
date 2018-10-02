@@ -89,65 +89,65 @@
 
 var checkoutObject={
 
-  WomensXSmall5k:"link1_1",
-  WomensSmall5k:"link2_1",
-  WomensMedium5k:"link3_1",
-  WomensLarge5k:"link4_1",
-  WomensXLarge5k:"link5_1",
+  WomensXSmall5k:"2191847030794",
+  WomensSmall5k:"2191847030794",
+  WomensMedium5k:"2191847030794",
+  WomensLarge5k:"2191847030794",
+  WomensXLarge5k:"2191847030794",
 
-  MensXSmall5k:"link1_2",
-  MensSmall5k:"link2_2",
-  MensMedium5k:"link3_2",
-  MensLarge5k:"link4_2",
-  MensXLarge5k:"link5_2",
+  MensXSmall5k:"2191847030794",
+  MensSmall5k:"2191847030794",
+  MensMedium5k:"2191847030794",
+  MensLarge5k:"2191847030794",
+  MensXLarge5k:"2191847030794",
 
-  WomensXSmall10k:"link1_3",
-  WomensSmall10k:"link2_3",
-  WomensMedium10k:"link3_3",
-  WomensLarge10k:"link4_3",
-  WomensXLarge10k:"link5_3",
+  WomensXSmall10k:"2191847030794",
+  WomensSmall10k:"2191847030794",
+  WomensMedium10k:"2191847030794",
+  WomensLarge10k:"2191847030794",
+  WomensXLarge10k:"2191847030794",
 
-  MensXSmall10k:"link1_4",
-  MensSmall10k:"link2_4",
-  MensMedium10k:"link3_4",
-  MensLarge10k:"link4_4",
-  MensXLarge10k:"link5_4",
+  MensXSmall10k:"2191847030794",
+  MensSmall10k:"2191847030794",
+  MensMedium10k:"2191847030794",
+  MensLarge10k:"2191847030794",
+  MensXLarge10k:"2191847030794",
 
-  WomensXSmallHalfMarathon:"link1_5",
-  WomensSmallHalfMarathon:"link2_5",
-  WomensMediumHalfMarathon:"link3_5",
-  WomensLargeHalfMarathon:"link4_5",
-  WomensXLargeHalfMarathon:"link5_5",
+  WomensXSmallHalfMarathon:"2191847030794",
+  WomensSmallHalfMarathon:"2191847030794",
+  WomensMediumHalfMarathon:"2191847030794",
+  WomensLargeHalfMarathon:"2191847030794",
+  WomensXLargeHalfMarathon:"2191847030794",
 
-  MensXSmallHalfMarathon:"link1_6",
-  MensSmallHalfMarathon:"link2_6",
-  MensMediumHalfMarathon:"link3_6",
-  MensLargeHalfMarathon:"link4_6",
-  MensXLargeHalfMarathon:"link5_6",
+  MensXSmallHalfMarathon:"2191847030794",
+  MensSmallHalfMarathon:"2191847030794",
+  MensMediumHalfMarathon:"2191847030794",
+  MensLargeHalfMarathon:"2191847030794",
+  MensXLargeHalfMarathon:"2191847030794",
 
-  WomensXSmallMarathon:"link1_7",
-  WomensSmallMarathon:"link2_7",
-  WomensMediumMarathon:"link3_7",
-  WomensLargeMarathon:"link4_7",
-  WomensXLargeMarathon:"link5_7",
+  WomensXSmallMarathon:"2191847030794",
+  WomensSmallMarathon:"2191847030794",
+  WomensMediumMarathon:"2191847030794",
+  WomensLargeMarathon:"2191847030794",
+  WomensXLargeMarathon:"2191847030794",
 
-  MensXSmallMarathon:"link1_8",
-  MensSmallMarathon:"link2_8",
-  MensMediumMarathon:"link3_8",
-  MensLargeMarathon:"link4_8",
-  MensXLargeMarathon:"link5_8",
+  MensXSmallMarathon:"2191847030794",
+  MensSmallMarathon:"2191847030794",
+  MensMediumMarathon:"2191847030794",
+  MensLargeMarathon:"2191847030794",
+  MensXLargeMarathon:"2191847030794",
 
-  WomensXSmallUltra:"link1_9",
-  WomensSmallUltra:"link2_9",
-  WomensMediumUltra:"link3_9",
-  WomensLargeUltra:"link4_9",
-  WomensXLargeUltra:"link5_9",
+  WomensXSmallUltra:"2191847030794",
+  WomensSmallUltra:"2191847030794",
+  WomensMediumUltra:"2191847030794",
+  WomensLargeUltra:"2191847030794",
+  WomensXLargeUltra:"2191847030794",
 
-  MensXSmallUltra:"link1_10",
-  MensSmallUltra:"link2_10",
-  MensMediumUltra:"link3_10",
-  MensLargeUltra:"link4_10",
-  MensXLargeUltra:"link5_10"
+  MensXSmallUltra:"2191847030794",
+  MensSmallUltra:"2191847030794",
+  MensMediumUltra:"2191847030794",
+  MensLargeUltra:"2191847030794",
+  MensXLargeUltra:"2191847030794"
 }
 
 var cartString = getCookie("cart");
@@ -190,11 +190,13 @@ var finalLink = ""
 for (var i in linkString) {
   var linkStringi = linkString[i];
   var finalLinki = checkoutObject[linkStringi];
-  finalLink += finalLinki+","
+  finalLink += finalLinki+":1,"
 }
 
 alert(finalLink);
 
+var finalLink2 = "https://kick-10.myshopify.com/cart/"+finalLink
+alert(finalLink2)
 
 document.getElementById("cartItems").innerHTML = ccart
 
