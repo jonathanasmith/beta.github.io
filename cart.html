@@ -168,7 +168,6 @@ for (var i in cartArray) {
   ccart = ccart+'<div class="FR h4 cartLine"><div class="F_1 flexCell_v"><img src="images/top'+itemArray[0]+'.png" class="H_50 BoR_5"/></div><div class="F_1  flexCell_iv TA_L M_L_10">'+itemArray[1]+'</div><div class="F_1 flexCell_iv">'+itemArray[2]+'</div><div class="F_1 flexCell_iv"><div>'+itemArray[3]+'</div></div></div><div class="H_20"></div>'
 }
 
-
 var linkString=""
 
 alert(linkString)
@@ -176,6 +175,7 @@ alert(linkString)
 for (var i in cartArray) {
   cartArrayi = cartArray[i];
   var cartArrayi = cartArrayi.replace(/\,/g,"");
+  var cartArrayi = cartArrayi.substr(1);
   linkString += cartArrayi+","
 }
 
