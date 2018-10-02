@@ -59,24 +59,6 @@
 
       <span id="cartItems"></span>
 
-      <!--<div class="FR h4" style="max-width:650px" >
-        <div class="F_1 flexCell_v M_L_20"><img src="https://cdn.shopify.com/s/files/1/1368/7687/products/mara-royal-mens_480x480.png?v=1535690526" class="H_60 BoR_5"/></div>
-        <div class="F_3 flexCell_iv TA_L">5k Tech (Mens, XX Large)</div>
-        <div class="F_1 flexCell_v M_R_20">
-          <div><i class="fas fa-minus-circle"></i>&nbsp;&nbsp;1&nbsp;&nbsp;<i class="fas fa-plus-circle"></i>
-          </div>
-        </div>
-      </div>
-      <div class="H_20"></div>
-      <div class="FR h4 " style="max-width:650px" >
-        <div class="F_1 flexCell_v M_L_20"><img src="https://cdn.shopify.com/s/files/1/1368/7687/products/KickBlanks28_480x480.jpg?v=1535690817" class="H_60 BoR_5"/></div>
-        <div class="F_3 flexCell_v TA_L">Half Marathon Tech (Womens, Smal)</div>
-        <div class="F_1 flexCell_v M_R_20">
-          <div><i class="fas fa-minus-circle"></i>&nbsp;&nbsp;1&nbsp;&nbsp;<i class="fas fa-plus-circle"></i>
-          </div>
-        </div>
-      </div>-->
-
       <div class="H_50"></div>
       <button class="Bu_i active B_i" id="cartFull"><i class="fas fa-shopping-cart"></i>&nbsp;&nbsp;Checkout</button>
       <button class="Bu_i disable hide B_i" id="cartEmpty">Cart Empty</button>
@@ -108,6 +90,7 @@
 
 // Cart Functions *********************************************************************
 
+
 var cartString = getCookie("cart");
 
 if(cartString.length>2){
@@ -118,11 +101,13 @@ var cartArray =  cartString.split(':')
 
 cartArray.shift();
 
+
+
 var ccart = ""
 
 for (var i in cartArray) {
   var itemArray = cartArray[i].split("")
-  ccart = ccart+'<div class="FR h4" ><div class="F_1 flexCell_v"><img src="images/top'+itemArray[0]+'.png" class="H_50 BoR_5"/></div><div class="F_2  flexCell_v TA_L M_L_10">Item: '+itemArray[0]+'</div><div class="F_1 flexCell_v">Gender: '+itemArray[1]+'</div><div class="F_1 flexCell_v"><div>Size: '+itemArray[2]+'</div></div></div><div class="H_20"></div>'
+  ccart = ccart+'<div class="FR h4"><div class="F_1 flexCell_v"><img src="images/top'+itemArray[0]+'.png" class="H_50 BoR_5"/></div><div class="F_2  flexCell_v TA_L M_L_10">Item: '+itemArray[0]+'</div><div class="F_1 flexCell_v">Gender: '+itemArray[1]+'</div><div class="F_1 flexCell_v"><div>Size: '+itemArray[2]+'</div></div></div><div class="H_20"></div>'
 }
 
 document.getElementById("cartItems").innerHTML = ccart

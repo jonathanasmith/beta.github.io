@@ -125,11 +125,11 @@ function addToCart(){
 
 var cart = getCookie("cart");
 
-var T = localStorage.getItem("T");
+var M = localStorage.getItem("M");
 var G = localStorage.getItem("G");
-var S = localStorage.getItem("S");
+var M = localStorage.getItem("S");
 
-var cart = cart+":"+T+G+S
+var cart = cart+":"+M+G+S
 
 document.cookie = "cart="+cart+";max-age=2678400; path=/"
 }

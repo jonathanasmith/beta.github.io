@@ -102,7 +102,7 @@
             <div class="F_1 flexCell_v">
               <img src="images/top1.png" class="productImage"/>
               <div class="H_20"></div>
-              <button class="Bu_i active disable B_i" value="5k" onclick="productFlow(this.id)" id="1">
+              <button class="Bu_i active disable B_i" value="5k" onclick="productFlow(this.id); storeLocal('M','5k,');" id="1">
                 <i class="fas fa-lock" id="topUnlock1"></i>&nbsp;&nbsp;5k
               </button>
               <div class="H_50"></div>
@@ -111,7 +111,7 @@
             <div class="F_1 flexCell_v">
               <img src="images/top2.png" class="productImage"/>
               <div class="H_20"></div>
-              <button class="Bu_i active disable B_i" onclick="productFlow(this.id)" id="2">
+              <button class="Bu_i active disable B_i" onclick="productFlow(this.id); storeLocal('M','10k,');" id="2">
                 <i class="fas fa-lock" id="topUnlock2"></i>&nbsp;&nbsp;10k
               </button>
               <div class="H_50"></div>
@@ -119,7 +119,7 @@
             <div class="F_1 flexCell_v">
               <img src="images/top3.png" class="productImage"/>
               <div class="H_20"></div>
-              <button class="Bu_i active disable B_i" onclick="productFlow(this.id)" id="3">
+              <button class="Bu_i active disable B_i" onclick="productFlow(this.id); storeLocal('M','Half Marathon,');" id="3">
                 <i class="fas fa-lock" id="topUnlock3"></i>&nbsp;&nbsp;Half Marathon
               </button>
               <div class="H_50"></div>
@@ -129,7 +129,7 @@
             <div class="F_1 flexCell_v">
               <img src="images/top4.png" class="productImage"/>
               <div class="H_20"></div>
-              <button class="Bu_i active disable B_i" onclick="productFlow(this.id)" id="4">
+              <button class="Bu_i active disable B_i" onclick="productFlow(this.id); storeLocal('M','Marathon,');" id="4">
                 <i class="fas fa-lock" id="topUnlock4"></i>&nbsp;&nbsp;Marathon
               </button>
               <div class="H_50"></div>
@@ -137,7 +137,7 @@
             <div class="F_1 flexCell_v">
               <img src="images/top5.png" class="productImage"/>
               <div class="H_20"></div>
-              <button class="Bu_i active disable B_i" onclick="productFlow(this.id)" id="5">
+              <button class="Bu_i active disable B_i" onclick="productFlow(this.id); storeLocal('M','Ultra,');" id="5">
                 <i class="fas fa-lock" id="topUnlock5"></i>&nbsp;&nbsp;Ultra (50+ km)
               </button>
               <div class="H_50"></div>
@@ -201,15 +201,15 @@
         <div class="H_50"></div>
         <div class="FR">
           <div class="F_1"></div>
-          <div class="F_1 flexCell_v" onclick="storeLocal('G','1'); hideShowBlock('buyOne','buyTwo')">
+          <div class="F_1 flexCell_v" onclick="storeLocal('G','Mens,'); hideShowBlock('buyOne','buyTwo')">
             <div class="productBackground flexCell_v FoC_i h2 FW_500 active" style="background-image:url('images/top1.png')">
             </div>
             <div class="H_30"></div>
             <button class="Bu_iii active B_i">Mens</button>
           </div>
           <div class="F_025"></div>
-          <div class="F_1 flexCell_v" onclick="storeLocal('G','2'); hideShowBlock('buyOne','buyTwo')">
-            <div class="productBackground flexCell_v FoC_i h2 FW_500 active" onclick="storeLocal('G','F'); hideShowBlock('buyOne','buyTwo')" style="background-image:url('images/top2.png')">
+          <div class="F_1 flexCell_v" onclick="storeLocal('G','Womens,'); hideShowBlock('buyOne','buyTwo')">
+            <div class="productBackground flexCell_v FoC_i h2 FW_500 active" onclick="storeLocal('G','Womens'); hideShowBlock('buyOne','buyTwo')" style="background-image:url('images/top2.png')">
             </div>
             <div class="H_30"></div>
             <button class="Bu_iii active B_i">Womens</button>
@@ -246,19 +246,19 @@
             <div class="H_50"></div>
             <div class="FR M_A JC_C H_75 AI_C" style="max-width:600px; margin:auto">
               <div class="F_025"></div>
-              <div class="F_1 size B_i flexCell_v h4 active link" onclick="storeLocal('S','1'); addToCart(); hideShowBlock('buyTwo','buyThree')" id="progressOne">
+              <div class="F_1 size B_i flexCell_v h4 active link" onclick="storeLocal('S','X-Small'); addToCart(); hideShowBlock('buyTwo','buyThree')" id="progressOne">
                 <div class="H_10"></div>
                 <div>X-Small</div>
                 <div class="p2">(#)</div>
                 <div class="H_10"></div>
               </div>
-              <div class="F_1 size B_i flexCell_v h4 active link" onclick="storeLocal('S','2'); addToCart(); hideShowBlock('buyTwo','buyThree')" id="progressOne">
+              <div class="F_1 size B_i flexCell_v h4 active link" onclick="storeLocal('S','Small'); addToCart(); hideShowBlock('buyTwo','buyThree')" id="progressOne">
                 <div class="H_10"></div>
                 <div>Small</div>
                 <div class="p2">(#)</div>
                 <div class="H_10"></div>          
               </div>
-              <div class="F_1 size B_i flexCell_v h4 active link" onclick="storeLocal('S','3'); addToCart(); hideShowBlock('buyTwo','buyThree')" id="progressOne">
+              <div class="F_1 size B_i flexCell_v h4 active link" onclick="storeLocal('S','Medium'); addToCart(); hideShowBlock('buyTwo','buyThree')" id="progressOne">
                 <div class="H_10"></div>
                 <div>Medium</div>
                 <div class="p2">(#)</div>
@@ -268,13 +268,13 @@
             </div>
             <div class="FR M_A JC_C H_75 AI_C" style="max-width:600px; margin:auto">
               <div class="F_075"></div>
-              <div class="F_1 size B_i flexCell_v h4 active link" onclick="storeLocal('S','4'); addToCart(); hideShowBlock('buyTwo','buyThree')" id="progressOne">
+              <div class="F_1 size B_i flexCell_v h4 active link" onclick="storeLocal('S','Large'); addToCart(); hideShowBlock('buyTwo','buyThree')" id="progressOne">
                 <div class="H_10"></div>
                 <div>Large</div>
                 <div class="p2">(#)</div>
                 <div class="H_10"></div>          
               </div>
-              <div class="F_1 size B_i flexCell_v h4 active link" onclick="storeLocal('S','5'); addToCart(); hideShowBlock('buyTwo','buyThree')" id="progressOne">
+              <div class="F_1 size B_i flexCell_v h4 active link" onclick="storeLocal('S','X-Large'); addToCart(); hideShowBlock('buyTwo','buyThree')" id="progressOne">
                 <div class="H_10"></div>
                 <div>X-Large</div>
                 <div class="p2">(#)</div>
