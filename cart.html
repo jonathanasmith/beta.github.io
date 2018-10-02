@@ -172,14 +172,16 @@ for (var i in cartArray) {
 
 
 var linkString=""
+
 alert(linkString)
 
 for (var i in cartArray) {
-  linkString += cartArray[i]+","
+  cartArrayi = cartArray[i];
+  cartArrayi.replace(/^,+/i, '');
+  linkString += cartArrayi+","
 }
 
 alert(linkString)
-
 
 document.getElementById("cartItems").innerHTML = ccart
 
