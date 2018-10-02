@@ -108,7 +108,7 @@ function linkTo(x){
 function productFlow(x){
   document.getElementById("frontPage").style.display = "none";
   document.getElementById("productFlow").style.display = "block";
-  localStorage.setItem("T", x);
+  localStorage.setItem("T,", x);
 }
 
 function storeLocal(x,y){
@@ -125,11 +125,12 @@ function addToCart(){
 
 var cart = getCookie("cart");
 
+var T = localStorage.getItem("T");
 var M = localStorage.getItem("M");
 var G = localStorage.getItem("G");
 var S = localStorage.getItem("S");
 
-var cart = cart+":"+M+G+S
+var cart = cart+":"T+M+G+S
 
 document.cookie = "cart="+cart+";max-age=2678400; path=/"
 }
