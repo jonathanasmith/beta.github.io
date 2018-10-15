@@ -57,7 +57,7 @@
       <div class="H_50"></div>
       <span id="cartItems"></span>
       <div class="H_50"></div>
-      <button class="Bu_i active B_i" id="cartFull"><i class="fas fa-shopping-cart"></i>&nbsp;&nbsp;Checkout</button>
+      <button class="Bu_i active B_i" id="cartFull" onclick="checkout()"><i class="fas fa-shopping-cart"></i>&nbsp;&nbsp;Checkout</button>
       <div class="H_20"></div>
       <div class="active" onclick="exitCart()">Continue shopping</div>
       <div class="H_20"></div>
@@ -194,7 +194,6 @@ for (var i in linkString) {
 
 var finalLink2 = "https://kick-10.myshopify.com/cart/"+finalLink
 
-alert(finalLink2)
 
 document.getElementById("cartItems").innerHTML = ccart
 
@@ -204,6 +203,10 @@ else{
 document.getElementById("cartEmpty").style.display = "block";
 }
 
+
+function checkout {
+  window.location.href = finalLink2
+}
 
 
 </script>
