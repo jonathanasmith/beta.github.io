@@ -39,7 +39,7 @@
       <div class="H_50"></div>
       <div class="h2"> ¯\_(ツ)_/¯</div>
       <div class="H_50"></div>
-      <button class="Bu_i active B_i" id="cartFull">Continue Shopping</button>
+      <button class="Bu_i active B_i" id="cartFull" onclick="exitCart()">Continue Shopping</button>
       <button class="Bu_i disable hide B_i" id="cartEmpty">Cart Empty</button>
     </div>
   </div>
@@ -193,7 +193,7 @@ for (var i in linkString) {
 }
 
 var finalLink2 = "https://kick-10.myshopify.com/cart/"+finalLink
-
+  
 
 document.getElementById("cartItems").innerHTML = ccart
 
@@ -206,6 +206,10 @@ document.getElementById("cartEmpty").style.display = "block";
 
 function checkout() {
   window.location.href = finalLink2;
+}
+
+function exitCart() {
+  window.location.href = "https://beta.kick.run";
 }
 
 
