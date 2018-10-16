@@ -160,222 +160,7 @@
         </div>
         <!--Product Block 1-->
 
-        <!--Unlock Products-->
-
-        <div id="accountSettings" style="display:none">
-          <div class="H_50"></div>
-          <div class="BI_iii H_10 M_L_20 M_R_20"></div>
-          <div class="H_20"></div>
-          <div class="p3 M_L_20 M_R_20 LH_25">
-            <span class="FW_600">Account Settings:</span> 
-            Your account is connected to Strava <button class="active Bu_ii BS B_iv" onclick="disconnect()"><i class="fas fa-unlink"></i>&nbsp;&nbsp;Disconnect</button> 
-
-            <span id="notifications1" style="display:none">Unlock notifications are on <button class="active Bu_ii BS B_i" onclick="notificationsOff()"><i class="fas fa-bell"></i>&nbsp;&nbsp;Turn off</button></span>
-
-            <span id="notifications2" style="display:none">Unlock notifications are off <button class="active Bu_ii BS B_i" onclick="notificationsOn()"><i class="fas fa-bell"></i>&nbsp;&nbsp;Turn on</button></span>
-
-            <span id="preferences1" style="display:none">You are receiving updates and offers from Kick.run <button class="active Bu_ii BS B_i" onclick="preferencesOff()"><i class="fas fa-bullhorn"></i>&nbsp;&nbsp;Stop updates</button></span>
-
-            <span id="preferences2" style="display:none">You are not receiving updates and offers from Kick.run <button class="active Bu_ii BS B_i" onclick="preferencesOn()"><i class="fas fa-bullhorn"></i>&nbsp;&nbsp;Receive updates</button></span>
-
-            Any other queries? Just <button class="active Bu_ii BS B_i" onclick="location.href='mailto:hello@kick.run';"><i class="fas fa-envelope"></i>&nbsp;&nbsp;Get in touch</button>
-          </div>
-          <div class="H_50"></div>
-        </div>
-      </div>
-
-    </div>
-
-    </div>
-  </div>
-
-  <footer class="F_1 B_i FR H_75">
-    <div class="footerContainer FR H_75 ">
-      <div class="F_1 flexCell_iv M_L_20">&copy; Runwithkick Limited 2018</div>
-      <div class="F_1 flexCell_v">
-      </div>
-      <div class="F_1 FR AI_C JC_E h2 P_R_20">
-        <a href="https://facebook.com/groups/runwithkick" class="noStyle" target="_blank"><i class="fab fa-facebook-square"></i></a>&nbsp;&nbsp;
-        <a href="https://twitter.com/runwithkick" class="noStyle" target="_blank"><i class="fab fa-twitter-square"></i></a>&nbsp;&nbsp;
-        <a href="https://instagram.com/runwithkick" class="noStyle" target="_blank"><i class="fab fa-instagram"></i></a>
-      </div>
-    </div>
-  </footer>
-</body>
-</html>
-
-<script src="https://npmcdn.com/parse@1.11.1/dist/parse.js"></script>
-<script src="JS/main.js"></script>
-
-<script>
-
-
-var accessTokenURL = getQueryVariable("accesstoken")
-var accessTokenCookie = getCookie("accesstoken")
-
-if(accessTokenCookie.length>0){
-  storeLocal('accessToken',accessTokenCookie);
-  var accessToken = localStorage.getItem("accessToken");
-}
-
-else if(accessTokenURL.length>0){
-  storeLocal('accessToken',accessTokenURL);
-  var accessToken = localStorage.getItem("accessToken");
-  document.cookie = "accesstoken="+accessToken+";max-age=2678400; path=/"
-}
-
-else{
-var accessToken = ""
-}
-
-
-if(accessToken.length>0){
-
-startParse();
-
-Parse.Cloud.run('retrieveUser', {
-  AccessToken: accessToken
-  }, {
-  success: function(result) {
-
-    if (result.activeUser == false) {
-      document.getElementById("deleteNotice").innerHTML = '<div onclick="reconnect()" class="active FR H_75 flexCell_v TA_C B_iv BoR_10_B">Your account has been queued for deletion and will be removed during the next 24 hours. <span class="FW_500">Please click here to undo this action now.</span></div>'
-    }
-
-    //document.getElementById("firstNameConnecting").innerHTML = result.tokenResponse.athlete.firstname
-    document.getElementById("firstName").innerHTML = result.tokenResponse.athlete.firstname
-    
-    if (result.firstSweep == false){
-
-      document.getElementById('settingUp').style.display = "none";
-      document.getElementById('activityHistory').style.display = "block";
-
-      Parse.Cloud.run('StravaTempActivities', {
-        Accesstoken: result.username,
-      }, {
-        success: function(result) {
-          var distances = [];
-          for(j = 0; j<4; j++){
-            var result1 = result[j].data;
-            for (i = 0; i < result1.length; i++){
-              if(result1[i].type == "Run"){
-                var resultsloop = result1[i].distance;
-                distances.push(resultsloop) 
-              }
-            }
-          }
-          var maxDistance = Math.max(...distances)
-
-          if(maxDistance >= 4950 && maxDistance < 9900){
-            var tops = [true, false, false, false, false ] 
-            updateUser(accessToken,"tops",tops);
-            updateUser(accessToken,"firstSweep",true);
-          }
-
-          else if(maxDistance >= 9900 && maxDistance < 20950){
-            var tops = [true, true, false, false, false ] 
-            updateUser(accessToken,"tops",tops);
-            updateUser(accessToken,"firstSweep",true);
-          }
-
-          else if(maxDistance >= 20950 && maxDistance < 42000){
-            var tops = [true, true, true, false, false ] 
-            updateUser(accessToken,"tops",tops);
-            updateUser(accessToken,"firstSweep",true);
-          }
-
-          else if(maxDistance >= 42000 && maxDistance < 50000){
-            var tops = [true, true, true, true, false ] 
-            updateUser(accessToken,"tops",tops);
-            updateUser(accessToken,"firstSweep",true);
-          }
-
-          else if(maxDistance >= 50000){
-            var tops = [true, true, true, true, true ] 
-            updateUser(accessToken,"tops",tops);
-            updateUser(accessToken,"firstSweep",true);
-          }
-
-          else{
-            var tops = [false, false, false, false, false ] 
-            updateUser(accessToken,"tops",tops);
-            updateUser(accessToken,"firstSweep",true);
-          }
-
-          document.getElementById('loading').style.display = "none";
-          document.getElementById('connected').style.display = "block";
-          document.getElementById('accountSettings').style.display = "block";
-
-          for (i = 0; i < tops.length; i++){
-            
-            if(tops[i]){
-                var topNumber = i+1
-                var topNumberString =topNumber.toString();
-                var element = document.getElementById(topNumberString);
-                element.classList.remove("disable");
-                var element1 = document.getElementById("topUnlock"+topNumberString);
-                element1.classList.remove("fa-lock");
-                element1.classList.add("fa-check");
-            }
-          };
-        },
-        error: function(error) {
-          alert("Error retrieving activities, please refresh & contact hello@kick.run if the problem persists")
-        }
-      });
-    }
-
-    else{
-      document.getElementById('loading').style.display = "none";
-      document.getElementById('connected').style.display = "block";
-      document.getElementById('accountSettings').style.display = "block";
-
-      var tops = result.tops
-      for (i = 0; i < tops.length; i++){
-        
-        if(tops[i]){
-            var topNumber = i+1
-            var topNumberString =topNumber.toString();
-            var element = document.getElementById(topNumberString);
-            element.classList.remove("disable");
-            var element1 = document.getElementById("topUnlock"+topNumberString);
-            element1.classList.remove("fa-lock");
-            element1.classList.add("fa-check");
-        }
-      };
-    }
-
-
-    var notifications = result.notifications
-
-    if (notifications){
-      document.getElementById('notifications1').style.display = "inline";
-    }
-    else{
-      document.getElementById('notifications2').style.display = "inline";
-    }
-
-    var preferences = result.updates
-    if (preferences){
-      document.getElementById('preferences1').style.display = "inline";
-    }
-    else{
-      document.getElementById('preferences2').style.display = "inline";
-    }
-
-  },
-  error: function(error){ 
-  document.getElementById('loading').style.display = "none";
-  document.getElementById('connect').style.display = "flex";
-  }
-});
-}
-
-else  {
-  document.getElementById('loading').style.display = "none";
-  document.getElementById('connect').style.display = "flex";
-}
-
+        <script>
     <script type="text/javascript">
     /*<![CDATA[*/
 
@@ -706,4 +491,223 @@ else  {
     })();
     /*]]>*/
     </script>
+        </script>
+
+        <!--Unlock Products-->
+
+        <div id="accountSettings" style="display:none">
+          <div class="H_50"></div>
+          <div class="BI_iii H_10 M_L_20 M_R_20"></div>
+          <div class="H_20"></div>
+          <div class="p3 M_L_20 M_R_20 LH_25">
+            <span class="FW_600">Account Settings:</span> 
+            Your account is connected to Strava <button class="active Bu_ii BS B_iv" onclick="disconnect()"><i class="fas fa-unlink"></i>&nbsp;&nbsp;Disconnect</button> 
+
+            <span id="notifications1" style="display:none">Unlock notifications are on <button class="active Bu_ii BS B_i" onclick="notificationsOff()"><i class="fas fa-bell"></i>&nbsp;&nbsp;Turn off</button></span>
+
+            <span id="notifications2" style="display:none">Unlock notifications are off <button class="active Bu_ii BS B_i" onclick="notificationsOn()"><i class="fas fa-bell"></i>&nbsp;&nbsp;Turn on</button></span>
+
+            <span id="preferences1" style="display:none">You are receiving updates and offers from Kick.run <button class="active Bu_ii BS B_i" onclick="preferencesOff()"><i class="fas fa-bullhorn"></i>&nbsp;&nbsp;Stop updates</button></span>
+
+            <span id="preferences2" style="display:none">You are not receiving updates and offers from Kick.run <button class="active Bu_ii BS B_i" onclick="preferencesOn()"><i class="fas fa-bullhorn"></i>&nbsp;&nbsp;Receive updates</button></span>
+
+            Any other queries? Just <button class="active Bu_ii BS B_i" onclick="location.href='mailto:hello@kick.run';"><i class="fas fa-envelope"></i>&nbsp;&nbsp;Get in touch</button>
+          </div>
+          <div class="H_50"></div>
+        </div>
+      </div>
+
+    </div>
+
+    </div>
+  </div>
+
+  <footer class="F_1 B_i FR H_75">
+    <div class="footerContainer FR H_75 ">
+      <div class="F_1 flexCell_iv M_L_20">&copy; Runwithkick Limited 2018</div>
+      <div class="F_1 flexCell_v">
+      </div>
+      <div class="F_1 FR AI_C JC_E h2 P_R_20">
+        <a href="https://facebook.com/groups/runwithkick" class="noStyle" target="_blank"><i class="fab fa-facebook-square"></i></a>&nbsp;&nbsp;
+        <a href="https://twitter.com/runwithkick" class="noStyle" target="_blank"><i class="fab fa-twitter-square"></i></a>&nbsp;&nbsp;
+        <a href="https://instagram.com/runwithkick" class="noStyle" target="_blank"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
+
+<script src="https://npmcdn.com/parse@1.11.1/dist/parse.js"></script>
+<script src="JS/main.js"></script>
+
+<script>
+
+
+var accessTokenURL = getQueryVariable("accesstoken")
+var accessTokenCookie = getCookie("accesstoken")
+
+if(accessTokenCookie.length>0){
+  storeLocal('accessToken',accessTokenCookie);
+  var accessToken = localStorage.getItem("accessToken");
+}
+
+else if(accessTokenURL.length>0){
+  storeLocal('accessToken',accessTokenURL);
+  var accessToken = localStorage.getItem("accessToken");
+  document.cookie = "accesstoken="+accessToken+";max-age=2678400; path=/"
+}
+
+else{
+var accessToken = ""
+}
+
+
+if(accessToken.length>0){
+
+startParse();
+
+Parse.Cloud.run('retrieveUser', {
+  AccessToken: accessToken
+  }, {
+  success: function(result) {
+
+    if (result.activeUser == false) {
+      document.getElementById("deleteNotice").innerHTML = '<div onclick="reconnect()" class="active FR H_75 flexCell_v TA_C B_iv BoR_10_B">Your account has been queued for deletion and will be removed during the next 24 hours. <span class="FW_500">Please click here to undo this action now.</span></div>'
+    }
+
+    //document.getElementById("firstNameConnecting").innerHTML = result.tokenResponse.athlete.firstname
+    document.getElementById("firstName").innerHTML = result.tokenResponse.athlete.firstname
+    
+    if (result.firstSweep == false){
+
+      document.getElementById('settingUp').style.display = "none";
+      document.getElementById('activityHistory').style.display = "block";
+
+      Parse.Cloud.run('StravaTempActivities', {
+        Accesstoken: result.username,
+      }, {
+        success: function(result) {
+          var distances = [];
+          for(j = 0; j<4; j++){
+            var result1 = result[j].data;
+            for (i = 0; i < result1.length; i++){
+              if(result1[i].type == "Run"){
+                var resultsloop = result1[i].distance;
+                distances.push(resultsloop) 
+              }
+            }
+          }
+          var maxDistance = Math.max(...distances)
+
+          if(maxDistance >= 4950 && maxDistance < 9900){
+            var tops = [true, false, false, false, false ] 
+            updateUser(accessToken,"tops",tops);
+            updateUser(accessToken,"firstSweep",true);
+          }
+
+          else if(maxDistance >= 9900 && maxDistance < 20950){
+            var tops = [true, true, false, false, false ] 
+            updateUser(accessToken,"tops",tops);
+            updateUser(accessToken,"firstSweep",true);
+          }
+
+          else if(maxDistance >= 20950 && maxDistance < 42000){
+            var tops = [true, true, true, false, false ] 
+            updateUser(accessToken,"tops",tops);
+            updateUser(accessToken,"firstSweep",true);
+          }
+
+          else if(maxDistance >= 42000 && maxDistance < 50000){
+            var tops = [true, true, true, true, false ] 
+            updateUser(accessToken,"tops",tops);
+            updateUser(accessToken,"firstSweep",true);
+          }
+
+          else if(maxDistance >= 50000){
+            var tops = [true, true, true, true, true ] 
+            updateUser(accessToken,"tops",tops);
+            updateUser(accessToken,"firstSweep",true);
+          }
+
+          else{
+            var tops = [false, false, false, false, false ] 
+            updateUser(accessToken,"tops",tops);
+            updateUser(accessToken,"firstSweep",true);
+          }
+
+          document.getElementById('loading').style.display = "none";
+          document.getElementById('connected').style.display = "block";
+          document.getElementById('accountSettings').style.display = "block";
+
+          for (i = 0; i < tops.length; i++){
+            
+            if(tops[i]){
+                var topNumber = i+1
+                var topNumberString =topNumber.toString();
+                var element = document.getElementById(topNumberString);
+                element.classList.remove("disable");
+                var element1 = document.getElementById("topUnlock"+topNumberString);
+                element1.classList.remove("fa-lock");
+                element1.classList.add("fa-check");
+            }
+          };
+        },
+        error: function(error) {
+          alert("Error retrieving activities, please refresh & contact hello@kick.run if the problem persists")
+        }
+      });
+    }
+
+    else{
+      document.getElementById('loading').style.display = "none";
+      document.getElementById('connected').style.display = "block";
+      document.getElementById('accountSettings').style.display = "block";
+
+      var tops = result.tops
+      for (i = 0; i < tops.length; i++){
+        
+        if(tops[i]){
+            var topNumber = i+1
+            var topNumberString =topNumber.toString();
+            var element = document.getElementById(topNumberString);
+            element.classList.remove("disable");
+            var element1 = document.getElementById("topUnlock"+topNumberString);
+            element1.classList.remove("fa-lock");
+            element1.classList.add("fa-check");
+        }
+      };
+    }
+
+
+    var notifications = result.notifications
+
+    if (notifications){
+      document.getElementById('notifications1').style.display = "inline";
+    }
+    else{
+      document.getElementById('notifications2').style.display = "inline";
+    }
+
+    var preferences = result.updates
+    if (preferences){
+      document.getElementById('preferences1').style.display = "inline";
+    }
+    else{
+      document.getElementById('preferences2').style.display = "inline";
+    }
+
+  },
+  error: function(error){ 
+  document.getElementById('loading').style.display = "none";
+  document.getElementById('connect').style.display = "flex";
+  }
+});
+}
+
+else  {
+  document.getElementById('loading').style.display = "none";
+  document.getElementById('connect').style.display = "flex";
+}
+
+
 </script>
