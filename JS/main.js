@@ -150,3 +150,7 @@ function hideShowInline(x,y){
   document.getElementById(y).style.display = "inline";
 }
 
+function  navigate(x) {
+  window.location.href = x;
+}
+
