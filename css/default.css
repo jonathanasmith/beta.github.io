@@ -260,6 +260,11 @@ footer {
 
 /* Product Images ---------------------------------------------------*/
 
+.productImageSmall{
+    height:120px;
+    border-radius: 10px;
+}
+
 
 .productImage, .demoImage{
     height:190px;
