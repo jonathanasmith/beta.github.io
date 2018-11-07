@@ -291,7 +291,7 @@ Parse.Cloud.run('retrieveUser', {
   success: function(result) {
 
     if (result.activeUser == false) {
-      document.getElementById("deleteNotice").innerHTML = '<div onclick="reconnect()" class="active FR H_75 flexCell_v TA_C B_iv BoR_10_B M_L_20 M_R_20">Your account has been queued for deletion and will be removed during the next 24 hours. <span class="FW_500">Please click here to undo this action now.</span></div>'
+      document.getElementById("deleteNotice").innerHTML = '<div onclick="reconnect()" class="active FR H_75 flexCell_v TA_C B_iv BoR_10_B"><div class="M_L_20 M_R_20">Your account has been queued for deletion and will be removed during the next 24 hours. <span class="FW_500">Please click here to undo this action now.</span></div></div>'
     }
 
     //document.getElementById("firstNameConnecting").innerHTML = result.tokenResponse.athlete.firstname
