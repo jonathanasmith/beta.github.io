@@ -265,9 +265,8 @@ footer {
     border-radius: 10px;
 }
 
-
 .productImage, .demoImage{
-    height:190px;
+    height:170px;
     border-radius: 20px;
 }
 
@@ -283,10 +282,8 @@ footer {
 
 @media only screen and (max-width: 1000px) {
 
-
-
 .productImage, .demoImage{
-    height:180px;
+    height:150px;
     border-radius: 20px;
 }
 
@@ -314,7 +311,7 @@ font-size: 0.9em;
 }
 
 .productImage{
-    height:180px;
+    height:150px;
     border-radius: 20px;
 }
 
