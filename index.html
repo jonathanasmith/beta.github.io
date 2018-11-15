@@ -294,7 +294,7 @@ Parse.Cloud.run('retrieveUser', {
 
     //document.getElementById("firstNameConnecting").innerHTML = result.tokenResponse.athlete.firstname
     document.getElementById("firstName").innerHTML = result.tokenResponse.athlete.firstname
-    alert(result.firstSweep)
+
     
     if (result.firstSweep == false){
 
@@ -413,6 +413,7 @@ Parse.Cloud.run('retrieveUser', {
 
   },
   error: function(error){ 
+    alert("failure")
   document.getElementById('loading').style.display = "none";
   document.getElementById('connect').style.display = "flex";
   }
