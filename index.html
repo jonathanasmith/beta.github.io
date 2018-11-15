@@ -356,7 +356,7 @@ Parse.Cloud.run('retrieveUser', {
           document.getElementById('connected').style.display = "block";
           document.getElementById('accountSettings').style.display = "block";
 
-          /*
+          
           for (i = 0; i < tops.length; i++){
             
             if(tops[i]){
@@ -369,7 +369,9 @@ Parse.Cloud.run('retrieveUser', {
                 element1.classList.add("fa-check");
             }
           };
-          */
+
+          location.reload();
+          
         },
         error: function(error) {
           alert("Error retrieving activities, please refresh & contact hello@kick.run if the problem persists")
