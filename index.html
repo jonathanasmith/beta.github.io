@@ -281,6 +281,8 @@ var accessToken = ""
 
 if(accessToken.length>0){
 
+alert(accessToken)
+
 startParse();
 
 Parse.Cloud.run('retrieveUser', {
@@ -314,6 +316,7 @@ Parse.Cloud.run('retrieveUser', {
               }
             }
           }
+
           var maxDistance = Math.max(...distances)
 
           if(maxDistance >= 4950 && maxDistance < 9900){
