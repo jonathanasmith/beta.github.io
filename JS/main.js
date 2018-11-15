@@ -42,10 +42,8 @@ function updateUser(x,y,z) {
       ObjectValue: z
   }, {
     success: function(result) { 
-    
     },
-    error: function(error){
-      
+    error: function(error){  
     }
   });
 }
@@ -81,7 +79,7 @@ function preferencesOff(){
 }
 
 function disconnect(){
-
+  
   if (confirm("Are you sure? Disconnecting will completely remove your Kick.run achievements to date.")) {
     var accessToken = localStorage.getItem("accessToken");
     updateUser(accessToken,"activeUser",false) 

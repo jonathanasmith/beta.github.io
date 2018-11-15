@@ -290,11 +290,9 @@ Parse.Cloud.run('retrieveUser', {
 
     if (result.activeUser == false) {
       document.getElementById("deleteNotice").innerHTML = '<div onclick="reconnect()" class="active FR H_75 flexCell_v TA_C B_iv BoR_10_B"><div class="M_L_20 M_R_20">Your account has been queued for deletion and will be removed during the next 24 hours. <span class="FW_500">Please click here to undo this action now.</span></div></div>'
-    }
+        }
 
-    //document.getElementById("firstNameConnecting").innerHTML = result.tokenResponse.athlete.firstname
     document.getElementById("firstName").innerHTML = result.tokenResponse.athlete.firstname
-
     
     if (result.firstSweep == false){
 
@@ -358,6 +356,7 @@ Parse.Cloud.run('retrieveUser', {
           document.getElementById('connected').style.display = "block";
           document.getElementById('accountSettings').style.display = "block";
 
+          /*
           for (i = 0; i < tops.length; i++){
             
             if(tops[i]){
@@ -370,6 +369,7 @@ Parse.Cloud.run('retrieveUser', {
                 element1.classList.add("fa-check");
             }
           };
+          */
         },
         error: function(error) {
           alert("Error retrieving activities, please refresh & contact hello@kick.run if the problem persists")
