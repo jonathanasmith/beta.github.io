@@ -16,6 +16,12 @@
   <link href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
 </head>
+
+<script
+  src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+  integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+  crossorigin="anonymous"></script>
+
 <body>
 
   <header class="B_i F_1 flexCell_v">
@@ -26,6 +32,15 @@
       <!--<div id="cartIcon" class="F_1 h3 flexCell_v " onclick="linkTo('cart.html')"><i class="fas fa-shopping-cart"></i></div>-->
     </div>
   </header>
+
+  <section id="warning">
+    <a href="#" class="closeThis">✕</a>
+    <section class="warningContent">
+      <span>!</span>
+      <h5 class="wHeading">update your browser</h5>
+      <p>Your browser is <strong>ancient</strong>! <a href="http://browsehappy.com/">Upgrade</a> to a different browser or <a href="https://www.google.com/chromeframe/?redirect=true">Install</a> Google Chrome Frame to experience this site.</p>
+    </section>
+  </section>
 
 <!-- Start of Main content ******************************************************************************** -->
 
@@ -266,6 +281,8 @@
 <script src="JS/main.js"></script>
 
 <script>
+
+$(".closeThis").click(function(){ $("#warning").fadeOut('700'); });
 
 var accessTokenURL = getQueryVariable("accesstoken")
 var accessTokenCookie = getCookie("accesstoken")
