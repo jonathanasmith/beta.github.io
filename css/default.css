@@ -379,7 +379,6 @@ font-size: 0.8em;
 
 /*Aligning content within a single flex-cell*/
 
-.flexCell_vi{display:flex; flex-direction:column; justify-content: center; align-items: flex-end;}
 .flexCell_i{display: -webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display:flex; flex-direction:column; justify-content: flex-start; align-items: flex-start;}
 .flexCell_ii{display: -webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display:flex; flex-direction:column; justify-content: flex-start; align-items: center;}
 .flexCell_iii{display: -webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display:flex; flex-direction:column; justify-content: flex-start; align-items: flex-end;}
